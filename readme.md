@@ -2,6 +2,9 @@
 > Comprehensive recipe-development Java toolkit that streamlines the beverage development
 process under one unified, visually stunning, collaboration-oriented platform. 
 
+![JavaFX](https://img.shields.io/badge/built%20with-JavaFX-orange.svg)
+![GitHub](https://img.shields.io/github/license/espressoshock/vue-spritecore.svg)
+
 <span style="display:block;text-align:center">
     <img src="./assets/drinkle-screenshot.png" alt="vue-spritecore logo">
 </span>
