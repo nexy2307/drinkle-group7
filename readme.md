@@ -29,3 +29,5 @@ visually design and share cocktail recipes in a structured easy-to-read manner.
 
 # Features
 
+- [ ] Custom ingredient creation
+- [ ] Customizable per-ingredient price
