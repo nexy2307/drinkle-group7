@@ -7,11 +7,9 @@ process under one unified, visually stunning, collaboration-oriented platform.
 </span>
 
 ## Table of contents
-
-- [Drinkle](#drinkle)
-  - [Table of contents](#table-of-contents)
 - [Description](#description)
 - [Features](#features)
+- [License](#license)
 
 # Description
 
@@ -27,7 +25,11 @@ market sector, the software integrates a version for privates with limited funct
 visually design and share cocktail recipes in a structured easy-to-read manner.
 
 
-# Features
+# features
 
 - [ ] Custom ingredient creation
 - [ ] Customizable per-ingredient price
+
+## License
+
+[MIT](http://opensource.org/licenses/MIT)
