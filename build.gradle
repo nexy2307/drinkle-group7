@@ -1,8 +1,9 @@
 plugins {
     id 'java'
+    id 'org.openjfx.javafxplugin' version '0.0.7'
 }
 
-group 'drinkle'
+group 'com.espressoshock'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
@@ -13,4 +14,9 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+javafx {
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+    version = '11.0.2'
 }
