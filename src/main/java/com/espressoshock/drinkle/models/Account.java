@@ -1,6 +1,6 @@
 package com.espressoshock.drinkle.models;
 
-public class Account {
+public class Account implements IActionAccount{
     private String accountID;
     private String accountName;
     private String accountPassword;
@@ -45,5 +45,30 @@ public class Account {
                 ", registered=" + registered +
                 ", blueprint=" + blueprint +
                 '}';
+    }
+
+    @Override
+    public boolean addBlueprint(Blueprint blueprint) {
+        return false;
+    }
+
+    @Override
+    public boolean deleteBlueprint(Blueprint blueprint) {
+        return false;
+    }
+
+    @Override
+    public boolean deleteBlueprintUsingIndex(int pos) {
+        return false;
+    }
+
+    @Override
+    public boolean editBlueprint(Blueprint source, Blueprint destination) {
+        return false;
+    }
+
+    @Override
+    public boolean editBlueprintUsingIndex(int pos, Blueprint destination) {
+        return false;
     }
 }
