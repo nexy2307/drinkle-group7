@@ -36,5 +36,14 @@ public class Account {
 
     public void setBlueprint(Blueprint blueprint){this.blueprint = blueprint;}
 
-
+    @Override
+    public String toString() {
+        return "Account{" +
+                "accountID='" + accountID + '\'' +
+                ", accountName='" + accountName + '\'' +
+                ", accountPassword='" + accountPassword + '\'' +
+                ", registered=" + registered +
+                ", blueprint=" + blueprint +
+                '}';
+    }
 }
