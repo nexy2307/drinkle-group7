@@ -1,7 +1,7 @@
 package com.espressoshock.drinkle.models;
 
 public enum Unit {
-    GRAM("g"), MILLILITER("ml"), OUNCE("oz"), TEASPPON("ts");
+    GRAM("g"), MILLILITER("ml"), OUNCE("oz"), TEASPPON("ts"), COUNT("ct");
 
     private final String code;
 
