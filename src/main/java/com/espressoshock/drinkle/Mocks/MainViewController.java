@@ -17,7 +17,7 @@ public final class MainViewController {
     public void init() {}
 
     private void searchRecipeWith(String query) {
-       String recipe =  DBMock.searchRecipe();
+       String recipe =  DBMock.retrieveRecipe(query);
        updateView();
     }
 
@@ -44,7 +44,21 @@ public final class MainViewController {
 
 
 
+    /*
+    Modify Recipe Use Case
+     */
 
+
+    private void modifyRecipe(String name) {
+        showRecipeEditor(name);
+    }
+
+    private void showRecipeEditor(String name) { }
+
+    private void onSaveTapped(String recipe) {
+        String localRecipe = DBMock.retrieveRecipe(recipe);
+        DBMock.updateRecipe(localRecipe);
+    }
 
 
 }

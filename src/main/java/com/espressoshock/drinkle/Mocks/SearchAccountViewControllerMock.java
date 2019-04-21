@@ -41,7 +41,6 @@ public final class SearchAccountViewControllerMock {
     }
 
 
-
     private void createGroup(Array user, String name) {
         DBMock.createGroup(name, user);
         updateView();

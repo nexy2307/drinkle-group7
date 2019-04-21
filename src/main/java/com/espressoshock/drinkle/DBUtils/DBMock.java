@@ -7,7 +7,8 @@ public class DBMock implements DBLayer {
     //TODO: Generate random stuff.
     //TODO: Separate into multiple classes.
 
-    public static String searchRecipe() {return "";}
+    public static String retrieveRecipe(String name) {return "";}
+    public static void updateRecipe(String name) { }
     public static void markFavourite(String recipe) {}
 
     public static String searchUserWith(String regex){ return ""; }
