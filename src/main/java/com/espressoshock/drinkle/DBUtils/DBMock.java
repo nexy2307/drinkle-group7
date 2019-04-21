@@ -8,8 +8,6 @@ public class DBMock implements DBLayer {
     //TODO: Separate into multiple classes.
 
     public static String searchRecipe() {return "";}
-    public static void deleteRecipe() {}
-    public static void addRecipe() {}
     public static void markFavourite(String recipe) {}
 
     public static String searchUserWith(String regex){ return ""; }
@@ -18,5 +16,8 @@ public class DBMock implements DBLayer {
     public static void createGroup(String name, Array user) {}
     public static void sendInvitation(String email) {}
 
+
+    public static void deleteRecipe() {}
+    public static void createRecipe(String name) {}
 
 }

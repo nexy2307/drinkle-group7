@@ -6,12 +6,11 @@ public final class AccountViewControllerMock {
     type String should be modified to "Recipe"
      */
 
-
-
     public void init(){ }
 
 
-    
+
+
 
 
 }

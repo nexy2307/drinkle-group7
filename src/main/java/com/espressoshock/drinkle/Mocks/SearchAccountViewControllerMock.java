@@ -21,10 +21,9 @@ public final class SearchAccountViewControllerMock {
     //"Returns list of users";
     private void searchWith(String regex) {
         String users = DBMock.searchUserWith(regex);
-        updateView(users);
+        updateView();
     }
 
-    private void updateView(String data) {}
     private void updateView(){}
 
 
@@ -51,6 +50,8 @@ public final class SearchAccountViewControllerMock {
         DBMock.sendInvitation(email);
         updateView();
     }
+
+
 
 
 }
