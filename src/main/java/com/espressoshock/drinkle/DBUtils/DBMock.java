@@ -10,4 +10,8 @@ public class DBMock implements DBLayer {
     public static void markFavourite(String recipe) {}
 
 
+
+    public static String searchUserWith(String regex){ return ""; }
+
+
 }
