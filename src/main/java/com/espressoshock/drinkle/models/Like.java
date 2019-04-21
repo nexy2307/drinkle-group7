@@ -1,5 +1,7 @@
 package com.espressoshock.drinkle.models;
 
+import com.espressoshock.drinkle.models.Account.Account;
+
 import java.sql.Timestamp;
 
 public class Like {
