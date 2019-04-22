@@ -8,10 +8,10 @@ public abstract class Blueprint {
     private Timestamp ts;
     private int blueprintId;
     private List<Permission>permissions;
-    private AcessLevel accessLevel;
+    private AccessLevel accessLevel;
     private Statistic statistic;
 
-    public Blueprint(String metadata, Timestamp ts, int blueprintId, List<Permission> permissions, AcessLevel accessLevel, Statistic statistic) {
+    public Blueprint(String metadata, Timestamp ts, int blueprintId, List<Permission> permissions, AccessLevel accessLevel, Statistic statistic) {
         this.metadata = metadata;
         this.ts = ts;
         this.blueprintId = blueprintId;
@@ -36,7 +36,7 @@ public abstract class Blueprint {
         return permissions;
     }
 
-    public AcessLevel getAccessLevel() {
+    public AccessLevel getAccessLevel() {
         return accessLevel;
     }
 
@@ -52,7 +52,7 @@ public abstract class Blueprint {
         this.permissions = permissions;
     }
 
-    public void setAccessLevel(AcessLevel accessLevel) {
+    public void setAccessLevel(AccessLevel accessLevel) {
         this.accessLevel = accessLevel;
     }
 
