@@ -1,7 +1,5 @@
 package com.espressoshock.drinkle.models;
 
-import jdk.jfr.Category;
-
 public enum BeverageCategory implements ICategory {
     //***** MORE TO COME
     NON_ALCOHOLIC("Alcohol-free"),

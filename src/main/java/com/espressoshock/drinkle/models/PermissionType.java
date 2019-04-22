@@ -1,7 +1,7 @@
 package com.espressoshock.drinkle.models;
 
 public enum PermissionType {
-    V("View"), E("Edit");
+    VIEW("View"), EDIT("Edit");
 
     private final String permissionTextual;
 
