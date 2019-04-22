@@ -1,7 +1,7 @@
 package com.espressoshock.drinkle.models;
 
 public enum Country {
-    //TODO ..MORE TO COME
+   
     AUSTRIA("AUT","Austria"), AUSTRALIA("AUS","Australia"),
     ALBANIA("ALB","Albania"), ARGENTINA("ARG","Argentina"),
     BAHAMAAS("BHS","Bahamas "), BANGLADESH("BGD","Bangladesh "),BARBADOS("BRB"," Barbados"),
