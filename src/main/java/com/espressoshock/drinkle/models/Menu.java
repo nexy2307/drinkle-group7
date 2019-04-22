@@ -18,6 +18,33 @@ public class Menu extends Blueprint {
         this.pictureURL = pictureURL;
     }
 
+    ////////////////***************** BEVERAGES MNG-M
+    public void addBeverages(Beverage ...beverages){
+        for (Beverage beverage : beverages)
+            this.addBeverage(beverage);
+    }
+
+    public boolean addBeverage(Beverage beverage){
+        //might wanna check if beverage exists? -> wait for back-end implementation
+        return this.beverages.add(beverage);
+    }
+
+    public boolean removeBeverage(Beverage beverage){
+        return this.beverages.remove(beverage);
+    }
+
+    public Beverage removeBeverage(int pos) {
+        return this.beverages.remove(pos);
+    }
+
+    public void clearPermission(){
+        this.beverages.clear();
+    }
+
+    ////////////////***************** BEVERAGES MNG-M END
+
+
+
     public List<Beverage> getBeverages() {
         return beverages;
     }
