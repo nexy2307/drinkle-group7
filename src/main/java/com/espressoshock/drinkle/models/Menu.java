@@ -9,7 +9,7 @@ public class Menu extends Blueprint {
     private String theme;
     private String pictureURL;
 
-    public Menu(String metadata, Timestamp ts, int blueprintId, List<Permission> permissions, AcessLevel accessLevel, Statistic statistic, List<Beverage> beverages, String name, String theme, String pictureURL) {
+    public Menu(String metadata, Timestamp ts, int blueprintId, List<Permission> permissions, AccessLevel accessLevel, Statistic statistic, List<Beverage> beverages, String name, String theme, String pictureURL) {
 
         super(metadata, ts, blueprintId, permissions, accessLevel, statistic);
         this.beverages = beverages;

@@ -10,7 +10,7 @@ public class Beverage extends Blueprint {
     private String pictureURL;
     private double pourCost;
 
-    public Beverage(String metadata, Timestamp ts, int blueprintId, List<Permission> permissions, AcessLevel accessLevel, Statistic statistic, String name, String description, Recipe recipe, String pictureURL, double pourCost) {
+    public Beverage(String metadata, Timestamp ts, int blueprintId, List<Permission> permissions, AccessLevel accessLevel, Statistic statistic, String name, String description, Recipe recipe, String pictureURL, double pourCost) {
         super(metadata, ts, blueprintId, permissions, accessLevel, statistic);
         this.name = name;
         this.description = description;
