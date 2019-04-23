@@ -1,0 +1,40 @@
+#paneTab1 {
+    -fx-background-image: url("/images/bgr.jpg");
+}
+
+.text-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+
+}
+
+#exportGenerate {
+
+}
+
+#btnExport {
+    -fx-background-color: #ef4a00;
+    -fx-font-family: "Arial Black";
+    -fx-text-fill: white;
+}
+
+#btnGenerate {
+    -fx-background-color: blue;
+    -fx-font-family: "Arial Black";
+    -fx-text-fill: white;
+}
+
+/*.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: black;
+}*/
+.tab{
+    -fx-background-color: blue;
+}
+.tab:selected{
+    -fx-background-color:green;
+}
+.tab-header-background{
+    -fx-background-color: blue;
+}
+
+

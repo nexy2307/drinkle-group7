@@ -1,6 +1,8 @@
 package com.espressoshock.drinkle;
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -12,13 +14,13 @@ public class Main extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) {
-        Text text = new Text("Hello world drinkle!");
-        Group root = new Group();
-        text.setY(50);
-        root.getChildren().add(text);
-        primaryStage.setTitle("Drinkle");
-        primaryStage.setScene(new Scene(root, 1000, 729));
+    public void start(Stage primaryStage) throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/MainSceneViewV2.fxml"));
+        primaryStage.setTitle("Hello World");
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("/css/MainSceneStyle.css").toExternalForm());
+        primaryStage.setScene(scene);
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 }
