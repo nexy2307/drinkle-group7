@@ -28,10 +28,16 @@ market sector, the software integrates a version for privates with limited funct
 visually design and share cocktail recipes in a structured easy-to-read manner.
 
 
-# features
+# Features
 
 - [ ] Custom ingredient creation
 - [ ] Customizable per-ingredient price
+
+# Views
+
+<span style="display:block;text-align:center">
+    <img src="./assets/drinkle-views.png" alt="drinkle views">
+</span>
 
 ## License
 
