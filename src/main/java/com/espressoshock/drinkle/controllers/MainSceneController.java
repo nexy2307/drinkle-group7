@@ -13,6 +13,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.Region;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
@@ -30,7 +31,7 @@ public class MainSceneController implements Initializable {
     @FXML
     Tab tab1,tab2;
     @FXML
-    Pane paneTab1, titleBar;
+    Pane paneTab1, titleBar, paneRegion;
     @FXML
     Rectangle rectangle;
 
@@ -101,6 +102,18 @@ public class MainSceneController implements Initializable {
         Stage stage = (Stage)((ImageView)minimizeProgramEvent.getSource()).getScene().getWindow();
         stage.setIconified(true);
     }
+    public static void clipChildren(Region region, double arc) {
+
+        final Rectangle outputClip = new Rectangle();
+        outputClip.setArcWidth(arc);
+        outputClip.setArcHeight(arc);
+        region.setClip(outputClip);
+
+        region.layoutBoundsProperty().addListener((ov, oldValue, newValue) -> {
+            outputClip.setWidth(newValue.getWidth());
+            outputClip.setHeight(newValue.getHeight());
+        });
+    }
 
 
 
@@ -109,5 +122,6 @@ public class MainSceneController implements Initializable {
         sliderProgressChange();
         setGraphic();
         addDraggableNode(rectangle);
+        clipChildren(paneRegion,30);
     }
 }

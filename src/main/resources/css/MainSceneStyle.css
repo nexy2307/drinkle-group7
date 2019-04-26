@@ -1,5 +1,6 @@
 #paneTab1 {
-    -fx-background-image: url("/images/background.png");
+   -fx-background-image: url("/images/background.png");
+    -fx-background-radius: 30;
 }
 
 .text-field {
@@ -11,6 +12,7 @@
 #exportGenerate {
 
 }
+
 #titleBar{
     -fx-background-color: blue;
 }
@@ -23,6 +25,10 @@
     -fx-font-family: "Arial Black";
     -fx-text-fill: white;
 }
+#btnExport:hover{
+    -fx-background-color: #ef6b02;
+}
+
 
 #btnGenerate {
     -fx-background-color: blue;
@@ -34,7 +40,8 @@
     -fx-background-color: black;
 }*/
 .tab{
-
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
     -fx-background-color: blue;
 }
 .tab:selected{
@@ -43,8 +50,8 @@
 .tab-header-background{
     -fx-background-color: blue;
 }
-#tab1-label{
-    -fx-graphic: url("/images/editorIcon.png");
+#paneRegion{
+
 }
 
 
