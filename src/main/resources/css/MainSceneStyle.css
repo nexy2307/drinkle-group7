@@ -1,5 +1,5 @@
 #paneTab1 {
-    -fx-background-image: url("/images/bgr.jpg");
+    -fx-background-image: url("/images/background.png");
 }
 
 .text-field {
@@ -28,13 +28,17 @@
     -fx-background-color: black;
 }*/
 .tab{
+
     -fx-background-color: blue;
 }
 .tab:selected{
-    -fx-background-color:green;
+    -fx-background-color:#008aff;
 }
 .tab-header-background{
     -fx-background-color: blue;
+}
+#tab1-label{
+    -fx-graphic: url("/images/editorIcon.png");
 }
 
 

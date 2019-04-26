@@ -9,7 +9,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
-
 import java.net.URL;
 import java.text.NumberFormat;
 import java.util.ResourceBundle;
@@ -25,7 +24,6 @@ public class MainSceneController implements Initializable {
     Tab tab1,tab2;
     @FXML
     Pane paneTab1;
-
     public void choseIngredient(Event event) {
         Label lbl = (Label) event.getSource();
         String s = lbl.getText();
@@ -37,7 +35,7 @@ public class MainSceneController implements Initializable {
     Button btn = (Button) event.getSource();
     lblHeader.setText(btn.getText()+" button pressed!");
     }
-    public void asd(){
+    public void sliderProgressChange(){
         slider.valueProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> arg0, Number arg1, Number arg2) {
@@ -58,13 +56,14 @@ public class MainSceneController implements Initializable {
 
     }
     public void setGraphic(){
-        tab1.setGraphic(new ImageView("img/editorIcon.png"));
-        tab2.setGraphic(new ImageView("img/drinkIcon.png"));
+        tab1.setGraphic(new ImageView("images/editorIcon.png"));
+        tab2.setGraphic(new ImageView("images/drinkIcon.png"));
     }
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        asd();
+        sliderProgressChange();
         setGraphic();
 
     }
