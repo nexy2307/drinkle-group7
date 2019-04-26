@@ -11,9 +11,15 @@
 #exportGenerate {
 
 }
+#titleBar{
+    -fx-background-color: blue;
+}
+#rectangle{
+-fx-fill: transparent;
+}
 
 #btnExport {
-    -fx-background-color: #ef4a00;
+    -fx-background-color: #ef6300;
     -fx-font-family: "Arial Black";
     -fx-text-fill: white;
 }

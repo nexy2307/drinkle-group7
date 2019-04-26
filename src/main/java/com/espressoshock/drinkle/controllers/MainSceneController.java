@@ -4,11 +4,18 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.scene.shape.Rectangle;
+import javafx.stage.Stage;
+
 import java.net.URL;
 import java.text.NumberFormat;
 import java.util.ResourceBundle;
@@ -23,7 +30,11 @@ public class MainSceneController implements Initializable {
     @FXML
     Tab tab1,tab2;
     @FXML
-    Pane paneTab1;
+    Pane paneTab1, titleBar;
+    @FXML
+    Rectangle rectangle;
+
+    double initialX,initialY;
     public void choseIngredient(Event event) {
         Label lbl = (Label) event.getSource();
         String s = lbl.getText();
@@ -59,12 +70,44 @@ public class MainSceneController implements Initializable {
         tab1.setGraphic(new ImageView("images/editorIcon.png"));
         tab2.setGraphic(new ImageView("images/drinkIcon.png"));
     }
+    private void addDraggableNode(final Node node) {
+
+        node.setOnMousePressed(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent me) {
+                if (me.getButton() != MouseButton.MIDDLE) {
+                    initialX = me.getSceneX();
+                    initialY = me.getSceneY();
+                }
+            }
+        });
+
+        node.setOnMouseDragged(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent me) {
+                if (me.getButton() != MouseButton.MIDDLE) {
+                    node.getScene().getWindow().setX(me.getScreenX() - initialX);
+                    node.getScene().getWindow().setY(me.getScreenY() - initialY);
+                }
+            }
+        });
+    }
+    @FXML
+    private void exitProgramAction(Event exitProgramEvent) {
+        System.exit(0);
+    }
+    @FXML
+    public void minimizeProgramAction(Event minimizeProgramEvent) {
+        Stage stage = (Stage)((ImageView)minimizeProgramEvent.getSource()).getScene().getWindow();
+        stage.setIconified(true);
+    }
+
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         sliderProgressChange();
         setGraphic();
-
+        addDraggableNode(rectangle);
     }
 }

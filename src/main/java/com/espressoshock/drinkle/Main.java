@@ -4,6 +4,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class Main extends Application {
 
@@ -19,6 +20,7 @@ public class Main extends Application {
         scene.getStylesheets().add(getClass().getResource("/css/MainSceneStyle.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
+        primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.show();
     }
 

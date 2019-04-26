@@ -18,11 +18,36 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espressoshock.drinkle.controllers.MainSceneController">
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espressoshock.drinkle.controllers.MainSceneController">
    <children>
+      <AnchorPane fx:id="titleBar" prefHeight="25.0" prefWidth="873.0">
+         <children>
+            <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="835.0" onMouseClicked="#exitProgramAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/titlebar-icons/close.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="803.0" onMouseClicked="#minimizeProgramAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/titlebar-icons/minimize.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="-1.0" stroke="TRANSPARENT" strokeType="INSIDE" width="774.0">
+               <cursor>
+                  <Cursor fx:constant="MOVE" />
+               </cursor>
+            </Rectangle>
+         </children>
+      </AnchorPane>
       <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="873.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab fx:id="tab1">
@@ -298,7 +323,7 @@
                                     <Tooltip text="Export recipe" />
                                  </tooltip>
                                  <effect>
-                                    <Bloom threshold="0.39" />
+                                    <Bloom threshold="0.5" />
                                  </effect>
                               </Button>
                               <Button fx:id="btnGenerate" layoutX="1.0" layoutY="51.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="142.0" text="Generate">
@@ -306,7 +331,7 @@
                                     <Tooltip text="Export recipe" />
                                  </tooltip>
                                  <effect>
-                                    <Bloom threshold="0.39" />
+                                    <Bloom threshold="0.5" />
                                  </effect>
                               </Button>
                            </children>
