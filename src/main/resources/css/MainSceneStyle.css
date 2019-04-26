@@ -14,7 +14,7 @@
 }
 
 #titleBar{
-    -fx-background-color: blue;
+    -fx-background-color: #3f4fa5;
 }
 #rectangle{
 -fx-fill: transparent;
@@ -31,7 +31,7 @@
 
 
 #btnGenerate {
-    -fx-background-color: blue;
+    -fx-background-color: #3f4fa5;
     -fx-font-family: "Arial Black";
     -fx-text-fill: white;
 }
@@ -42,13 +42,22 @@
 .tab{
     -fx-background-radius: 30;
     -fx-border-radius: 30;
-    -fx-background-color: blue;
+    -fx-background-color: #3f4fa5;
+}
+.tab-pane {
+    -fx-tab-min-width:40px;
+    -fx-tab-max-width:40px;
+    -fx-tab-min-height:50px;
+    -fx-tab-max-height:50px;
 }
 .tab:selected{
     -fx-background-color:#008aff;
 }
+.tab-header{
+
+}
 .tab-header-background{
-    -fx-background-color: blue;
+    -fx-background-color: #3f4fa5;
 }
 #paneRegion{
 

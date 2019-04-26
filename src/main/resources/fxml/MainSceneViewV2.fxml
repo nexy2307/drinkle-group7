@@ -22,7 +22,6 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
 <Pane fx:id="paneRegion" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espressoshock.drinkle.controllers.MainSceneController">
    <children>
       <VBox>
@@ -47,7 +46,7 @@
                   </ImageView>
                   <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="25.0" layoutX="-1.0" stroke="TRANSPARENT" strokeType="INSIDE" width="774.0">
                      <cursor>
-                        <Cursor fx:constant="MOVE" />
+                        <Cursor fx:constant="DEFAULT" />
                      </cursor>
                   </Rectangle>
                </children>
@@ -55,6 +54,7 @@
             <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="873.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
               <tabs>
                 <Tab fx:id="tab1">
+
                   <content>
                      <AnchorPane fx:id="paneTab1" minHeight="0.0" minWidth="0.0" prefHeight="605.0" prefWidth="844.0">
                            <children>
@@ -208,7 +208,7 @@
                               <Group id="Name/Load" layoutX="620.0" layoutY="21.0" />
                               <Group id="Notes" layoutX="620.0" layoutY="77.0" />
                               <Group id="No. Ingredients" layoutX="717.0" layoutY="77.0" />
-                              <Group id="Alc%" layoutX="648.0" layoutY="158.0">
+                              <Group id="Alc%" layoutX="632.0" layoutY="158.0">
                                  <children>
                                     <Label text="Alcohol%" textFill="#b53904">
                                        <font>
@@ -222,7 +222,7 @@
                                     </ProgressIndicator>
                                  </children>
                               </Group>
-                              <Group id="Pour Cost" layoutX="754.0" layoutY="158.0">
+                              <Group id="Pour Cost" layoutX="738.0" layoutY="158.0">
                                  <children>
                                     <ProgressIndicator layoutX="12.0" layoutY="27.0" progress="0.0">
                                        <tooltip>
@@ -236,7 +236,7 @@
                                     </Label>
                                  </children>
                               </Group>
-                              <Group id="Total Volume" layoutX="646.0" layoutY="244.0">
+                              <Group id="Total Volume" layoutX="633.0" layoutY="244.0">
                                  <children>
                                     <Label layoutX="2.0" text="Total volume" textFill="#b53904">
                                        <font>
@@ -250,7 +250,7 @@
                                     </Label>
                                  </children>
                               </Group>
-                              <Button layoutX="741.0" layoutY="244.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="85.0" text="Manage" textFill="#ef4a00">
+                              <Button layoutX="728.0" layoutY="244.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="85.0" text="Manage" textFill="#ef4a00">
                                  <tooltip>
                                     <Tooltip text="Manage the volume of the glass" />
                                  </tooltip>
@@ -258,7 +258,7 @@
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Button>
-                              <Group id="Ingredient 1" layoutX="628.0" layoutY="394.0">
+                              <Group id="Ingredient 1" layoutX="616.0" layoutY="394.0">
                                  <children>
                                     <Label layoutX="16.0" text="Ingredient 1" textFill="WHITE" />
                                     <Label layoutX="172.0" text="0ml" textFill="#b53904">
@@ -275,17 +275,17 @@
                                     <Font size="20.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="772.0" layoutY="90.0" text="N.I." textFill="#b53904">
+                              <Label layoutX="765.0" layoutY="90.0" text="N.I." textFill="#b53904">
                                  <font>
                                     <Font name="Arial Black" size="12.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="774.0" layoutY="105.0" text="0" textFill="WHITE">
+                              <Label layoutX="767.0" layoutY="105.0" text="0" textFill="WHITE">
                                  <font>
                                     <Font name="Arial Black" size="12.0" />
                                  </font>
                               </Label>
-                              <TextField layoutX="652.0" layoutY="97.0" prefHeight="37.0" prefWidth="114.0" text="Served cold">
+                              <TextField layoutX="645.0" layoutY="97.0" prefHeight="37.0" prefWidth="114.0" text="Served cold">
                                  <tooltip>
                                     <Tooltip text="Add your notes here." />
                                  </tooltip>
@@ -293,12 +293,12 @@
                                     <Font name="Arial Black" size="12.0" />
                                  </font>
                               </TextField>
-                              <Label layoutX="660.0" layoutY="90.0" text="Notes" textFill="#b53904">
+                              <Label layoutX="653.0" layoutY="90.0" text="Notes" textFill="#b53904">
                                  <font>
                                     <Font name="Arial Black" size="12.0" />
                                  </font>
                               </Label>
-                              <Group id="Ingredient 1" layoutX="628.0" layoutY="355.0">
+                              <Group id="Ingredient 1" layoutX="616.0" layoutY="355.0">
                                  <children>
                                     <Label layoutX="16.0" text="Ingredient 1" textFill="WHITE" />
                                     <Label layoutX="172.0" text="0ml" textFill="#b53904">
@@ -309,7 +309,7 @@
                                     <ProgressBar layoutX="14.0" layoutY="28.0" prefHeight="9.0" prefWidth="177.0" progress="0.0" />
                                  </children>
                               </Group>
-                              <Group id="Ingredient 1" layoutX="628.0" layoutY="316.0">
+                              <Group id="Ingredient 1" layoutX="616.0" layoutY="316.0">
                                  <children>
                                     <Label layoutX="16.0" text="Ingredient 1" textFill="WHITE" />
                                     <Label layoutX="172.0" text="0ml" textFill="#b53904">
@@ -320,7 +320,7 @@
                                     <ProgressBar layoutX="14.0" layoutY="28.0" prefHeight="9.0" prefWidth="177.0" progress="0.0" />
                                  </children>
                               </Group>
-                              <Group id="Export Generate" fx:id="exportGenerate" layoutX="662.0" layoutY="491.0">
+                              <Group id="Export Generate" fx:id="exportGenerate" layoutX="652.0" layoutY="491.0">
                                  <children>
                                     <Button fx:id="btnExport" mnemonicParsing="false" prefHeight="38.0" prefWidth="142.0" text="Export">
                                        <tooltip>
@@ -346,12 +346,12 @@
                                     <Tooltip text="Slide to adjust the volume of the ingredient." />
                                  </tooltip>
                               </Slider>
-                              <Label layoutX="666.0" layoutY="34.0" text="Name" textFill="#b53904">
+                              <Label layoutX="652.0" layoutY="32.0" text="Name" textFill="#b53904">
                                  <font>
                                     <Font name="Arial Black" size="12.0" />
                                  </font>
                               </Label>
-                              <TextField layoutX="656.0" layoutY="40.0" prefHeight="37.0" prefWidth="135.0" text="Cocktail Name">
+                              <TextField layoutX="642.0" layoutY="38.0" prefHeight="37.0" prefWidth="135.0" text="Cocktail Name">
                                  <tooltip>
                                     <Tooltip text="Write a name for your cocktail." />
                                  </tooltip>
@@ -359,7 +359,7 @@
                                     <Font name="Arial Black" size="12.0" />
                                  </font>
                               </TextField>
-                              <ImageView fitHeight="30.0" fitWidth="26.0" layoutX="796.0" layoutY="39.0">
+                              <ImageView fitHeight="30.0" fitWidth="26.0" layoutX="782.0" layoutY="37.0">
                                  <cursor>
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
