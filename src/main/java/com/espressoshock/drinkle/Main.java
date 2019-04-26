@@ -20,7 +20,7 @@ public class Main extends Application {
         scene.getStylesheets().add(getClass().getResource("/css/MainSceneStyle.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
-        primaryStage.initStyle(StageStyle.UNDECORATED);
+        primaryStage.initStyle(StageStyle.TRANSPARENT);
         primaryStage.show();
     }
 
