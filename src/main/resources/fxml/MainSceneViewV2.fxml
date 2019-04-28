@@ -236,7 +236,7 @@
                                     </Label>
                                  </children>
                               </Group>
-                              <Group id="Total Volume" layoutX="633.0" layoutY="244.0">
+                              <Group id="Total Volume" layoutX="627.0" layoutY="244.0">
                                  <children>
                                     <Label layoutX="2.0" text="Total volume" textFill="#b53904">
                                        <font>
@@ -250,7 +250,7 @@
                                     </Label>
                                  </children>
                               </Group>
-                              <Button layoutX="728.0" layoutY="244.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="85.0" text="Manage" textFill="#ef4a00">
+                              <Button layoutX="722.0" layoutY="244.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="85.0" text="Manage" textFill="#ef4a00">
                                  <tooltip>
                                     <Tooltip text="Manage the volume of the glass" />
                                  </tooltip>
@@ -258,7 +258,7 @@
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Button>
-                              <Group id="Ingredient 1" layoutX="616.0" layoutY="394.0">
+                              <Group id="Ingredient 1" layoutX="614.0" layoutY="394.0">
                                  <children>
                                     <Label layoutX="16.0" text="Ingredient 1" textFill="WHITE" />
                                     <Label layoutX="172.0" text="0ml" textFill="#b53904">
@@ -298,7 +298,7 @@
                                     <Font name="Arial Black" size="12.0" />
                                  </font>
                               </Label>
-                              <Group id="Ingredient 1" layoutX="616.0" layoutY="355.0">
+                              <Group id="Ingredient 1" layoutX="614.0" layoutY="355.0">
                                  <children>
                                     <Label layoutX="16.0" text="Ingredient 1" textFill="WHITE" />
                                     <Label layoutX="172.0" text="0ml" textFill="#b53904">
@@ -309,7 +309,7 @@
                                     <ProgressBar layoutX="14.0" layoutY="28.0" prefHeight="9.0" prefWidth="177.0" progress="0.0" />
                                  </children>
                               </Group>
-                              <Group id="Ingredient 1" layoutX="616.0" layoutY="316.0">
+                              <Group id="Ingredient 1" layoutX="614.0" layoutY="316.0">
                                  <children>
                                     <Label layoutX="16.0" text="Ingredient 1" textFill="WHITE" />
                                     <Label layoutX="172.0" text="0ml" textFill="#b53904">
