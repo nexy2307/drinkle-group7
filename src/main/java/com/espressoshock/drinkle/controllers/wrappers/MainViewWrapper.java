@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
@@ -26,7 +27,7 @@ public class MainViewWrapper {
     @FXML
     private BorderPane borderPane;
     @FXML
-    private AnchorPane recipeEditor;
+    private Button btn1, btn2, btn3, btn4, btn5, btn6;
 
     @FXML
     private void exitProgramAction() {
@@ -99,7 +100,12 @@ public class MainViewWrapper {
         borderPane.setCenter(root);
     }
     private void setGraphics(){
-        
+        btn1.setGraphic(new ImageView("images/drinkIcon.png"));
+        btn2.setGraphic(new ImageView("images/editorIcon.png"));
+        btn3.setGraphic(new ImageView("images/btn.png"));
+        btn4.setGraphic(new ImageView("images/btn.png"));
+        btn5.setGraphic(new ImageView("images/btn.png"));
+        btn6.setGraphic(new ImageView("images/btn.png"));
     }
     @FXML
     public void initialize() throws IOException {
@@ -116,6 +122,7 @@ public class MainViewWrapper {
         }*/
         addDraggableNode(draggableNode);
         clipChildren(borderPane, 60);
+        setGraphics();
     }
 
 }

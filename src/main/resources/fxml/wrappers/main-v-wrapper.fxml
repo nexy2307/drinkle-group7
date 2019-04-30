@@ -15,12 +15,12 @@
          <children>
             <Label fx:id="lblName" text="VB" />
             <ImageView fitHeight="44.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true" />
-            <Button mnemonicParsing="false" onAction="#menu1" prefHeight="61.0" prefWidth="67.0" text="menu 1" />
-            <Button layoutX="10.0" layoutY="71.0" mnemonicParsing="false" onAction="#menu2" prefHeight="61.0" prefWidth="67.0" text="menu 2" />
-            <Button layoutX="10.0" layoutY="132.0" mnemonicParsing="false" onAction="#menu3" prefHeight="61.0" prefWidth="67.0" text="menu 3" />
-            <Button layoutX="10.0" layoutY="193.0" mnemonicParsing="false" onAction="#menu4" prefHeight="61.0" prefWidth="67.0" text="menu 4" />
-            <Button layoutX="10.0" layoutY="254.0" mnemonicParsing="false" onAction="#menu5" prefHeight="61.0" prefWidth="67.0" text="menu 5" />
-            <Button layoutX="10.0" layoutY="315.0" mnemonicParsing="false" onAction="#menu6" prefHeight="61.0" prefWidth="67.0" text="menu 6" />
+            <Button fx:id="btn1" mnemonicParsing="false" onAction="#menu1" prefHeight="61.0" prefWidth="67.0" />
+            <Button fx:id="btn2" layoutX="10.0" layoutY="71.0" mnemonicParsing="false" onAction="#menu2" prefHeight="61.0" prefWidth="67.0" />
+            <Button fx:id="btn3" layoutX="10.0" layoutY="132.0" mnemonicParsing="false" onAction="#menu3" prefHeight="61.0" prefWidth="67.0" />
+            <Button fx:id="btn4" layoutX="10.0" layoutY="193.0" mnemonicParsing="false" onAction="#menu4" prefHeight="61.0" prefWidth="67.0" />
+            <Button fx:id="btn5" layoutX="10.0" layoutY="254.0" mnemonicParsing="false" onAction="#menu5" prefHeight="61.0" prefWidth="67.0" />
+            <Button fx:id="btn6" layoutX="10.0" layoutY="315.0" mnemonicParsing="false" onAction="#menu6" prefHeight="61.0" prefWidth="67.0" />
          </children></VBox>
    </left>
    <top>
