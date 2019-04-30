@@ -11,6 +11,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.Region;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
@@ -24,6 +25,8 @@ public class MainViewWrapper {
     private Rectangle draggableNode;
     @FXML
     private BorderPane borderPane;
+    @FXML
+    private AnchorPane recipeEditor;
 
     @FXML
     private void exitProgramAction() {
@@ -33,6 +36,18 @@ public class MainViewWrapper {
     private void minimizeProgramAction(Event minimizeProgramEvent) {
         Stage stage = (Stage)((ImageView)minimizeProgramEvent.getSource()).getScene().getWindow();
         stage.setIconified(true);
+    }
+    private static void clipChildren(Region pane, double arc) {
+
+        final Rectangle rectangleClip = new Rectangle();
+        rectangleClip.setArcWidth(arc);
+        rectangleClip.setArcHeight(arc);
+        pane.setClip(rectangleClip);
+
+        pane.layoutBoundsProperty().addListener((ov, oldValue, newValue) -> {
+            rectangleClip.setWidth(newValue.getWidth());
+            rectangleClip.setHeight(newValue.getHeight());
+        });
     }
     private void addDraggableNode(final Node node) {
 
@@ -56,7 +71,7 @@ public class MainViewWrapper {
     }
     @FXML
     private void menu2(Event mouseEvent){
-        borderPane.setCenter(null);
+        loadScene("/fxml/menu2.fxml");
     }
     @FXML
     private void menu3(Event mouseEvent){
@@ -98,6 +113,7 @@ public class MainViewWrapper {
 
         }*/
         addDraggableNode(draggableNode);
+        clipChildren(borderPane, 60);
     }
 
 }

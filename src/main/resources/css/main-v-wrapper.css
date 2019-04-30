@@ -2,6 +2,7 @@
     -fx-fill: transparent;
     -fx-background-radius: 30;
 }
+
 #draggableNode{
     -fx-stroke: transparent;
     -fx-fill: transparent;
@@ -13,5 +14,23 @@
     -fx-background-color: blue;
     -fx-padding: 12;
     -fx-background-radius: 5em;
+}
+#toolBar{
+    -fx-background-color: #3f4fa5;
+}
+#toolBar .button{
+      -fx-background-color: transparent;
+      -fx-background-radius: 100;
+  }
+#toolBar .button:hover{
+    -fx-background-color: #3f66a5;
+    -fx-background-radius: 100;
+}
+#toolBar .button:focused{
+    -fx-background-color: #3f7aa5;
+    -fx-background-radius: 100;
+}
+#titleBar{
+    -fx-background-color:#3f4fa5;
 }
 /*----------------------------------------*/
