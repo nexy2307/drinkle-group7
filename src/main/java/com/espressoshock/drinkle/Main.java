@@ -1,9 +1,10 @@
 package com.espressoshock.drinkle;
 import javafx.application.Application;
-import javafx.scene.Group;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import java.io.IOException;
 
 public class Main extends Application {
 
@@ -12,11 +13,8 @@ public class Main extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) {
-        Text text = new Text("Hello world drinkle!");
-        Group root = new Group();
-        text.setY(50);
-        root.getChildren().add(text);
+    public void start(Stage primaryStage) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/wrappers/main-v-wrapper.fxml"));
         primaryStage.setTitle("Drinkle");
         primaryStage.setScene(new Scene(root, 1000, 729));
         primaryStage.show();
