@@ -10,6 +10,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
+import javafx.scene.layout.VBox;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
@@ -21,15 +22,17 @@ public class MainSceneController implements Initializable {
     @FXML
     Slider slider;
     @FXML
-    ProgressBar progressGlass;
+    ProgressBar progressGlass, testBar;
     @FXML
     Label lblVol, lblCost, lblHeader, lblIngredient;
     @FXML
     Tab tab1,tab2;
     @FXML
-    Pane paneTab1, titleBar, paneRegion;
+    Pane paneTab1, titleBar, paneRegion, scrollIngredients;
     @FXML
     Rectangle rectangle;
+    @FXML
+    VBox vBoxChosenIngredients;
 
     private double initialX,initialY;
     public void choseIngredient(Event event) {
@@ -66,10 +69,10 @@ public class MainSceneController implements Initializable {
     }
     private void addDraggableNode(final Node node) {
 
-        node.setOnMousePressed(me -> {
-            if (me.getButton() != MouseButton.MIDDLE) {
-                initialX = me.getSceneX();
-                initialY = me.getSceneY();
+        node.setOnMousePressed(mouseEvent -> {
+            if (mouseEvent.getButton() != MouseButton.MIDDLE) {
+                initialX = mouseEvent.getSceneX();
+                initialY = mouseEvent.getSceneY();
             }
         });
 
@@ -89,16 +92,16 @@ public class MainSceneController implements Initializable {
         Stage stage = (Stage)((ImageView)minimizeProgramEvent.getSource()).getScene().getWindow();
         stage.setIconified(true);
     }
-    private static void clipChildren(Region region, double arc) {
+    private static void clipChildren(Region pane, double arc) {
 
-        final Rectangle outputClip = new Rectangle();
-        outputClip.setArcWidth(arc);
-        outputClip.setArcHeight(arc);
-        region.setClip(outputClip);
+        final Rectangle rectangleClip = new Rectangle();
+        rectangleClip.setArcWidth(arc);
+        rectangleClip.setArcHeight(arc);
+        pane.setClip(rectangleClip);
 
-        region.layoutBoundsProperty().addListener((ov, oldValue, newValue) -> {
-            outputClip.setWidth(newValue.getWidth());
-            outputClip.setHeight(newValue.getHeight());
+        pane.layoutBoundsProperty().addListener((ov, oldValue, newValue) -> {
+            rectangleClip.setWidth(newValue.getWidth());
+            rectangleClip.setHeight(newValue.getHeight());
         });
     }
 
@@ -110,5 +113,6 @@ public class MainSceneController implements Initializable {
         setGraphic();
         addDraggableNode(rectangle);
         clipChildren(paneRegion,30);
+        testBar.setProgress(0.3);
     }
 }
