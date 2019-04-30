@@ -5,16 +5,17 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="729.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="729.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espressoshock.drinkle.controllers.wrappers.MainViewWrapper">
    <left>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
    </left>
    <top>
       <HBox alignment="TOP_RIGHT" prefHeight="0.0" prefWidth="1000.0" BorderPane.alignment="CENTER_RIGHT">
          <children>
-            <ImageView fitHeight="24.0" fitWidth="44.0" layoutX="938.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+            <Rectangle fx:id="draggableNode" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="22.0" stroke="BLACK" strokeType="INSIDE" width="853.0" />
+            <ImageView fitHeight="24.0" fitWidth="44.0" layoutX="938.0" layoutY="10.0" onMouseClicked="#minimizeProgramAction" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../images/titlebar-icons/minimize.png" />
                </image>
@@ -24,7 +25,7 @@
                   <Image url="@../../images/titlebar-icons/spacer.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="24.0" fitWidth="44.0" layoutX="986.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="24.0" fitWidth="44.0" layoutX="986.0" layoutY="10.0" onMouseClicked="#exitProgramAction" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../images/titlebar-icons/close.png" />
                </image>
