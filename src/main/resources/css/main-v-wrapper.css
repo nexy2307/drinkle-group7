@@ -7,3 +7,11 @@
     -fx-stroke: transparent;
     -fx-fill: transparent;
 }
+
+#lblName{
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    -fx-background-color: blue;
+    -fx-padding: 12;
+    -fx-background-radius: 5em;
+}
