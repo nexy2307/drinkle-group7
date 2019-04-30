@@ -1,6 +1,5 @@
 .root{
     -fx-fill: transparent;
-    -fx-background-color: red;
     -fx-background-radius: 30;
 }
 #draggableNode{
@@ -15,3 +14,4 @@
     -fx-padding: 12;
     -fx-background-radius: 5em;
 }
+/*----------------------------------------*/

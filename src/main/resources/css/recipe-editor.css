@@ -1,0 +1,112 @@
+#recipeEditor {
+    -fx-background-radius: 30;
+   -fx-background-image: url("/images/recipe-editor/background.png");
+    -fx-border-radius: 30;
+    -fx-border-width: 5;
+}
+
+.text-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+#exportGenerate {
+
+}
+
+#titleBar{
+    -fx-background-color: #3f4fa5;
+}
+#rectangle{
+    -fx-fill: transparent;
+}
+
+#btnExport {
+    -fx-background-color: #ef6300;
+    -fx-font-family: "Arial Black";
+    -fx-text-fill: white;
+}
+#btnExport:hover{
+    -fx-background-color: #ef6b02;
+}
+
+
+#btnGenerate {
+    -fx-background-color: #3f4fa5;
+    -fx-font-family: "Arial Black";
+    -fx-text-fill: white;
+}
+
+/*.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: black;
+}*/
+.tab{
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-background-color: #3f4fa5;
+}
+.tab-pane {
+    -fx-tab-min-width:40px;
+    -fx-tab-max-width:40px;
+    -fx-tab-min-height:50px;
+    -fx-tab-max-height:50px;
+}
+.tab:selected{
+    -fx-background-color:#008aff;
+}
+.tab-header{
+
+}
+.tab-header-background{
+    -fx-background-color: #3f4fa5;
+}
+#paneRegion{
+
+}
+#addedIngredients{
+    scrollbar-arrow-color: black;
+    -fx-background-color: transparent;
+    -fx-fill: transparent;
+}
+#vBoxChosenIngredients{
+    -fx-background-color: transparent;
+    -fx-fill: transparent;
+}
+#addedIngredients .viewport, #addedIngredients :vertical {
+    -fx-pref-width: 8;
+    -fx-background-color: transparent;
+}
+#addedIngredients .track{
+
+    -fx-background-color: transparent;
+    -fx-fill: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+#addedIngredients .thumb {
+    -fx-pref-width: 5;
+    -fx-background-color: orange;
+    -fx-background-radius: 5em;
+}
+#addedIngredients .decrement-arrow, .increment-arrow{
+    -fx-background-color:orange;
+}
+#addedIngredients .decrement-arrow:hover, .increment-arrow:hover{
+    -fx-background-color:white;
+}
+#addedIngredients .decrement-button:hover, .increment-button:hover{
+    -fx-background-color: transparent;
+}
+#addedIngredients .progress-bar{
+    -fx-pref-height: 5;
+    -fx-background-color: #b53904;
+    -fx-background-radius: 5;
+
+}
+#addedIngredients .progress-bar .bar {
+    -fx-padding: 1px;
+    -fx-background-insets: 0;
+    -fx-background-color: #ef6b02;
+    -fx-background-radius: 5;
+}
+

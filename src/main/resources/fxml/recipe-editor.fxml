@@ -18,13 +18,12 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="com.espressoshock.drinkle.controllers.RecipeEditor" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="recipeEditor" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/recipe-editor.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espressoshock.drinkle.controllers.RecipeEditor">
    <children>
       <Group id="Left side list of ingredients" layoutX="36.0" layoutY="105.0" />
-      <Group id="Cetner graphics/data" layoutX="276.0" layoutY="113.0">
+      <Group id="Cetner graphics/data" layoutX="257.0" layoutY="105.0">
          <children>
-            <Group id="Chosen Ingredient" layoutX="92.0">
+            <Group id="Chosen Ingredient" layoutX="126.0">
                <children>
                   <Label layoutY="1.0" text="Chosen ingredient:" />
                   <Label fx:id="lblIngredient" layoutX="108.0" text="Name">
@@ -34,7 +33,7 @@
                   </Label>
                </children>
             </Group>
-            <ButtonBar layoutY="439.0" prefHeight="40.0" prefWidth="314.0">
+            <ButtonBar layoutX="30.0" layoutY="440.0" prefHeight="40.0" prefWidth="314.0">
                <buttons>
                   <Button mnemonicParsing="false" onAction="#setText" text="Go to previous">
                      <tooltip>
@@ -48,7 +47,7 @@
                   </Button>
                </buttons>
             </ButtonBar>
-            <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="66.0" layoutY="158.0">
+            <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="100.0" layoutY="182.0">
                <cursor>
                   <Cursor fx:constant="NONE" />
                </cursor>
@@ -59,7 +58,7 @@
                   <Image url="@../images/martini.png" />
                </image>
             </ImageView>
-            <Group id="Volume (center)" layoutX="94.0" layoutY="51.0">
+            <Group id="Volume (center)" layoutX="122.0" layoutY="51.0">
                <children>
                   <Label text="Volume" />
                   <Label fx:id="lblVol" layoutX="8.0" layoutY="18.0" text="0ml">
@@ -69,7 +68,7 @@
                   </Label>
                </children>
             </Group>
-            <Group id="Cost (center)" layoutX="208.0" layoutY="51.0">
+            <Group id="Cost (center)" layoutX="251.0" layoutY="51.0">
                <children>
                   <Label layoutX="2.0" text="Cost" />
                   <Label fx:id="lblCost" layoutY="18.0" text="0.0$">
@@ -79,15 +78,15 @@
                   </Label>
                </children>
             </Group>
-            <ProgressBar fx:id="progressGlass" layoutX="83.0" layoutY="127.0" prefHeight="18.0" prefWidth="163.0" progress="0.0" />
-            <Slider fx:id="slider" blockIncrement="0.01" layoutX="261.0" layoutY="42.0" max="1.0" orientation="VERTICAL">
+            <ProgressBar fx:id="progressGlass" layoutX="117.0" layoutY="127.0" prefHeight="18.0" prefWidth="163.0" progress="0.0" />
+            <Slider fx:id="slider" blockIncrement="0.01" layoutX="301.0" layoutY="42.0" max="1.0" orientation="VERTICAL">
                <tooltip>
                   <Tooltip text="Slide to adjust the volume of the ingredient." />
                </tooltip>
             </Slider>
          </children>
       </Group>
-      <Group id="Right side graphics/data" layoutX="638.0" layoutY="42.0">
+      <Group id="Right side graphics/data" layoutX="729.0" layoutY="44.0">
          <children>
             <Group id="Alc%" layoutX="4.0" layoutY="126.0">
                <children>
@@ -195,7 +194,7 @@
                   <Image url="@../images/folder.png" />
                </image>
             </ImageView>
-            <ScrollPane fx:id="addedIngredients" layoutY="254.0" prefHeight="200.0" prefWidth="179.0">
+            <ScrollPane fx:id="addedIngredients" layoutX="5.0" layoutY="254.0" prefHeight="200.0" prefWidth="179.0">
                <content>
                   <VBox fx:id="vBoxChosenIngredients" prefHeight="200.0" prefWidth="164.0">
                      <children>
@@ -315,12 +314,12 @@
             </ScrollPane>
          </children>
       </Group>
-      <Label fx:id="lblHeader" alignment="CENTER" contentDisplay="CENTER" layoutX="255.0" layoutY="41.0" prefHeight="45.0" prefWidth="356.0">
+      <Label fx:id="lblHeader" alignment="CENTER" contentDisplay="CENTER" layoutX="287.0" layoutY="41.0" prefHeight="45.0" prefWidth="356.0">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <ScrollPane id="Chose ingredient list" layoutX="43.0" layoutY="111.0" prefHeight="472.0" prefWidth="196.0">
+      <ScrollPane id="Chose ingredient list" layoutX="43.0" layoutY="103.0" prefHeight="472.0" prefWidth="196.0">
          <content>
             <VBox fx:id="vBoxChosenIngredients1" prefHeight="200.0" prefWidth="164.0">
                <children>
@@ -652,7 +651,7 @@
             </VBox>
          </content>
       </ScrollPane>
-      <Group id="Export Generate" fx:id="exportGenerate" layoutX="663.0" layoutY="519.0">
+      <Group id="Export Generate" fx:id="exportGenerate" layoutX="726.0" layoutY="518.0">
          <children>
             <Button fx:id="btnExport" mnemonicParsing="false" prefHeight="28.0" prefWidth="142.0" text="Export">
                <tooltip>

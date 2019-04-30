@@ -23,6 +23,8 @@ public class RecipeEditor implements Initializable {
     Label lblVol, lblCost, lblHeader, lblIngredient;
     @FXML
     VBox vBoxChosenIngredients;
+    @FXML
+    private BorderPane borderPane;
 
     public void choseIngredient(Event event) {
         Label lbl = (Label) event.getSource();
