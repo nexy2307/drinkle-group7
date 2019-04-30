@@ -1,14 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.espressoshock.drinkle.controllers.wrappers.MainViewWrapper"
-            fx:id="loadingPane">
 
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="729.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </left>
+   <top>
+      <HBox alignment="TOP_RIGHT" prefHeight="0.0" prefWidth="1000.0" BorderPane.alignment="CENTER_RIGHT">
+         <children>
+            <ImageView fitHeight="24.0" fitWidth="44.0" layoutX="938.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/titlebar-icons/minimize.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="24.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/titlebar-icons/spacer.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="24.0" fitWidth="44.0" layoutX="986.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/titlebar-icons/close.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="24.0" fitWidth="44.0" layoutX="986.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/titlebar-icons/spacer.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

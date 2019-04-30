@@ -1,0 +1,5 @@
+.root{
+    -fx-fill: transparent;
+    -fx-background-color: red;
+    -fx-background-radius: 30;
+}
