@@ -2,13 +2,28 @@ package com.espressoshock.drinkle.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.event.Event;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
+import javafx.scene.shape.Rectangle;
 
+import java.net.URL;
 import java.text.NumberFormat;
+import java.util.ResourceBundle;
 
-public class RecipeEditor {
-    
+public class RecipeEditor implements Initializable {
+    @FXML
+    Slider slider;
+    @FXML
+    ProgressBar progressGlass, testBar;
+    @FXML
+    Label lblVol, lblCost, lblHeader, lblIngredient;
+    @FXML
+    VBox vBoxChosenIngredients;
+
     public void choseIngredient(Event event) {
         Label lbl = (Label) event.getSource();
         String s = lbl.getText();
@@ -36,5 +51,10 @@ public class RecipeEditor {
 
         });
 
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        sliderProgressChange();
     }
 }

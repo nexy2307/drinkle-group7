@@ -19,7 +19,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="com.espressoshock.drinkle.controllers.RecipeEditor" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Group id="Left side list of ingredients" layoutX="36.0" layoutY="105.0" />
       <Group id="Cetner graphics/data" layoutX="276.0" layoutY="113.0">
