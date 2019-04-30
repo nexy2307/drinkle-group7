@@ -67,11 +67,11 @@ public class MainViewWrapper {
     }
     @FXML
     private void menu1(Event mouseEvent){
-        loadScene("/fxml/recipe-editor.fxml");
+        loadScene("/fxml/menu2.fxml");
     }
     @FXML
     private void menu2(Event mouseEvent){
-        loadScene("/fxml/menu2.fxml");
+        loadScene("/fxml/recipe-editor.fxml");
     }
     @FXML
     private void menu3(Event mouseEvent){
@@ -98,7 +98,9 @@ public class MainViewWrapper {
         }
         borderPane.setCenter(root);
     }
-
+    private void setGraphics(){
+        
+    }
     @FXML
     public void initialize() throws IOException {
         //fields loaded here -> check if logged/remembered is checked etc...
