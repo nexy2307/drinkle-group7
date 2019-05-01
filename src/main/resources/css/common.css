@@ -1,0 +1,9 @@
+/********* COMMON STYLES */
+.h1{
+    -fx-font-size: 30;
+    -fx-font-family: 'Lato Bold';
+}
+
+.orange-accent-text{
+    -fx-fill: #fd5815;
+}

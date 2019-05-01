@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.SVGPath?>
 
-
-<AnchorPane prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espressoshock.drinkle.controllers.auth.AuthLogin">
+<AnchorPane prefHeight="729.0" prefWidth="1000.0" styleClass="foreground-bg" stylesheets="/css/auth.css, /css/common.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espressoshock.drinkle.controllers.auth.AuthLogin">
    <children>
-      
+   
+       <SVGPath content="M583.000,729.000 L563.000,729.000 L527.000,729.000 L51.000,729.000 C51.000,729.000 -0.000,532.489 -0.000,343.521 C-0.000,168.526 51.000,-0.000 51.000,-0.000 L563.000,-0.000 C563.000,-0.000 563.001,-0.000 563.001,-0.000 L583.000,-0.000 L583.000,729.000 Z" layoutX="417.0" styleClass="rx-illustration-svg" />
+      <Pane layoutX="56.0" layoutY="132.0" prefHeight="513.0" prefWidth="337.0">
+         <children>
+            <Text  layoutX="14.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome">
+               <styleClass>
+                  <String fx:value="h1" />
+                  <String fx:value="orange-accent-text" />
+               </styleClass></Text>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
