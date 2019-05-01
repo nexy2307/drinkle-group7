@@ -65,27 +65,27 @@ public class MainViewWrapper {
         });
     }
     @FXML
-    private void menu1(Event mouseEvent){
+    private void menu1(){
         loadScene("/fxml/menu2.fxml");
     }
     @FXML
-    private void menu2(Event mouseEvent){
+    private void menu2(){
         loadScene("/fxml/recipe-editor.fxml");
     }
     @FXML
-    private void menu3(Event mouseEvent){
+    private void menu3(){
         borderPane.setCenter(null);
     }
     @FXML
-    private void menu4(Event mouseEvent){
+    private void menu4(){
         borderPane.setCenter(null);
     }
     @FXML
-    private void menu5(Event mouseEvent){
+    private void menu5(){
         borderPane.setCenter(null);
     }
     @FXML
-    private void menu6(Event mouseEvent){
+    private void menu6(){
         borderPane.setCenter(null);
     }
     private void loadScene(String path){
@@ -109,8 +109,8 @@ public class MainViewWrapper {
     public void initialize() throws IOException {
         //fields loaded here -> check if logged/remembered is checked etc...
 
-        boolean auth = false;
-        /*if(auth){
+        /*boolean auth = false;
+        if(auth){
             //logged show main ui
         } else{
             //not logged - load auth-default
@@ -121,6 +121,7 @@ public class MainViewWrapper {
         addDraggableNode(draggableNode);
         clipChildren(borderPane, 60);
         setGraphics();
+        menu1();
     }
 
 }
