@@ -1,9 +1,9 @@
 package com.espressoshock.drinkle.controllers.wrappers;
 
-import static com.espressoshock.drinkle.AppState.UserState.loggedIn;
-import static com.espressoshock.drinkle.AppState.UserState.loggedOut;
+import static com.espressoshock.drinkle.appState.UserState.loggedIn;
+import static com.espressoshock.drinkle.appState.UserState.loggedOut;
 
-import com.espressoshock.drinkle.AppState.Current;
+import com.espressoshock.drinkle.appState.Current;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;

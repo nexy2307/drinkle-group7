@@ -1,4 +1,4 @@
-package com.espressoshock.drinkle.AppState;
+package com.espressoshock.drinkle.appState;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

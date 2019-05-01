@@ -1,3 +1,3 @@
-package com.espressoshock.drinkle.AppState;
+package com.espressoshock.drinkle.appState;
 
 public enum UserState {loggedIn, loggedOut}
