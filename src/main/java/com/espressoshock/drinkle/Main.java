@@ -18,6 +18,18 @@ public class Main extends Application {
         //RESOURCE LOADING //***********
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/wrappers/main-v-wrapper.fxml"));
         //FONT LOADING //***********
+        this.loadFonts();
+
+        primaryStage.setTitle("Drinkle");
+        primaryStage.setScene(new Scene(root, 1000, 729));
+        primaryStage.setResizable(false);
+        primaryStage.show();
+    }
+
+
+
+    private void loadFonts(){
+        //LATO//***********
         Font.loadFont(getClass().getResource("/fonts/Lato-Black.ttf").toExternalForm(), 10);
         Font.loadFont(getClass().getResource("/fonts/Lato-BlackItalic.ttf").toExternalForm(), 10);
         Font.loadFont(getClass().getResource("/fonts/Lato-Bold.ttf").toExternalForm(), 10);
@@ -26,10 +38,6 @@ public class Main extends Application {
         Font.loadFont(getClass().getResource("/fonts/Lato-Light.ttf").toExternalForm(), 10);
         Font.loadFont(getClass().getResource("/fonts/Lato-LightItalic.ttf").toExternalForm(), 10);
         Font.loadFont(getClass().getResource("/fonts/Lato-Regular.ttf").toExternalForm(), 10);
-
-        primaryStage.setTitle("Drinkle");
-        primaryStage.setScene(new Scene(root, 1000, 729));
-        primaryStage.setResizable(false);
-        primaryStage.show();
+        //END LATO//***********
     }
 }
