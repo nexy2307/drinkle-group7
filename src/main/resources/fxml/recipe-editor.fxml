@@ -16,12 +16,13 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="recipeEditor" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/recipe-editor.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espressoshock.drinkle.controllers.RecipeEditor">
+<AnchorPane fx:id="recipeEditor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="935.0" stylesheets="@../css/recipe-editor.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espressoshock.drinkle.controllers.RecipeEditor">
    <children>
       <Group id="Left side list of ingredients" layoutX="36.0" layoutY="105.0" />
-      <Group id="Cetner graphics/data" layoutX="257.0" layoutY="105.0">
+      <Group id="Cetner graphics/data" layoutX="258.0" layoutY="121.0">
          <children>
             <Group id="Chosen Ingredient" layoutX="126.0">
                <children>
@@ -33,7 +34,7 @@
                   </Label>
                </children>
             </Group>
-            <ButtonBar layoutX="30.0" layoutY="440.0" prefHeight="40.0" prefWidth="314.0">
+            <ButtonBar layoutX="30.0" layoutY="535.0" prefHeight="40.0" prefWidth="314.0">
                <buttons>
                   <Button mnemonicParsing="false" onAction="#setText" text="Go to previous">
                      <tooltip>
@@ -47,7 +48,7 @@
                   </Button>
                </buttons>
             </ButtonBar>
-            <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="100.0" layoutY="182.0">
+            <ImageView fitHeight="349.0" fitWidth="365.0" layoutX="22.0" layoutY="182.0">
                <cursor>
                   <Cursor fx:constant="NONE" />
                </cursor>
@@ -55,7 +56,7 @@
                   <Glow />
                </effect>
                <image>
-                  <Image url="@../images/martini.png" />
+                  <Image url="@../images/recipe-editor/martini.png" />
                </image>
             </ImageView>
             <Group id="Volume (center)" layoutX="122.0" layoutY="51.0">
@@ -86,7 +87,8 @@
             </Slider>
          </children>
       </Group>
-      <Group id="Right side graphics/data" layoutX="729.0" layoutY="44.0">
+      <SVGPath fx:id="highlight" content="M36.7,719.7c-23.3-106-36.6-245-36.6-382.2c0-112.8,12.5-223.3,38.2-337.4c39.8,0,69.6,0.1,98.4,0.1c28.6,0,58.1,0.1,97.4,0.1v719c-39.3,0-69.2,0.1-98.2,0.2C106.7,719.6,76.5,719.7,36.7,719.7z" layoutX="701.0" layoutY="-2.0" translateY="0.8" />
+      <Group id="Right side graphics/data" layoutX="739.0" layoutY="44.0">
          <children>
             <Group id="Alc%" layoutX="4.0" layoutY="126.0">
                <children>
@@ -191,10 +193,10 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
                <image>
-                  <Image url="@../images/folder.png" />
+                  <Image url="@../images/recipe-editor/folder.png" />
                </image>
             </ImageView>
-            <ScrollPane fx:id="addedIngredients" layoutX="5.0" layoutY="254.0" prefHeight="200.0" prefWidth="179.0">
+            <ScrollPane fx:id="addedIngredients" layoutX="4.0" layoutY="266.0" prefHeight="228.0" prefWidth="179.0">
                <content>
                   <VBox fx:id="vBoxChosenIngredients" prefHeight="200.0" prefWidth="164.0">
                      <children>
@@ -314,12 +316,12 @@
             </ScrollPane>
          </children>
       </Group>
-      <Label fx:id="lblHeader" alignment="CENTER" contentDisplay="CENTER" layoutX="287.0" layoutY="41.0" prefHeight="45.0" prefWidth="356.0">
+      <Label fx:id="lblHeader" alignment="CENTER" contentDisplay="CENTER" layoutX="287.0" layoutY="46.0" prefHeight="45.0" prefWidth="356.0">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <ScrollPane id="Chose ingredient list" layoutX="43.0" layoutY="103.0" prefHeight="472.0" prefWidth="196.0">
+      <ScrollPane id="Chose ingredient list" layoutX="43.0" layoutY="117.0" prefHeight="569.0" prefWidth="196.0">
          <content>
             <VBox fx:id="vBoxChosenIngredients1" prefHeight="200.0" prefWidth="164.0">
                <children>
@@ -651,14 +653,14 @@
             </VBox>
          </content>
       </ScrollPane>
-      <Group id="Export Generate" fx:id="exportGenerate" layoutX="726.0" layoutY="518.0">
+      <Group id="Export Generate" fx:id="exportGenerate" layoutX="738.0" layoutY="592.0">
          <children>
-            <Button fx:id="btnExport" mnemonicParsing="false" prefHeight="28.0" prefWidth="142.0" text="Export">
+            <Button fx:id="btnExport" mnemonicParsing="false" prefHeight="34.0" prefWidth="170.0" text="Export">
                <tooltip>
                   <Tooltip text="Export recipe" />
                </tooltip>
             </Button>
-            <Button fx:id="btnGenerate" layoutX="1.0" layoutY="38.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="142.0" text="Generate">
+            <Button fx:id="btnGenerate" layoutX="1.0" layoutY="38.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="169.0" text="Generate">
                <tooltip>
                   <Tooltip text="Export recipe" />
                </tooltip>

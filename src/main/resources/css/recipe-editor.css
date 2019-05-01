@@ -38,33 +38,10 @@
     -fx-font-family: "Arial Black";
     -fx-text-fill: white;
 }
+#highlight{
+-fx-fill: #ef4a00;
+}
 
-/*.tab-pane .tab-header-area .tab-header-background {
-    -fx-background-color: black;
-}*/
-.tab{
-    -fx-background-radius: 30;
-    -fx-border-radius: 30;
-    -fx-background-color: #3f4fa5;
-}
-.tab-pane {
-    -fx-tab-min-width:40px;
-    -fx-tab-max-width:40px;
-    -fx-tab-min-height:50px;
-    -fx-tab-max-height:50px;
-}
-.tab:selected{
-    -fx-background-color:#008aff;
-}
-.tab-header{
-
-}
-.tab-header-background{
-    -fx-background-color: #3f4fa5;
-}
-#paneRegion{
-
-}
 #addedIngredients{
     scrollbar-arrow-color: black;
     -fx-background-color: transparent;
