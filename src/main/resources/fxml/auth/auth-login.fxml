@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.net.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.shape.*?>
 <?import java.lang.*?>
@@ -7,18 +10,71 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.SVGPath?>
 
-<AnchorPane prefHeight="729.0" prefWidth="1000.0" styleClass="foreground-bg" stylesheets="/css/auth.css, /css/common.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espressoshock.drinkle.controllers.auth.AuthLogin">
+<AnchorPane maxHeight="749.0" maxWidth="1000.0" prefHeight="729.0" prefWidth="1000.0" styleClass="foreground-bg" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espressoshock.drinkle.controllers.auth.AuthLogin">
    <children>
    
-       <SVGPath content="M583.000,729.000 L563.000,729.000 L527.000,729.000 L51.000,729.000 C51.000,729.000 -0.000,532.489 -0.000,343.521 C-0.000,168.526 51.000,-0.000 51.000,-0.000 L563.000,-0.000 C563.000,-0.000 563.001,-0.000 563.001,-0.000 L583.000,-0.000 L583.000,729.000 Z" layoutX="417.0" styleClass="rx-illustration-svg" />
-      <Pane layoutX="56.0" layoutY="132.0" prefHeight="513.0" prefWidth="337.0">
+       <SVGPath content="M583.000,729.000 L563.000,729.000 L527.000,729.000 L51.000,729.000 C51.000,729.000 -0.000,532.489 -0.000,343.521 C-0.000,168.526 51.000,-0.000 51.000,-0.000 L563.000,-0.000 C563.000,-0.000 563.001,-0.000 563.001,-0.000 L583.000,-0.000 L583.000,729.000 Z" layoutX="417.0" styleClass="svg-orange-fill" />
+       <SVGPath content="M35.500,202.000 C26.827,202.000 18.294,201.401 9.932,200.267 C24.770,86.685 51.000,-0.000 51.000,-0.000 L223.514,-0.000 C223.829,4.460 224.000,8.960 224.000,13.500 C224.000,117.606 139.606,202.000 35.500,202.000 Z" layoutX="417.0" styleClass="svg-bg-composition" />
+       <SVGPath content="M126.000,558.084 L1.000,537.000 L-0.000,419.000 L0.072,418.920 C0.047,418.447 -0.000,417.979 -0.000,417.500 C-0.000,402.843 11.476,390.898 25.929,390.079 L26.000,390.000 L71.000,390.000 L71.909,388.961 C82.292,386.059 90.174,377.231 91.701,366.342 L92.000,366.000 L92.000,23.000 L92.107,22.889 C93.091,11.143 102.186,1.725 113.779,0.230 L114.000,0.000 L126.000,0.000 L126.000,558.084 Z" layoutX="874.0" layoutY="119.0" opacity="0.5" styleClass="svg-bg-composition" />
+       <SVGPath content="M143.000,528.000 L0.924,528.000 L-0.000,419.000 L0.072,418.920 C0.047,418.447 -0.000,417.979 -0.000,417.500 C-0.000,402.843 11.476,390.898 25.929,390.079 L26.000,390.000 L71.000,390.000 L71.909,388.961 C82.292,386.059 90.174,377.231 91.701,366.342 L92.000,366.000 L92.000,23.000 L92.106,22.889 C93.091,11.143 102.186,1.725 113.779,0.230 L114.000,0.000 L163.000,0.000 L163.000,508.000 C163.000,519.046 154.046,528.000 143.000,528.000 Z" layoutX="837.0" layoutY="201.0" styleClass="svg-bg-composition" />
+
+      <ImageView disable="true" fitHeight="638.0" fitWidth="1005.0" layoutX="-15.0" layoutY="7.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/auth/ref.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="47.0" layoutY="144.0" prefHeight="413.0" prefWidth="349.0">
          <children>
-            <Text  layoutX="14.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome">
-               <styleClass>
-                  <String fx:value="h1" />
-                  <String fx:value="orange-accent-text" />
-               </styleClass></Text>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="6.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/auth/welcome@2x.png" />
+               </image>
+            </ImageView>
+            <VBox layoutX="12.0" layoutY="133.0" prefHeight="53.0" prefWidth="275.0" spacing="5.0">
+               <children>
+                  <Label styleClass="textfield-label" text="Email" />
+                  <TextField prefHeight="34.0" prefWidth="275.0" />
+               </children>
+            </VBox>
+            <VBox layoutX="12.0" layoutY="210.0" prefHeight="53.0" prefWidth="275.0" spacing="5.0">
+               <children>
+                  <Label styleClass="textfield-label" text="Password" />
+                  <PasswordField prefHeight="34.0" prefWidth="275.0" />
+               </children>
+            </VBox>
+            <HBox layoutX="12.0" layoutY="290.0" prefHeight="21.0" prefWidth="275.0" spacing="45.0">
+               <children>
+                  <CheckBox fx:id="rememberMe_Cb" mnemonicParsing="false" styleClass="inactive-grey" text="Remember me" />
+                  <Label fx:id="forgotPassword_Lbl" styleClass="font-bold" text="Forgot your password?" />
+               </children>
+            </HBox>
+            <ImageView fitHeight="65.0" fitWidth="265.0" layoutX="18.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/auth/login-btn@2x.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
+      <VBox layoutX="576.0" layoutY="226.0" prefHeight="281.0" prefWidth="304.0" spacing="25.0">
+         <children>
+            <ImageView fitHeight="195.0" fitWidth="288.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/auth/illustration-placeholder@2x.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="65.0" fitWidth="265.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/auth/registration-btn@2x.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="2.0" />
+               </VBox.margin>
+            </ImageView>
+         </children>
+      </VBox>
    </children>
+   <stylesheets>
+      <URL value="@../../css/auth.css" />
+      <URL value="@../../css/common.css" />
+   </stylesheets>
 </AnchorPane>

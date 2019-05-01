@@ -7,12 +7,12 @@
 
 .h1{
     -fx-font-size: 30;
-    -fx-font-family: 'Lato Black';
 }
 
 
 .font-black{
     -fx-font-family: 'Lato Black';
+    -fx-font-weight: 900;
 }
 
 .font-bold{

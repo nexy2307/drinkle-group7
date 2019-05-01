@@ -2,6 +2,52 @@
     -fx-background-color: #e7e9f0;
 }
 
-.rx-illustration-svg{
+.svg-orange-fill{
     -fx-fill: #fd5815;
+}
+.svg-bg-composition{
+    -fx-fill: #e45014;
+}
+
+.h1-subtitle{
+    -fx-font-size: 18;
+    -fx-text-fill: #b69e9c;
+}
+.textfield-label{
+    -fx-font-family: 'Lato Light';
+    -fx-font-size: 12;
+    -fx-text-fill: #999ec0;
+}
+.text-field{
+    -fx-background-color: #d7dae3;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+#forgotPassword_Lbl{
+    -fx-text-fill: #909fe9;
+
+}
+
+#rememberMe_Cb .box{
+    -fx-background-color: #d7dae3;
+}
+
+#rememberMe_Cb:selected .box{
+    -fx-background-color: #fd5815;
+
+}
+
+#rememberMe_Cb:selected .mark{
+    -fx-mark-color: transparent;
+    -fx-focused-mark-color: transparent;
+}
+
+.custom{
+    -fx-font-family: 'Lato Light Italic';
+}
+
+
+.rx-illustration-g1-svg{
+
 }
