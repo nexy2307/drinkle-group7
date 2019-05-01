@@ -28,7 +28,10 @@
 }
 #toolBar .button:focused{
     -fx-background-color: #3f7aa5;
-    -fx-background-radius: 100;
+    -fx-background-radius: 10;
+    -fx-background-insets: 0;
+    -fx-border-width: 0 0 0 10;
+    -fx-border-color: white;
 }
 #titleBar{
     -fx-background-color:#3f4fa5;
