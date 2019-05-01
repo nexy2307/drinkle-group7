@@ -39,12 +39,17 @@ public class RecipeEditor implements Initializable {
     }
     private void sliderProgressChange(){
         slider.valueProperty().addListener((arg0, arg1, arg2) -> {
-            String strDouble = String.format("%.2f", slider.getValue());
-            Double volume = Double.parseDouble(strDouble)*100;
-            String cost = String.format("%.2f", volume*0.0315);
-            progressGlass.setProgress(Double.parseDouble(strDouble));
-            lblVol.setText(String.valueOf(volume.intValue()));
-            lblCost.setText(cost+"$");
+            try {
+                String strDouble = String.format("%.2f", slider.getValue());
+                Double volume = Double.parseDouble(strDouble) * 100;
+                String cost = String.format("%.2f", volume * 0.0315);
+                progressGlass.setProgress(Double.parseDouble(strDouble));
+                lblVol.setText(String.valueOf(volume.intValue()));
+                lblCost.setText(cost + "$");
+            } catch(NumberFormatException ex) {
+                //throws exception only on MacOS.
+                System.out.println(ex);
+            }
         });
 
     }
