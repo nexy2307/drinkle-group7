@@ -1,9 +1,39 @@
 /********* COMMON STYLES */
+
+/********* =FONTS */
+*{
+    -fx-font-family: 'Lato Regular';
+}
+
 .h1{
     -fx-font-size: 30;
-    -fx-font-family: 'Lato Bold';
+    -fx-font-family: 'Lato Black';
 }
+
+
+.font-black{
+    -fx-font-family: 'Lato Black';
+}
+
+.font-bold{
+    -fx-font-family: 'Lato';
+    -fx-font-weight: 700;
+}
+
+
+.font-light{
+    -fx-font-family: 'Lato Light';
+}
+
+/********* END =FONTS */
+
+
 
 .orange-accent-text{
     -fx-fill: #fd5815;
+    -fx-text-fill: #fd5815;
+}
+
+.inactive-grey{
+    -fx-text-fill: #bbbec6;
 }
