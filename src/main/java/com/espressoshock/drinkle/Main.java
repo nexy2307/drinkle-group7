@@ -29,6 +29,7 @@ public class Main extends Application {
 
         primaryStage.setTitle("Drinkle");
         primaryStage.setScene(new Scene(root, 1000, 729));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 }
