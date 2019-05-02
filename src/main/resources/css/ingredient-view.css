@@ -1,0 +1,16 @@
+.button {
+    -fx-background-color: #1337ff;
+    -fx-border-color: #1643ff;
+    -fx-progress-color: blue;
+}
+.text-field {
+    -fx-background-color: #ffb2b3;
+}
+.combo-box{
+    -fx-background-color: #ff6e5a;
+    -fx-border-color: #ff6e5a;
+}
+#btnCreate{
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}

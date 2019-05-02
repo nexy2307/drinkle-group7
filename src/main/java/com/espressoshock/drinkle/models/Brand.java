@@ -3,12 +3,12 @@ package com.espressoshock.drinkle.models;
 public class Brand {
     private String name;
     private String description;
-    private String brandColor;
+    private IngredientCategory productType;
 
-    public Brand(String name, String description, String brandColor) {
+    public Brand(String name, String description, IngredientCategory productType) {
         this.name = name;
         this.description = description;
-        this.brandColor = brandColor;
+        this.productType = productType;
     }
 
     public String getName() {
@@ -19,8 +19,6 @@ public class Brand {
         return description;
     }
 
-    public String getBrandColor() {
-        return brandColor;
+    public IngredientCategory getProductType() { return productType;
     }
-
 }
