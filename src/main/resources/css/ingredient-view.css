@@ -14,3 +14,8 @@
     -fx-background-radius: 10;
     -fx-border-radius: 10;
 }
+#btnAddToInventory{
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-background-color: #ff7028;
+}

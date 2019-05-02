@@ -8,7 +8,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
@@ -47,33 +46,35 @@ public class IngredientViewController implements Initializable {
     private TextArea txtAreaDescription;
     @FXML
     private ImageView imgRecipient,imgCornerUp,imgCornerDown;
+    @FXML
+    private TextField txtFieldMoreFrom;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        typesList.add(IngredientCategory.WINE);
-        typesList.add(IngredientCategory.BEER);
-        typesList.add(IngredientCategory.BRANDY);
-        typesList.add(IngredientCategory.CIDER);
-        typesList.add(IngredientCategory.JUICE);
-        typesList.add(IngredientCategory.ICE_TYPE);
-        typesList.add(IngredientCategory.GLASSWARE);
-        typesList.add(IngredientCategory.GARNISH);
-        typesList.add(IngredientCategory.GIN);
-        typesList.add(IngredientCategory.LIQUEUR);
-        typesList.add(IngredientCategory.POWDER);
-        typesList.add(IngredientCategory.RUM);
-        typesList.add(IngredientCategory.SYRUP);
-        typesList.add(IngredientCategory.TEQUILA);
-        typesList.add(IngredientCategory.VERMOUTH);
-        typesList.add(IngredientCategory.VODKA);
-        typesList.add(IngredientCategory.WATER);
-        typesList.add(IngredientCategory.WARM_DRINK);
-        typesList.add(IngredientCategory.WHISKEY);
-        typesList.add(IngredientCategory.BITTER);
-        typesList.add(IngredientCategory.FRUIT);
-        typesList.add(IngredientCategory.DAIRY_PRODUCT);
+        setTypesList();
+        setBrandsList();
 
+        comboBoxTypes.setItems(ingredientsType);
+        comboBoxTypes.getItems().addAll();
+        comboBoxBrands.getItems().addAll();
+
+        txtFieldSearchOptions.setOnAction(e->{});
+        txtFieldMoreFrom.setOnAction(e->{});
+
+        btnCreate.setOnAction(e->{});
+
+    }
+    public void setTxtFieldMoreFrom(){}
+    public void setImageRecipient(){}
+    public void setImageCornerUp(){}
+    public void setImageCornerDown(){}
+    public void setTxtAreaDescription(){}
+    public void setVBox(){}
+    public String readComboBoxBrands(ActionEvent event){String brand="product brand"; return brand;}
+    public String readComboBoxTypes(ActionEvent event){String type="product type"; return type;}
+    public char[] readTxtFieldSearchOptions(){char[] text = new char[1]; return text;}
+    public void setBrandsList(){
         brandsList.add(new Brand("Absolute","Vodka",IngredientCategory.VODKA));
         brandsList.add(new Brand("Grey Goose","Vodka",IngredientCategory.VODKA));
         brandsList.add(new Brand("Black Cow","Vodka",IngredientCategory.VODKA));
@@ -213,27 +214,32 @@ public class IngredientViewController implements Initializable {
         brandsList.add(new Brand("Cinnamon","Powder",IngredientCategory.POWDER));
         brandsList.add(new Brand("Sugar","Powder",IngredientCategory.POWDER));
         brandsList.add(new Brand("Cocoa","Powder",IngredientCategory.POWDER));*/
-
-
-
-
-
-
-
-
-
-
-
-        comboBoxTypes.setItems(ingredientsType);
-        comboBoxTypes.getItems().addAll();
-        comboBoxBrands.getItems().addAll();
-
-
-        txtFieldSearchOptions.setOnAction(e->{});
-
-        btnCreate.setOnAction(e->{});
-
-
+    }
+    public void setTypesList(){
+        typesList.add(IngredientCategory.WINE);
+        typesList.add(IngredientCategory.BEER);
+        typesList.add(IngredientCategory.BRANDY);
+        typesList.add(IngredientCategory.CIDER);
+        typesList.add(IngredientCategory.JUICE);
+        typesList.add(IngredientCategory.ICE_TYPE);
+        typesList.add(IngredientCategory.GLASSWARE);
+        typesList.add(IngredientCategory.GARNISH);
+        typesList.add(IngredientCategory.GIN);
+        typesList.add(IngredientCategory.LIQUEUR);
+        typesList.add(IngredientCategory.POWDER);
+        typesList.add(IngredientCategory.RUM);
+        typesList.add(IngredientCategory.SYRUP);
+        typesList.add(IngredientCategory.TEQUILA);
+        typesList.add(IngredientCategory.VERMOUTH);
+        typesList.add(IngredientCategory.VODKA);
+        typesList.add(IngredientCategory.WATER);
+        typesList.add(IngredientCategory.WARM_DRINK);
+        typesList.add(IngredientCategory.WHISKEY);
+        typesList.add(IngredientCategory.BITTER);
+        typesList.add(IngredientCategory.FRUIT);
+        typesList.add(IngredientCategory.DAIRY_PRODUCT);
+    }
+    public void setOnActionIngredientsVBox(){
         button1.setOnAction(e->{});
         button2.setOnAction(e->{});
         button3.setOnAction(e->{});
@@ -283,12 +289,4 @@ public class IngredientViewController implements Initializable {
         button47.setOnAction(e->{});
         button48.setOnAction(e->{});
     }
-    public void setImageRecipient(){}
-    public void setImageCornerUp(){}
-    public void setImageCornerDown(){}
-    public void setTxtAreaDescription(){}
-    public void setVBox(){}
-    public String readComboBoxBrands(ActionEvent event){String brand="product brand"; return brand;}
-    public String readComboBoxTypes(ActionEvent event){String type="product type"; return type;}
-    public char[]  readTxtFieldSearchOptions(){char[] text = new char[1]; return text;}
 }
