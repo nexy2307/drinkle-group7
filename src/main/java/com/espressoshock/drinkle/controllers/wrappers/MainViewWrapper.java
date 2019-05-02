@@ -113,6 +113,10 @@ public class MainViewWrapper {
     @FXML
     public void initialize() throws IOException {
         //fields loaded here -> check if logged/remembered is checked etc...
+        addDraggableNode(draggableNode);
+        clipChildren(borderPane, 60);
+        setGraphics();
+        menu1();
         boolean auth = false;
         if(auth){
         if (Current.environment.userStatus.equals(loggedIn)) {
@@ -122,10 +126,7 @@ public class MainViewWrapper {
             Pane authLogin = FXMLLoader.load(getClass().getResource("/fxml/auth/auth-login.fxml"));
             this.loadingPane.getChildren().add(authLogin);
         }
-        addDraggableNode(draggableNode);
-        clipChildren(borderPane, 60);
-        setGraphics();
-        menu1();
+
         }
     }
 }
