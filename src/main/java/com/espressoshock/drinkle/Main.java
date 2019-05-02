@@ -12,6 +12,9 @@ import java.io.IOException;
 
 public class Main extends Application {
 
+    private static final int windowWidth = 1000;
+    private static final int windowHeight = 729;
+
     public static void main(String[] args) {
         launch(args);
     }
@@ -20,8 +23,9 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws IOException {
         //RESOURCE LOADING //***********
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/wrappers/main-v-wrapper.fxml"));
-        //Parent root = FXMLLoader.load(getClass().getResource("/fxml/recipe-editor.fxml"));
-        Scene scene = new Scene(root);
+
+        //WINDOW  //***********
+        Scene scene = new Scene(root,windowWidth,windowHeight);
         scene.setFill(Color.TRANSPARENT);
         scene.getStylesheets().add(getClass().getResource("/css/main-v-wrapper.css").toExternalForm());
         primaryStage.initStyle(StageStyle.TRANSPARENT);
@@ -39,4 +43,6 @@ public class Main extends Application {
         Font.loadFont(getClass().getResource("/fonts/Lato-Regular.ttf").toExternalForm(), 10);
 
     }
+
+
 }

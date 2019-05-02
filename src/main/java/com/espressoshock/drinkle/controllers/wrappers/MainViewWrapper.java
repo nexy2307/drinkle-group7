@@ -5,6 +5,7 @@ import javafx.event.Event;
 import static com.espressoshock.drinkle.appState.UserState.loggedIn;
 import static com.espressoshock.drinkle.appState.UserState.loggedOut;
 import com.espressoshock.drinkle.appState.Current;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -128,5 +129,10 @@ public class MainViewWrapper {
         }
 
         }
+    }
+
+    @FXML
+    public void closeWindow(Event e){
+        System.exit(0);
     }
 }
