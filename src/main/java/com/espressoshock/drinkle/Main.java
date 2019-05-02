@@ -3,11 +3,17 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
 import java.io.IOException;
 
 public class Main extends Application {
+
+    private static final int windowWidth = 1000;
+    private static final int windowHeight = 729;
 
     public static void main(String[] args) {
         launch(args);
@@ -17,19 +23,17 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws IOException {
         //RESOURCE LOADING //***********
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/wrappers/main-v-wrapper.fxml"));
-        //FONT LOADING //***********
+        //WINDOW  //***********
+        Scene mainScene = new Scene(root, windowWidth, windowHeight);
+        mainScene.setFill(Color.TRANSPARENT);
+        primaryStage.initStyle(StageStyle.TRANSPARENT);
 
 
         primaryStage.setTitle("Drinkle");
-        primaryStage.setScene(new Scene(root, 1000, 729));
+        primaryStage.setResizable(false);
+        primaryStage.setScene(mainScene);
         primaryStage.show();
     }
 
-    private void loadFonts(){
-        //VEGUR//***********
-        Font.loadFont(getClass().getResource("/fonts/Vegur-Bold.ttf").toExternalForm(), 10);
-        Font.loadFont(getClass().getResource("/fonts/Vegur-Light.ttf").toExternalForm(), 10);
-        Font.loadFont(getClass().getResource("/fonts/Vegur-Regular.ttf").toExternalForm(), 10);
-        //END VEGUR//***********
-    }
+
 }
