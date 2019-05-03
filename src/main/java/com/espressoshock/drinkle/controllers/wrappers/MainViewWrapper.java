@@ -7,6 +7,7 @@ import com.espressoshock.drinkle.appState.Current;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -41,24 +42,58 @@ public class MainViewWrapper {
             Window.currentX = currentX;
         }
     }
-    /********* END =WINDOW          */
 
+
+    /********* =VIEW LOADER */
+    public static class ViewLoader{
+        private static AnchorPane loadingWrapper;
+
+
+        public Pane getView(ViewPaths viewPath) throws IOException{
+            return FXMLLoader.load(getClass().getResource(viewPath.getPath()));
+        }
+
+        public void load(ViewPaths viewPath) throws IOException{
+            loadingWrapper.getChildren().add(getView(viewPath));
+        }
+
+        public void load(ViewPaths viewPath, double offsetX, double offsetY) throws IOException{
+            Pane view = getView(viewPath);
+            view.setLayoutX(offsetX);
+            view.setLayoutY(offsetY);
+            loadingWrapper.getChildren().add(view);
+        }
+
+    }
+    /********* =END VIEW LOADER */
+
+
+    /********* =COMPONENT INJECTION FIELD */
     @FXML
     private AnchorPane loadingPane;
+    /********* END =COMPONENT INJECTION FIELD */
+
+    /********* =TEMPORARY */
+    private ViewLoader viewLoader;
+    /********* =TEMPORARY */
 
     @FXML
     public void initialize() throws IOException {
+        viewLoader = new ViewLoader();
+        ViewLoader.loadingWrapper = this.loadingPane;
+
         //fields loaded here -> check if logged/remembered is checked etc...
         if (Current.environment.userStatus.equals(loggedIn)) {
             //logged show main ui
         } else if (Current.environment.userStatus.equals(loggedOut)) {
-            //not logged - load auth-default
-            Pane authLogin = FXMLLoader.load(getClass().getResource("/fxml/auth/auth-login.fxml"));
-            authLogin.setLayoutX(0d);
-            authLogin.setLayoutY(35d);
-            this.loadingPane.getChildren().add(authLogin);
+
+            //NOT_LOGGED -> LOAD auth-login
+            viewLoader.load(ViewPaths.AUTH_LOGIN);
+
         }
     }
+
+
 
     /********* =WINDOW-CONTROLS */
     @FXML
