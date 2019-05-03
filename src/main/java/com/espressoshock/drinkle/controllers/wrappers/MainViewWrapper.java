@@ -25,6 +25,8 @@ public class MainViewWrapper {
         } else if (Current.environment.userStatus.equals(loggedOut)) {
             //not logged - load auth-default
             Pane authLogin = FXMLLoader.load(getClass().getResource("/fxml/auth/auth-login.fxml"));
+            authLogin.setLayoutX(0d);
+            authLogin.setLayoutY(35d);
             this.loadingPane.getChildren().add(authLogin);
         }
     }
