@@ -4,6 +4,7 @@ import static com.espressoshock.drinkle.appState.UserState.loggedIn;
 import static com.espressoshock.drinkle.appState.UserState.loggedOut;
 
 import com.espressoshock.drinkle.appState.Current;
+import com.espressoshock.drinkle.controllers.auth.AuthLogin;
 import com.espressoshock.drinkle.viewLoader.EventObserverAdapter;
 import com.espressoshock.drinkle.viewLoader.IEventObserver;
 import com.espressoshock.drinkle.viewLoader.ViewLoader;
@@ -30,10 +31,9 @@ public class MainViewWrapper extends EventObserverAdapter implements IEventObser
     }
 
     @SuppressWarnings("ConstantConditions")
-    public MainViewWrapper() {
+    public void setRefLoadingWrapper() {
         ViewLoader.setLoadingWrapperNode(this.loadingWrapperPane);
     }
-
     /********* END =VIEW-LOADER           */
 
     /********* =WINDOW          */
@@ -69,15 +69,20 @@ public class MainViewWrapper extends EventObserverAdapter implements IEventObser
     /********* =INIT W/ LOADED */
     @FXML
     public void initialize() throws IOException {
+        /********* =VIEW-LOADER: AUTH_LOGIN         */
+        this.setRefLoadingWrapper();
+        /********* END =VIEW-LOADER: AUTH_LOGIN           */
 
 
         //fields loaded here -> check if logged/remembered is checked etc...
         if (Current.environment.userStatus.equals(loggedIn)) {
             //logged show main ui
         } else if (Current.environment.userStatus.equals(loggedOut)) {
-
             //NOT_LOGGED -> LOAD auth-login
 
+            /********* =VIEW-LOADER: AUTH_LOGIN         */
+            super.setEventDispatcher(ViewLoader.load(ViewMetadata.AUTH_LOGIN));
+            /********* END =VIEW-LOADER: AUTH_LOGIN           */
 
         }
     }
