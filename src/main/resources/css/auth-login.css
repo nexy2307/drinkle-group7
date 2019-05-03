@@ -80,10 +80,18 @@
 .login-form .login-btn:pressed{
     -fx-background-image: url("../images/auth-login/login-btn-active@2x.png");
 }
+/********* END =LOGIN-FORM   */
 
+/********* =REGISTRATION CALLOUT BTN */
+.registration-btn{
+    -fx-background-color: #fff;
+    -fx-background-radius: 20 0 20 0;
+    -fx-text-fill: #fd5f19;
+    -fx-font-size: 16;
 
+}
+/********* END =REGISTRATION CALLOUT BTN */
 
-/********* =END-FORM  */
 
 
 
