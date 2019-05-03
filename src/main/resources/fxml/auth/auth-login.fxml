@@ -2,6 +2,7 @@
 
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.RadioButton?>
@@ -38,7 +39,7 @@
                   <RadioButton mnemonicParsing="false" prefHeight="34.0" prefWidth="75.5" styleClass="right" text="Individual" textAlignment="CENTER" toggleGroup="$loginType" />
                </children>
             </HBox>
-            <VBox layoutX="46.0" layoutY="260.0" prefHeight="148.0" prefWidth="349.0" styleClass="login-form">
+            <VBox layoutX="46.0" layoutY="260.0" prefHeight="270.0" prefWidth="349.0" styleClass="login-form">
                <children>
                   <Label text="Email" />
                   <TextField prefHeight="34.0" prefWidth="353.0">
@@ -49,9 +50,19 @@
                   <Label text="Password" />
                   <PasswordField prefHeight="34.0" prefWidth="353.0">
                      <VBox.margin>
-                        <Insets />
+                        <Insets bottom="21.0" />
                      </VBox.margin>
                   </PasswordField>
+                  <HBox alignment="CENTER_LEFT" prefHeight="27.0" prefWidth="349.0" spacing="130.0">
+                     <children>
+                        <CheckBox mnemonicParsing="false" styleClass="remember-password-cb" text="Remember me" />
+                        <Label contentDisplay="CENTER" prefHeight="2.0" prefWidth="140.0" styleClass="forgot-password-lbl" text="Forgot your password?">
+                           <HBox.margin>
+                              <Insets top="8.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
          </children>

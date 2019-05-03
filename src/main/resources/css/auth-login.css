@@ -29,7 +29,7 @@
 .login-type-toggle .radio-button:selected{
     -fx-background-color: #fd5e1a;
     -fx-text-fill: #d7dae3;
-    -fx-font-family: 'Vegur Bold'!important;
+    -fx-font-family: 'Vegur Bold';
 
 }
 /********* END =LOGIN TYPE TOGGLE */
@@ -49,5 +49,31 @@
     -fx-padding: 0 0 0 10;
     -fx-font-size: 11;
 }
+.login-form .forgot-password-lbl, .login-form .remember-password-cb{
+    -fx-font-size: 12.5;
+
+}
+.login-form .remember-password-cb .box{
+    -fx-background-color: #e3e5eb;
+}
+.login-form .remember-password-cb{
+    -fx-text-fill: #bfc2c8;
+}
+.login-form .remember-password-cb:selected .box{
+    -fx-background-color: #fd5e1a;
+}
+.login-form .remember-password-cb:selected .mark{
+    -fx-background-color: transparent;
+}
+.login-form .forgot-password-lbl{
+    -fx-font-family: 'Vegur Bold';
+    -fx-text-fill: #909fe9;
+}
+
+
+
 /********* =END-FORM  */
+
+
+
 
