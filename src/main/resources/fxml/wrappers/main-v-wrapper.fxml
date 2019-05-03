@@ -19,8 +19,8 @@
    <top>
       <HBox alignment="CENTER_RIGHT" onMouseDragged="#windowDragEnd" onMousePressed="#windowDragStart" prefHeight="35.0" prefWidth="996.0" spacing="34.0" styleClass="title-bar" BorderPane.alignment="CENTER">
          <children>
-            <Button maxHeight="1.0" maxWidth="10.0" minHeight="1.0" minWidth="10.0" mnemonicParsing="false" prefHeight="1.0" prefWidth="10.0" styleClass="minimize-btn" />
-            <Button maxHeight="10.0" maxWidth="10.0" minHeight="10.0" minWidth="10.0" mnemonicParsing="false" prefHeight="10.0" prefWidth="10.0" styleClass="close-btn" />
+            <Button maxHeight="1.0" maxWidth="10.0" minHeight="1.0" minWidth="10.0" mnemonicParsing="false" onMousePressed="#windowMinimize" prefHeight="1.0" prefWidth="10.0" styleClass="minimize-btn" />
+            <Button maxHeight="10.0" maxWidth="10.0" minHeight="10.0" minWidth="10.0" mnemonicParsing="false" onMousePressed="#windowClose" prefHeight="10.0" prefWidth="10.0" styleClass="close-btn" />
          </children>
          <BorderPane.margin>
             <Insets />

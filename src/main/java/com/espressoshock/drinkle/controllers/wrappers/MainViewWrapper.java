@@ -7,6 +7,7 @@ import com.espressoshock.drinkle.appState.Current;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -61,14 +62,21 @@ public class MainViewWrapper {
 
     /********* =WINDOW-CONTROLS */
     @FXML
-    void windowDragStart(MouseEvent event) {
+    public void windowDragStart(MouseEvent event) {
         Window.currentX = event.getSceneX();
         Window.currentY = event.getY();
     }
     @FXML
-    void windowDragEnd(MouseEvent event) {
+    public void windowDragEnd(MouseEvent event) {
        ((Node) event.getSource()).getScene().getWindow().setX(event.getScreenX() - Window.currentX);
        ((Node) event.getSource()).getScene().getWindow().setY(event.getScreenY() - Window.currentY);
+    }
+    @FXML
+    public void windowClose(MouseEvent event) {
+        ((Stage) ((Node) event.getSource()).getScene().getWindow()).close();
+    }
+    public void windowMinimize(MouseEvent event) {
+        ((Stage) ((Node) event.getSource()).getScene().getWindow()).setIconified(true);
     }
     /********* END =WINDOW-CONTROLS */
 }
