@@ -1,23 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.shape.*?>
-<?import java.net.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 
-<AnchorPane fx:id="loadingPane" maxHeight="729.0" maxWidth="1000.0" minHeight="729.0" minWidth="1000.0" prefHeight="729.0" prefWidth="1000.0" styleClass="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espressoshock.drinkle.controllers.wrappers.MainViewWrapper">
+
+<BorderPane maxHeight="729.0" maxWidth="1000.0" minHeight="729.0" minWidth="1000.0" prefHeight="729.0" prefWidth="1000.0" styleClass="root" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espressoshock.drinkle.controllers.wrappers.MainViewWrapper">
+   <center>
+      <AnchorPane fx:id="loadingPane" prefHeight="694.0" prefWidth="1000.0" BorderPane.alignment="CENTER" />
+   </center>
    <stylesheets>
-      <URL value="@../../css/common.css" />
       <URL value="@../../css/window.css" />
+      <URL value="@../../css/common.css" />
    </stylesheets>
-   <children>
-      <HBox alignment="CENTER_RIGHT" layoutX="960.0" layoutY="15.0" onMouseReleased="#closeWindow" prefHeight="10.0" prefWidth="10.0">
+   <top>
+      <HBox alignment="CENTER_RIGHT" onMouseDragged="#windowDragEnd" onMousePressed="#windowDragStart" prefHeight="35.0" prefWidth="996.0" spacing="34.0" styleClass="title-bar" BorderPane.alignment="CENTER">
          <children>
-            <SVGPath fx:id="close_Btn" content="M6.333,5.854 L10.464,10.001 C10.660,10.197 10.660,10.520 10.464,10.717 C10.366,10.815 10.239,10.863 10.109,10.863 C9.980,10.863 9.852,10.815 9.755,10.717 L5.623,6.567 L1.491,10.717 C1.394,10.815 1.266,10.863 1.137,10.863 C1.007,10.863 0.880,10.815 0.782,10.717 C0.586,10.520 0.586,10.197 0.782,10.001 L4.913,5.854 L0.782,1.706 C0.586,1.509 0.586,1.190 0.782,0.993 C0.978,0.797 1.296,0.797 1.491,0.993 L5.623,5.141 L9.755,0.993 C9.950,0.797 10.268,0.797 10.464,0.993 C10.660,1.190 10.660,1.509 10.464,1.706 L6.333,5.854 Z" fill="WHITE" />
+            <Button maxHeight="1.0" maxWidth="10.0" minHeight="1.0" minWidth="10.0" mnemonicParsing="false" onMousePressed="#windowMinimize" prefHeight="1.0" prefWidth="10.0" styleClass="minimize-btn" />
+            <Button maxHeight="10.0" maxWidth="10.0" minHeight="10.0" minWidth="10.0" mnemonicParsing="false" onMousePressed="#windowClose" prefHeight="10.0" prefWidth="10.0" styleClass="close-btn" />
          </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets right="25.0" />
+         </padding>
       </HBox>
-   </children>
-</AnchorPane>
+   </top>
+</BorderPane>
