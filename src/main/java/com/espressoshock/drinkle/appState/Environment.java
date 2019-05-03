@@ -9,7 +9,7 @@ import java.util.Date;
 public class Environment {
 
   //TODO: Check for data on disk, query db for existing user.
-  public UserState userStatus = UserState.loggedIn;
+  public UserState userStatus = UserState.loggedOut;
 
 
   private DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm");
