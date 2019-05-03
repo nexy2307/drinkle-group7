@@ -3,3 +3,35 @@
     -fx-background-radius: 20 0 20 20;
 }
 
+/********* =LOGIN TYPE TOGGLE */
+.login-type-toggle .radio-button{
+    -fx-background-color: #f4f5fa;
+    -fx-text-fill: #d7dae3;
+    -fx-font-size: 10;
+    -fx-padding: 0 0 0 5;
+}
+.login-type-toggle .radio-button > .radio {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0px;
+    -fx-padding: 0.0em;
+}
+.login-type-toggle  .radio-button:selected > .radio > .dot {
+    -fx-background-color: transparent;
+}
+
+.login-type-toggle .radio-button.left{
+    -fx-background-radius: 10 0 0 10;
+}
+
+.login-type-toggle .radio-button.right{
+    -fx-background-radius: 0 10 10 0;
+}
+.login-type-toggle .radio-button:selected{
+    -fx-background-color: #fd5e1a;
+    -fx-text-fill: #d7dae3;
+    -fx-font-family: 'Vegur Bold'!important;
+    -fx-font-weight: bold;
+
+}
+/********* END =LOGIN TYPE TOGGLE */

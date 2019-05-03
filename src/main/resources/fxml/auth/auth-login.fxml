@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 
 <AnchorPane maxHeight="694.0" maxWidth="1000.0" minHeight="694.0" minWidth="1000.0" prefHeight="694.0" prefWidth="1000.0" styleClass="root" stylesheets="@../../css/auth-login.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espressoshock.drinkle.controllers.auth.AuthLogin">
@@ -14,11 +17,21 @@
       </ImageView>
       <Pane layoutY="22.0" prefHeight="634.0" prefWidth="529.0">
          <children>
-            <ImageView fitHeight="99.0" fitWidth="480.0" layoutX="46.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="99.0" fitWidth="480.0" layoutX="46.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../images/auth-login/welcome-h1@2x.png" />
                </image>
             </ImageView>
+            <HBox layoutX="145.0" layoutY="222.0" prefHeight="34.0" prefWidth="151.0" styleClass="login-type-toggle">
+               <children>
+                  <RadioButton mnemonicParsing="false" prefHeight="34.0" prefWidth="75.5" selected="true" styleClass="left" text="Company">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="loginType" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" prefHeight="34.0" prefWidth="75.5" styleClass="right" text="Individual" textAlignment="CENTER" toggleGroup="$loginType" />
+               </children>
+            </HBox>
          </children>
       </Pane>
    </children>
