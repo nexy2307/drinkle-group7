@@ -8,6 +8,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Slider?>
@@ -681,5 +682,14 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
+      <Group id="radio buttons" layoutX="364.0" layoutY="659.0">
+         <children>
+            <RadioButton alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" ellipsisString="asd" mnemonicParsing="false" text="RadioButton" textOverrun="WORD_ELLIPSIS" />
+            <RadioButton alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" ellipsisString="asd" layoutX="41.0" mnemonicParsing="false" text="RadioButton" textOverrun="WORD_ELLIPSIS" />
+            <RadioButton alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" ellipsisString="asd" layoutX="82.0" mnemonicParsing="false" text="RadioButton" textOverrun="WORD_ELLIPSIS" />
+            <RadioButton alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" ellipsisString="asd" layoutX="123.0" mnemonicParsing="false" text="RadioButton" textOverrun="WORD_ELLIPSIS" />
+            <RadioButton alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" ellipsisString="asd" layoutX="164.0" mnemonicParsing="false" text="RadioButton" textOverrun="WORD_ELLIPSIS" />
+         </children>
+      </Group>
    </children>
 </AnchorPane>
