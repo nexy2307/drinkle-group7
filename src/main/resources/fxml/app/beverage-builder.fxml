@@ -23,7 +23,7 @@
         <URL value="@../../css/common.css" />
     </stylesheets>
    <children>
-      <Group id="Ingredient 1" fx:id="addedIngredientWidget" layoutX="747.0" layoutY="307.0">
+      <Group id="Ingredient 1" fx:id="addedIngredientWidget" layoutX="731.0" layoutY="89.0">
          <children>
             <Label layoutX="16.0" text="Ingredient 1" />
             <Label layoutX="148.0" text="0ml" />
@@ -540,6 +540,11 @@
                </children>
             </VBox>
          </content>
+      </ScrollPane>
+      <ScrollPane fx:id="listOfAddedIngredients" layoutX="733.0" layoutY="295.0" prefHeight="200.0" prefWidth="200.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+        </content>
       </ScrollPane>
    </children>
 </AnchorPane>
