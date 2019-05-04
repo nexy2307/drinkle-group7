@@ -67,7 +67,7 @@
                         <Insets bottom="45.0" />
                      </VBox.margin>
                   </HBox>
-                  <Button mnemonicParsing="false" prefHeight="47.0" prefWidth="190.0" styleClass="login-btn">
+                  <Button mnemonicParsing="false" onMousePressed="#login" prefHeight="47.0" prefWidth="190.0" styleClass="login-btn">
                      <VBox.margin>
                         <Insets left="-8.0" />
                      </VBox.margin>

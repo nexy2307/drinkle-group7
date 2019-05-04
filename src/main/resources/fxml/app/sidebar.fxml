@@ -38,7 +38,7 @@
                   <ToggleGroup fx:id="sidebarMenu" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" prefHeight="40.0" prefWidth="68.0" styleClass="ingredient-list" toggleGroup="$sidebarMenu" />
+            <RadioButton mnemonicParsing="false" prefHeight="40.0" prefWidth="68.0" selected="true" styleClass="ingredient-list" toggleGroup="$sidebarMenu" />
             <RadioButton mnemonicParsing="false" prefHeight="40.0" prefWidth="68.0" styleClass="beverage-list" toggleGroup="$sidebarMenu" />
             <RadioButton mnemonicParsing="false" prefHeight="40.0" prefWidth="68.0" styleClass="menu-list" toggleGroup="$sidebarMenu" />
             <RadioButton mnemonicParsing="false" prefHeight="40.0" prefWidth="68.0" styleClass="team-list" toggleGroup="$sidebarMenu" />

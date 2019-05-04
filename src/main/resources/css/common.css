@@ -42,6 +42,9 @@
 .left-border-radius{
     -fx-background-radius: 20 0 20 20;
 }
+.view-page{
+    -fx-background-radius: 20 0 20 0;
+}
 
 /********* END =VIEWS DEFAULTS BG */
 
