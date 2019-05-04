@@ -70,15 +70,15 @@
     -fx-text-fill: #909fe9;
 }
 .login-form .login-btn{
-    -fx-background-image: url("../../images/auth-login/login-btn@2x.png");
+    -fx-background-image: url("../../images/auth/auth-login/login-btn@2x.png");
     -fx-background-color: transparent;
     -fx-background-size: 190 47;
 }
 .login-form .login-btn:hover{
-    -fx-background-image: url("../../images/auth-login/login-btn-hover@2x.png");
+    -fx-background-image: url("../../images/auth/auth-login/login-btn-hover@2x.png");
 }
 .login-form .login-btn:pressed{
-    -fx-background-image: url("../../images/auth-login/login-btn-active@2x.png");
+    -fx-background-image: url("../../images/auth/auth-login/login-btn-active@2x.png");
 }
 /********* END =LOGIN-FORM   */
 

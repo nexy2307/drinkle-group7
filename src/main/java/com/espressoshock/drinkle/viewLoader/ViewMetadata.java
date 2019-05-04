@@ -12,7 +12,7 @@ public enum ViewMetadata {
     APP_MENU_LIST(MenuList.class, "/fxml/app/menu-list.fxml"),
     APP_BEVERAGE_BUILDER(BeverageBuilder.class, "/fxml/app/beverage-builder.fxml"),
     APP_DASHBOARD(Dashboard.class, "/fxml/app/dashboard.fxml");
-    
+
 
 
 
