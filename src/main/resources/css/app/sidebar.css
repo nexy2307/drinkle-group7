@@ -1,5 +1,6 @@
 .root{
     -fx-background-color: #3f4fa5;
+    -fx-background-radius: 20;
 }
 
 /********* =MENU */
