@@ -29,7 +29,7 @@
         <URL value="@../../css/common.css" />
     </stylesheets>
    <children>
-      <SVGPath content="M36.7,719.7c-23.3-106-36.6-245-36.6-382.2c0-112.8,12.5-223.3,38.2-337.4c39.8,0,69.6,0.1,98.4,0.1c28.6,0,58.1,0.1,97.4,0.1v719c-39.3,0-69.2,0.1-98.2,0.2C106.7,719.6,76.5,719.7,36.7,719.7z" layoutX="761.0" layoutY="2.0" scaleX="1.05" scaleY="1.03" />
+      <SVGPath fx:id="highlight" content="M36.7,719.7c-23.3-106-36.6-245-36.6-382.2c0-112.8,12.5-223.3,38.2-337.4c39.8,0,69.6,0.1,98.4,0.1c28.6,0,58.1,0.1,97.4,0.1v719c-39.3,0-69.2,0.1-98.2,0.2C106.7,719.6,76.5,719.7,36.7,719.7z" layoutX="761.0" layoutY="2.0" scaleX="1.05" scaleY="1.03" />
       <Group id="Cetner graphics/data" layoutX="288.0" layoutY="89.0">
          <children>
             <Group id="Chosen Ingredient" layoutX="126.0">
@@ -556,7 +556,7 @@
             </Group>
          </children>
       </AnchorPane>
-      <ScrollPane fx:id="listOfAddedIngredients" hbarPolicy="NEVER" layoutX="773.0" layoutY="340.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="207.0" prefWidth="222.0">
+      <ScrollPane id="Added ingredients list" fx:id="listOfAddedIngredients" hbarPolicy="NEVER" layoutX="773.0" layoutY="340.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="207.0" prefWidth="222.0">
          <content>
             <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT">
                <children>
