@@ -1,9 +1,20 @@
 package com.espressoshock.drinkle.viewLoader;
 
+import com.espressoshock.drinkle.controllers.app.*;
 import com.espressoshock.drinkle.controllers.auth.AuthLogin;
+import com.espressoshock.drinkle.controllers.auth.AuthRegistration;
 
 public enum ViewMetadata {
-    AUTH_LOGIN(AuthLogin.class, "/fxml/auth/auth-login.fxml");
+    AUTH_LOGIN(AuthLogin.class, "/fxml/auth/auth-login.fxml"),
+    AUTH_REGISTRATION(AuthRegistration.class, "/fxml/auth/auth-registration.fxml"),
+    APP_INGREDIENT_LIST(IngredientList.class, "/fxml/app/ingredient-list.fxml"),
+    APP_BEVERAGE_LIST(BeverageList.class, "/fxml/app/beverage-list.fxml"),
+    APP_MENU_LIST(MenuList.class, "/fxml/app/menu-list.fxml"),
+    APP_BEVERAGE_BUILDER(BeverageBuilder.class, "/fxml/app/beverage-builder.fxml"),
+    APP_DASHBOARD(Dashboard.class, "/fxml/app/dashboard.fxml");
+
+
+
 
     private final Class controllerClass;
     private final String resourcePath;
