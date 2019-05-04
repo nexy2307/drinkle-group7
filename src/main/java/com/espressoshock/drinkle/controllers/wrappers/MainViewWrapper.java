@@ -4,7 +4,8 @@ import static com.espressoshock.drinkle.appState.UserState.loggedIn;
 import static com.espressoshock.drinkle.appState.UserState.loggedOut;
 
 import com.espressoshock.drinkle.appState.Current;
-import com.espressoshock.drinkle.controllers.auth.AuthLogin;
+import com.espressoshock.drinkle.controllers.auth.*;
+import com.espressoshock.drinkle.controllers.app.*;
 import com.espressoshock.drinkle.viewLoader.EventObserverAdapter;
 import com.espressoshock.drinkle.viewLoader.IEventObserver;
 import com.espressoshock.drinkle.viewLoader.ViewLoader;
@@ -27,7 +28,9 @@ public class MainViewWrapper extends EventObserverAdapter implements IEventObser
     /********* =VIEW-LOADER           */
     @Override
     public void onViewChangeRequest(ViewMetadata view) {
-        System.out.println("onViewChangeRequest received");
+        System.out.println("loading: "+view.getResourcePath());
+        try{ this.loadLayoutUtility(view);}
+        catch (IOException e){e.printStackTrace();}
     }
 
     @SuppressWarnings("ConstantConditions")
@@ -108,4 +111,17 @@ public class MainViewWrapper extends EventObserverAdapter implements IEventObser
         ((Stage) ((Node) event.getSource()).getScene().getWindow()).setIconified(true);
     }
     /********* END =WINDOW-CONTROLS */
+
+
+/********* =LAYOUT UTILITY - TEMPORARY */
+ public void loadLayoutUtility(ViewMetadata view) throws IOException{
+     if(view != ViewMetadata.APP_SIDEBAR && view != ViewMetadata.AUTH_LOGIN && view != ViewMetadata.AUTH_REGISTRATION) {
+         super.setEventDispatcher(ViewLoader.load(ViewMetadata.APP_SIDEBAR, 0d, 35d));
+         super.setEventDispatcher(ViewLoader.load(view, 65d, 35d));
+     } else
+         super.setEventDispatcher(ViewLoader.load(view));
+ }
+ /********* =LAYOUT UTILITY - TEMPORARY */
+
+
 }

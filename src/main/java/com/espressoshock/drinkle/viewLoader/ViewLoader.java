@@ -7,6 +7,7 @@ import javafx.scene.layout.Pane;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ViewLoader {
@@ -34,9 +35,7 @@ public class ViewLoader {
     }
 
     public static <T>List<T> loadLayout(ViewMetadata view) throws IOException{
-        if(view == ViewMetadata.AUTH_LOGIN || view == ViewMetadata.AUTH_REGISTRATION)
-            return load(view);
-         else if(view != ViewMetadata.APP_SIDEBAR){
+        if(view != ViewMetadata.APP_SIDEBAR && view != ViewMetadata.AUTH_LOGIN && view != ViewMetadata.AUTH_REGISTRATION) {
             List<T>controllers = new ArrayList<>();
             controllers.add(load(ViewMetadata.APP_SIDEBAR, 0d, 35d));
             controllers.add(load(view, 65d, 35d));
