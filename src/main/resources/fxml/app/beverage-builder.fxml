@@ -553,7 +553,7 @@
             </Group>
          </children>
       </AnchorPane>
-      <ScrollPane fx:id="listOfAddedIngredients" hbarPolicy="NEVER" layoutX="773.0" layoutY="377.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="170.0" prefWidth="222.0">
+      <ScrollPane fx:id="listOfAddedIngredients" hbarPolicy="NEVER" layoutX="773.0" layoutY="340.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="207.0" prefWidth="222.0">
          <content>
             <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT">
                <children>
@@ -627,25 +627,59 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <Group id="Alc%" layoutX="798.0" layoutY="237.0">
+      <Group id="Alc%" layoutX="798.0" layoutY="191.0">
          <children>
             <Label text="Alcohol%" />
-            <ProgressIndicator layoutX="12.0" layoutY="27.0" progress="0.0">
+            <ProgressIndicator layoutX="-26.0" layoutY="25.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" progress="0.0">
                <tooltip>
                   <Tooltip text="Alcohol amount in percent" />
                </tooltip>
             </ProgressIndicator>
          </children>
       </Group>
-      <Group id="Pour Cost" layoutX="930.0" layoutY="237.0">
+      <Group id="Pour Cost" layoutX="924.0" layoutY="191.0">
          <children>
-            <ProgressIndicator layoutX="12.0" layoutY="27.0" progress="0.0">
+            <ProgressIndicator layoutX="-33.0" layoutY="25.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" progress="0.0">
                <tooltip>
                   <Tooltip text="Pour cost in percent" />
                </tooltip>
             </ProgressIndicator>
-            <Label text="Pour Cost" />
+            <Label layoutX="-3.0" layoutY="1.0" text="Pour Cost" />
          </children>
       </Group>
+      <Group id="Number of ingredients" layoutX="950.0" layoutY="106.0">
+         <children>
+            <Label text="N.I." />
+            <Label layoutX="2.0" layoutY="15.0" text="0" />
+         </children>
+      </Group>
+      <Group id="Notes" layoutX="806.0" layoutY="99.0">
+         <children>
+            <TextField layoutY="7.0" prefHeight="37.0" prefWidth="114.0" text="Served cold">
+               <tooltip>
+                  <Tooltip text="Add your notes here." />
+               </tooltip>
+            </TextField>
+            <Label layoutX="8.0" text="Notes" />
+         </children>
+      </Group>
+      <Group id="Cocktail name" layoutX="806.0" layoutY="40.0">
+         <children>
+            <TextField layoutY="6.0" prefHeight="37.0" prefWidth="135.0" text="Cocktail Name">
+               <tooltip>
+                  <Tooltip text="Write a name for your cocktail." />
+               </tooltip>
+            </TextField>
+            <Label layoutX="9.0" layoutY="-3.0" text="Name" />
+         </children>
+      </Group>
+      <ImageView fitHeight="150.0" fitWidth="40.0" layoutX="951.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/app/beverage-builder/folder.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
    </children>
 </AnchorPane>
