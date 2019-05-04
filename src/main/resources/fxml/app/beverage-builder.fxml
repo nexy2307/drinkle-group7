@@ -536,7 +536,7 @@
             </VBox>
          </content>
       </ScrollPane>
-      <ScrollPane fx:id="listOfAddedIngredients" layoutX="743.0" layoutY="377.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="218.0" prefWidth="252.0" vbarPolicy="ALWAYS">
+      <ScrollPane fx:id="listOfAddedIngredients" hbarPolicy="NEVER" layoutX="743.0" layoutY="377.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="218.0" prefWidth="252.0">
          <content>
             <VBox alignment="CENTER">
                <children>
