@@ -3,3 +3,6 @@
     -fx-border-radius: 100;
     -fx-fit-to-width: 20;
 }
+.progress-indicator .percentage {
+    -fx-fill:null;
+}

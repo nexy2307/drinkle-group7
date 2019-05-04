@@ -18,6 +18,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.SVGPath?>
 
@@ -632,11 +633,13 @@
       <Group id="Alc%" layoutX="798.0" layoutY="191.0">
          <children>
             <Label text="Alcohol%" />
-            <ProgressIndicator layoutX="-26.0" layoutY="25.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" progress="0.0">
+            <ProgressIndicator accessibleHelp="asdasdasq3rqwerwerwr333er" accessibleText="asdasdasd" layoutX="-26.0" layoutY="25.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="100.0" progress="0.0">
                <tooltip>
                   <Tooltip text="Alcohol amount in percent" />
                </tooltip>
             </ProgressIndicator>
+            <Circle fill="WHITE" layoutX="24.0" layoutY="67.0" radius="31.0" stroke="WHITE" strokeType="INSIDE" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="17.0" layoutY="60.0" text="0%" textAlignment="CENTER" />
          </children>
       </Group>
       <Group id="Pour Cost" layoutX="924.0" layoutY="191.0">
@@ -647,6 +650,8 @@
                </tooltip>
             </ProgressIndicator>
             <Label layoutX="-3.0" layoutY="1.0" text="Pour Cost" />
+            <Circle fill="WHITE" layoutX="17.0" layoutY="67.0" radius="31.0" stroke="WHITE" strokeType="INSIDE" />
+            <Label layoutX="10.0" layoutY="60.0" text="0%" />
          </children>
       </Group>
       <Group id="Number of ingredients" layoutX="950.0" layoutY="106.0">
