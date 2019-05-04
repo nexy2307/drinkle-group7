@@ -79,7 +79,7 @@
       </Pane>
    </children>
    <stylesheets>
-      <URL value="@../../css/auth-login.css" />
+      <URL value="@../../css/auth/auth-login.css" />
       <URL value="@../../css/common.css" />
    </stylesheets>
 </AnchorPane>
