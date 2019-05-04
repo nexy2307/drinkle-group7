@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
@@ -21,6 +22,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="729.0" prefWidth="1000.0" styleClass="view-white-bg, view-page" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espressoshock.drinkle.controllers.app.BeverageBuilder">
 
@@ -556,70 +558,6 @@
             </Group>
          </children>
       </AnchorPane>
-      <ScrollPane id="Added ingredients list" fx:id="listOfAddedIngredients" hbarPolicy="NEVER" layoutX="773.0" layoutY="340.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="207.0" prefWidth="222.0">
-         <content>
-            <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT">
-               <children>
-                  <Group id="Added Ingredient" fx:id="addedIngredientWidget">
-                     <children>
-                        <Label layoutX="18.0" layoutY="7.0" text="Ingredient" />
-                        <Label layoutX="192.0" layoutY="7.0" text="0ml" />
-                        <ProgressBar fx:id="ingredientPercentBar" layoutX="14.0" layoutY="28.0" prefHeight="12.0" prefWidth="201.0" progress="0.0" />
-                     </children>
-                  </Group>
-                  <Group id="Added Ingredient" fx:id="addedIngredientWidget1" layoutX="-4.0" layoutY="3.0">
-                     <children>
-                        <Label layoutX="18.0" layoutY="7.0" text="Ingredient" />
-                        <Label layoutX="192.0" layoutY="7.0" text="0ml" />
-                        <ProgressBar fx:id="ingredientPercentBar1" layoutX="14.0" layoutY="28.0" prefHeight="12.0" prefWidth="201.0" progress="0.0" />
-                     </children>
-                  </Group>
-                  <Group id="Added Ingredient" fx:id="addedIngredientWidget11" layoutX="-4.0" layoutY="36.0">
-                     <children>
-                        <Label layoutX="18.0" layoutY="7.0" text="Ingredient" />
-                        <Label layoutX="192.0" layoutY="7.0" text="0ml" />
-                        <ProgressBar fx:id="ingredientPercentBar11" layoutX="14.0" layoutY="28.0" prefHeight="12.0" prefWidth="201.0" progress="0.0" />
-                     </children>
-                  </Group>
-                  <Group id="Added Ingredient" fx:id="addedIngredientWidget111" layoutX="-4.0" layoutY="69.0">
-                     <children>
-                        <Label layoutX="18.0" layoutY="7.0" text="Ingredient" />
-                        <Label layoutX="192.0" layoutY="7.0" text="0ml" />
-                        <ProgressBar fx:id="ingredientPercentBar111" layoutX="14.0" layoutY="28.0" prefHeight="12.0" prefWidth="201.0" progress="0.0" />
-                     </children>
-                  </Group>
-                  <Group id="Added Ingredient" fx:id="addedIngredientWidget1111" layoutX="-4.0" layoutY="102.0">
-                     <children>
-                        <Label layoutX="18.0" layoutY="7.0" text="Ingredient" />
-                        <Label layoutX="192.0" layoutY="7.0" text="0ml" />
-                        <ProgressBar fx:id="ingredientPercentBar1111" layoutX="14.0" layoutY="28.0" prefHeight="12.0" prefWidth="201.0" progress="0.0" />
-                     </children>
-                  </Group>
-                  <Group id="Added Ingredient" fx:id="addedIngredientWidget11111" layoutX="-4.0" layoutY="135.0">
-                     <children>
-                        <Label layoutX="18.0" layoutY="7.0" text="Ingredient" />
-                        <Label layoutX="192.0" layoutY="7.0" text="0ml" />
-                        <ProgressBar fx:id="ingredientPercentBar11111" layoutX="14.0" layoutY="28.0" prefHeight="12.0" prefWidth="201.0" progress="0.0" />
-                     </children>
-                  </Group>
-                  <Group id="Added Ingredient" fx:id="addedIngredientWidget111111" layoutX="-4.0" layoutY="168.0">
-                     <children>
-                        <Label layoutX="18.0" layoutY="7.0" text="Ingredient" />
-                        <Label layoutX="192.0" layoutY="7.0" text="0ml" />
-                        <ProgressBar fx:id="ingredientPercentBar111111" layoutX="14.0" layoutY="28.0" prefHeight="12.0" prefWidth="201.0" progress="0.0" />
-                     </children>
-                  </Group>
-                  <Group id="Added Ingredient" fx:id="addedIngredientWidget1111111" layoutX="-4.0" layoutY="201.0">
-                     <children>
-                        <Label layoutX="18.0" layoutY="7.0" text="Ingredient" />
-                        <Label layoutX="192.0" layoutY="7.0" text="0ml" />
-                        <ProgressBar fx:id="ingredientPercentBar1111111" layoutX="14.0" layoutY="28.0" prefHeight="12.0" prefWidth="201.0" progress="0.0" />
-                     </children>
-                  </Group>
-               </children>
-            </VBox>
-         </content>
-      </ScrollPane>
       <Button layoutX="813.0" layoutY="580.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" text="Export" />
       <Button layoutX="813.0" layoutY="624.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" text="Generate" />
       <ImageView fitHeight="150.0" fitWidth="20.0" layoutX="968.0" layoutY="698.0" pickOnBounds="true" preserveRatio="true">
@@ -662,7 +600,7 @@
       </Group>
       <Group id="Notes" layoutX="806.0" layoutY="99.0">
          <children>
-            <TextField layoutY="7.0" prefHeight="37.0" prefWidth="114.0" text="Served cold">
+            <TextField fx:id="txtFieldNotes" layoutY="7.0" prefHeight="37.0" prefWidth="114.0" text="Served cold">
                <tooltip>
                   <Tooltip text="Add your notes here." />
                </tooltip>
@@ -672,7 +610,7 @@
       </Group>
       <Group id="Cocktail name" layoutX="806.0" layoutY="40.0">
          <children>
-            <TextField layoutY="6.0" prefHeight="37.0" prefWidth="135.0" text="Cocktail Name">
+            <TextField fx:id="txtFieldCocktailName" layoutY="6.0" prefHeight="37.0" prefWidth="135.0" text="Cocktail Name">
                <tooltip>
                   <Tooltip text="Write a name for your cocktail." />
                </tooltip>
@@ -727,5 +665,93 @@
          </children>
       </Group>
       <Line endX="100.0" startX="-100.0" />
+      <ScrollPane fx:id="addedIngredients" hbarPolicy="NEVER" layoutX="772.0" layoutY="337.0" prefHeight="228.0" prefWidth="224.0">
+         <content>
+            <VBox fx:id="vBoxChosenIngredients" prefHeight="200.0" prefWidth="164.0" spacing="10.0">
+               <children>
+                  <Group id="Ingredient 1" fx:id="addedIngredient" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label layoutX="16.0" text="Ingredient" />
+                        <Label layoutX="195.0" text="0ml">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                        </Label>
+                        <ProgressBar fx:id="addedIngredientPercentBar" layoutX="14.0" layoutY="29.0" prefHeight="8.0" prefWidth="204.0" progress="0.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Group>
+                  <Group id="Ingredient 1" fx:id="addedIngredient1" layoutX="-4.0" layoutY="10.0">
+                     <children>
+                        <Label layoutX="16.0" text="Ingredient" />
+                        <Label layoutX="195.0" text="0ml">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                        </Label>
+                        <ProgressBar fx:id="addedIngredientPercentBar1" layoutX="14.0" layoutY="29.0" prefHeight="8.0" prefWidth="204.0" progress="0.0" />
+                     </children>
+                  </Group>
+                  <Group id="Ingredient 1" fx:id="addedIngredient11" layoutX="-4.0" layoutY="54.0">
+                     <children>
+                        <Label layoutX="16.0" text="Ingredient" />
+                        <Label layoutX="195.0" text="0ml">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                        </Label>
+                        <ProgressBar fx:id="addedIngredientPercentBar11" layoutX="14.0" layoutY="29.0" prefHeight="8.0" prefWidth="204.0" progress="0.0" />
+                     </children>
+                  </Group>
+                  <Group id="Ingredient 1" fx:id="addedIngredient111" layoutX="-4.0" layoutY="98.0">
+                     <children>
+                        <Label layoutX="16.0" text="Ingredient" />
+                        <Label layoutX="195.0" text="0ml">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                        </Label>
+                        <ProgressBar fx:id="addedIngredientPercentBar111" layoutX="14.0" layoutY="29.0" prefHeight="8.0" prefWidth="204.0" progress="0.0" />
+                     </children>
+                  </Group>
+                  <Group id="Ingredient 1" fx:id="addedIngredient1111" layoutX="-4.0" layoutY="142.0">
+                     <children>
+                        <Label layoutX="16.0" text="Ingredient" />
+                        <Label layoutX="195.0" text="0ml">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                        </Label>
+                        <ProgressBar fx:id="addedIngredientPercentBar1111" layoutX="14.0" layoutY="29.0" prefHeight="8.0" prefWidth="204.0" progress="0.0" />
+                     </children>
+                  </Group>
+                  <Group id="Ingredient 1" fx:id="addedIngredient11111" layoutX="-4.0" layoutY="186.0">
+                     <children>
+                        <Label layoutX="16.0" text="Ingredient" />
+                        <Label layoutX="195.0" text="0ml">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                        </Label>
+                        <ProgressBar fx:id="addedIngredientPercentBar11111" layoutX="14.0" layoutY="29.0" prefHeight="8.0" prefWidth="204.0" progress="0.0" />
+                     </children>
+                  </Group>
+                  <Group id="Ingredient 1" fx:id="addedIngredient111111" layoutX="-4.0" layoutY="230.0">
+                     <children>
+                        <Label layoutX="16.0" text="Ingredient" />
+                        <Label layoutX="195.0" text="0ml">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                        </Label>
+                        <ProgressBar fx:id="addedIngredientPercentBar111111" layoutX="14.0" layoutY="29.0" prefHeight="8.0" prefWidth="204.0" progress="0.0" />
+                     </children>
+                  </Group>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
    </children>
 </AnchorPane>

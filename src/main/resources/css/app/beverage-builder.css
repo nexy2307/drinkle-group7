@@ -3,6 +3,11 @@
     -fx-border-radius: 100;
     -fx-fit-to-width: 20;
 }
+/*---------------Right side css---------------------*/
+#txtFieldCocktailName, #txtFieldNotes{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
 .progress-indicator .percentage {
     -fx-fill:null;
 }
@@ -56,3 +61,4 @@
     -fx-background-color: #ef6b02;
     -fx-background-radius: 5;
 }
+/*--------------End of right side----------------------*/
