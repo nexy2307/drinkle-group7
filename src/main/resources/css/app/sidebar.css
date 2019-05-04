@@ -1,0 +1,74 @@
+.root{
+    -fx-background-color: #3f4fa5;
+}
+
+/********* =MENU */
+.ordered-menu .radio-button{
+    -fx-padding: 0 0 0 0;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: contain;
+
+}
+.ordered-menu .radio-button .radio{
+    -fx-background-color: transparent;
+}
+.ordered-menu .radio-button:selected .radio{
+    -fx-background-color: #fff;
+    -fx-background-radius: 0 3.5 3.5 0;
+    -fx-padding: 15 0 15 0;
+}
+.ordered-menu .radio-button .dot{
+    -fx-background-color: transparent;
+}
+
+
+/********* =MENU ITEMS */
+
+.ordered-menu .dashboard{
+    -fx-background-image: url("../../images/app/sidebar/icons/dashboard@2x.png");
+
+}
+.ordered-menu .dashboard:selected, .ordered-menu .dashboard:hover{
+    -fx-background-image: url("../../images/app/sidebar/icons/dashboard-active@2x.png");
+}
+
+.ordered-menu .ingredient-list{
+    -fx-background-image: url("../../images/app/sidebar/icons/ingredient-list@2x.png");
+}
+.ordered-menu .ingredient-list:selected, .ordered-menu .ingredient-list:hover{
+    -fx-background-image: url("../../images/app/sidebar/icons/ingredient-list-active@2x.png");
+}
+
+.ordered-menu .beverage-list{
+    -fx-background-image: url("../../images/app/sidebar/icons/beverage-list@2x.png");
+}
+.ordered-menu .beverage-list:selected, .ordered-menu .beverage-list:hover{
+    -fx-background-image: url("../../images/app/sidebar/icons/beverage-list-active@2x.png");
+}
+
+.ordered-menu .menu-list{
+    -fx-background-image: url("../../images/app/sidebar/icons/menu-list@2x.png");
+}
+.ordered-menu .menu-list:selected, .ordered-menu .menu-list:hover{
+    -fx-background-image: url("../../images/app/sidebar/icons/menu-list-active@2x.png");
+}
+
+.ordered-menu .team-list{
+    -fx-background-image: url("../../images/app/sidebar/icons/team-list@2x.png");
+}
+.ordered-menu .team-list:selected, .ordered-menu .team-list:hover{
+    -fx-background-image: url("../../images/app/sidebar/icons/team-list-active@2x.png");
+}
+
+.bottom-bar .log-out{
+    -fx-background-image: url("../../images/app/sidebar/icons/logout@2x.png");
+    -fx-background-size: contain;
+    -fx-background-color: transparent;
+}
+.bottom-bar .log-out:hover{
+    -fx-background-image: url("../../images/app/sidebar/icons/logout-active@2x.png");
+}
+/********* END =MENU ITEMS */
+
+/********* END =MENU */

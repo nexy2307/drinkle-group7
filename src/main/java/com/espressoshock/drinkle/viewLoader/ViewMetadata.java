@@ -1,8 +1,7 @@
 package com.espressoshock.drinkle.viewLoader;
 
 import com.espressoshock.drinkle.controllers.app.*;
-import com.espressoshock.drinkle.controllers.auth.AuthLogin;
-import com.espressoshock.drinkle.controllers.auth.AuthRegistration;
+import com.espressoshock.drinkle.controllers.auth.*;
 
 public enum ViewMetadata {
     AUTH_LOGIN(AuthLogin.class, "/fxml/auth/auth-login.fxml"),
@@ -11,7 +10,8 @@ public enum ViewMetadata {
     APP_BEVERAGE_LIST(BeverageList.class, "/fxml/app/beverage-list.fxml"),
     APP_MENU_LIST(MenuList.class, "/fxml/app/menu-list.fxml"),
     APP_BEVERAGE_BUILDER(BeverageBuilder.class, "/fxml/app/beverage-builder.fxml"),
-    APP_DASHBOARD(Dashboard.class, "/fxml/app/dashboard.fxml");
+    APP_DASHBOARD(Dashboard.class, "/fxml/app/dashboard.fxml"),
+    APP_SIDEBAR(Sidebar.class, "/fxml/app/sidebar.fxml");
 
 
 
