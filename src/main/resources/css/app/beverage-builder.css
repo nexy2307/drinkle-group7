@@ -1,0 +1,5 @@
+.check-box .box{
+    -fx-background-radius: 100;
+    -fx-border-radius: 100;
+    -fx-fit-to-width: 20;
+}
