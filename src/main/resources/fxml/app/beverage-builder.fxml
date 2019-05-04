@@ -15,6 +15,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="729.0" prefWidth="1000.0" styleClass="view-white-bg, view-page" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espressoshock.drinkle.controllers.app.BeverageBuilder">
 
@@ -23,13 +24,7 @@
         <URL value="@../../css/common.css" />
     </stylesheets>
    <children>
-      <Group id="Ingredient 1" fx:id="addedIngredientWidget" layoutX="731.0" layoutY="89.0">
-         <children>
-            <Label layoutX="16.0" text="Ingredient 1" />
-            <Label layoutX="148.0" text="0ml" />
-            <ProgressBar fx:id="ingredientPercentBar" layoutX="14.0" layoutY="28.0" prefHeight="10.0" prefWidth="159.0" progress="0.0" />
-         </children>
-      </Group>
+      <SVGPath content="M36.7,719.7c-23.3-106-36.6-245-36.6-382.2c0-112.8,12.5-223.3,38.2-337.4c39.8,0,69.6,0.1,98.4,0.1c28.6,0,58.1,0.1,97.4,0.1v719c-39.3,0-69.2,0.1-98.2,0.2C106.7,719.6,76.5,719.7,36.7,719.7z" layoutX="745.0" layoutY="4.0" scaleX="1.2" scaleY="1.03" />
       <Group id="Cetner graphics/data" layoutX="288.0" layoutY="89.0">
          <children>
             <Group id="Chosen Ingredient" layoutX="126.0">
@@ -541,10 +536,20 @@
             </VBox>
          </content>
       </ScrollPane>
-      <ScrollPane fx:id="listOfAddedIngredients" layoutX="733.0" layoutY="295.0" prefHeight="200.0" prefWidth="200.0">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
-        </content>
+      <ScrollPane fx:id="listOfAddedIngredients" layoutX="743.0" layoutY="377.0" prefHeight="218.0" prefWidth="252.0">
+         <content>
+            <VBox>
+               <children>
+                  <Group id="Added Ingredient" fx:id="addedIngredientWidget">
+                     <children>
+                        <Label layoutX="14.0" layoutY="7.0" text="Ingredient 1" />
+                        <Label layoutX="232.0" layoutY="7.0" text="0ml" />
+                        <ProgressBar fx:id="ingredientPercentBar" layoutX="14.0" layoutY="28.0" prefHeight="12.0" prefWidth="250.0" progress="0.0" />
+                     </children>
+                  </Group>
+               </children>
+            </VBox>
+         </content>
       </ScrollPane>
    </children>
 </AnchorPane>
