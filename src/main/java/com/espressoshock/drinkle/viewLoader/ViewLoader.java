@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.layout.Pane;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ViewLoader {
     private static Node loadingWrapperNode;
@@ -29,6 +31,19 @@ public class ViewLoader {
         ((Pane) loadingWrapperNode).getChildren().add(rootNode);
 
         return loader.getController();
+    }
+
+    public static <T>List<T> loadLayout(ViewMetadata view) throws IOException{
+        if(view == ViewMetadata.AUTH_LOGIN || view == ViewMetadata.AUTH_REGISTRATION)
+            return load(view);
+         else if(view != ViewMetadata.APP_SIDEBAR){
+            List<T>controllers = new ArrayList<>();
+            controllers.add(load(ViewMetadata.APP_SIDEBAR, 0d, 35d));
+            controllers.add(load(view, 65d, 35d));
+
+            return controllers;
+        }
+        return load(view);
     }
 
     public static void setLoadingWrapperNode(Node loadingWrapperNode) {
