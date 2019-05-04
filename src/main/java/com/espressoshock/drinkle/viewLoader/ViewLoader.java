@@ -16,7 +16,7 @@ public class ViewLoader {
     public ViewLoader() {
     }
 
-    public static <T>T load(ViewMetadata view) throws IOException {
+    public static <T>T add(ViewMetadata view) throws IOException {
         FXMLLoader loader = new FXMLLoader(ViewMetadata.class.getResource(view.getResourcePath()));
         Node rootNode = (Parent) loader.load();
         ((Pane) loadingWrapperNode).getChildren().add(rootNode);
@@ -24,12 +24,32 @@ public class ViewLoader {
         return loader.getController();
     }
 
-    public static <T>T load(ViewMetadata view, double offsetX, double offsetY) throws IOException {
+    @SuppressWarnings("Duplicates")
+    public static <T>T add(ViewMetadata view, double offsetX, double offsetY) throws IOException {
         FXMLLoader loader = new FXMLLoader(ViewMetadata.class.getResource(view.getResourcePath()));
         Node rootNode = (Parent) loader.load();
         rootNode.setLayoutX(offsetX);
         rootNode.setLayoutY(offsetY);
         ((Pane) loadingWrapperNode).getChildren().add(rootNode);
+
+        return loader.getController();
+    }
+
+    public static <T>T load(ViewMetadata view) throws IOException {
+        FXMLLoader loader = new FXMLLoader(ViewMetadata.class.getResource(view.getResourcePath()));
+        Node rootNode = (Parent) loader.load();
+        ((Pane) loadingWrapperNode).getChildren().setAll(rootNode);
+
+        return loader.getController();
+    }
+
+    @SuppressWarnings("Duplicates")
+    public static <T>T load(ViewMetadata view, double offsetX, double offsetY) throws IOException {
+        FXMLLoader loader = new FXMLLoader(ViewMetadata.class.getResource(view.getResourcePath()));
+        Node rootNode = (Parent) loader.load();
+        rootNode.setLayoutX(offsetX);
+        rootNode.setLayoutY(offsetY);
+        ((Pane) loadingWrapperNode).getChildren().setAll(rootNode);
 
         return loader.getController();
     }
