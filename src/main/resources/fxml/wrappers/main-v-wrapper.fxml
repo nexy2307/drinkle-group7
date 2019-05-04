@@ -10,7 +10,7 @@
 
 <BorderPane maxHeight="729.0" maxWidth="1000.0" minHeight="729.0" minWidth="1000.0" prefHeight="729.0" prefWidth="1000.0" styleClass="root" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espressoshock.drinkle.controllers.wrappers.MainViewWrapper">
    <center>
-      <AnchorPane fx:id="loadingPane" prefHeight="694.0" prefWidth="1000.0" BorderPane.alignment="CENTER" />
+      <AnchorPane fx:id="loadingWrapperPane" prefHeight="694.0" prefWidth="1000.0" BorderPane.alignment="CENTER" />
    </center>
    <stylesheets>
       <URL value="@../../css/window.css" />

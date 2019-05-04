@@ -4,19 +4,37 @@ import static com.espressoshock.drinkle.appState.UserState.loggedIn;
 import static com.espressoshock.drinkle.appState.UserState.loggedOut;
 
 import com.espressoshock.drinkle.appState.Current;
+import com.espressoshock.drinkle.controllers.auth.AuthLogin;
+import com.espressoshock.drinkle.viewLoader.EventObserverAdapter;
+import com.espressoshock.drinkle.viewLoader.IEventObserver;
+import com.espressoshock.drinkle.viewLoader.ViewLoader;
+import com.espressoshock.drinkle.viewLoader.ViewMetadata;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class MainViewWrapper {
+public class MainViewWrapper extends EventObserverAdapter implements IEventObserver {
+
+    /********* =COMPONENT INJECTION FIELD */
+    @FXML
+    private AnchorPane loadingWrapperPane;
+    /********* END =COMPONENT INJECTION FIELD */
+
+    /********* =VIEW-LOADER           */
+    @Override
+    public void onViewChangeRequest(ViewMetadata view) {
+        System.out.println("onViewChangeRequest received");
+    }
+
+    @SuppressWarnings("ConstantConditions")
+    public void setRefLoadingWrapper() {
+        ViewLoader.setLoadingWrapperNode(this.loadingWrapperPane);
+    }
+    /********* END =VIEW-LOADER           */
 
     /********* =WINDOW          */
     public static class Window{
@@ -42,57 +60,33 @@ public class MainViewWrapper {
             Window.currentX = currentX;
         }
     }
+    /********* END =WINDOW          */
 
 
-    /********* =VIEW LOADER */
-    public static class ViewLoader{
-        private static AnchorPane loadingWrapper;
 
 
-        public Pane getView(ViewPaths viewPath) throws IOException{
-            return FXMLLoader.load(getClass().getResource(viewPath.getPath()));
-        }
 
-        public void load(ViewPaths viewPath) throws IOException{
-            loadingWrapper.getChildren().add(getView(viewPath));
-        }
-
-        public void load(ViewPaths viewPath, double offsetX, double offsetY) throws IOException{
-            Pane view = getView(viewPath);
-            view.setLayoutX(offsetX);
-            view.setLayoutY(offsetY);
-            loadingWrapper.getChildren().add(view);
-        }
-
-    }
-    /********* =END VIEW LOADER */
-
-
-    /********* =COMPONENT INJECTION FIELD */
-    @FXML
-    private AnchorPane loadingPane;
-    /********* END =COMPONENT INJECTION FIELD */
-
-    /********* =TEMPORARY */
-    private ViewLoader viewLoader;
-    /********* =TEMPORARY */
-
+    /********* =INIT W/ LOADED */
     @FXML
     public void initialize() throws IOException {
-        viewLoader = new ViewLoader();
-        ViewLoader.loadingWrapper = this.loadingPane;
+        /********* =VIEW-LOADER: AUTH_LOGIN         */
+        this.setRefLoadingWrapper();
+        /********* END =VIEW-LOADER: AUTH_LOGIN           */
+
 
         //fields loaded here -> check if logged/remembered is checked etc...
         if (Current.environment.userStatus.equals(loggedIn)) {
             //logged show main ui
         } else if (Current.environment.userStatus.equals(loggedOut)) {
-
             //NOT_LOGGED -> LOAD auth-login
-            viewLoader.load(ViewPaths.AUTH_LOGIN);
+
+            /********* =VIEW-LOADER: AUTH_LOGIN         */
+            super.setEventDispatcher(ViewLoader.load(ViewMetadata.AUTH_LOGIN));
+            /********* END =VIEW-LOADER: AUTH_LOGIN           */
 
         }
     }
-
+/********* END =INIT W/ LOADED */
 
 
     /********* =WINDOW-CONTROLS */
