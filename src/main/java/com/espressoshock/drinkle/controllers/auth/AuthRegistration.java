@@ -18,13 +18,15 @@ public class AuthRegistration extends EventDispatcherAdapter {
 
   @FXML
   public void initialize() {
+    setupComponents();
     setupUI();
   }
 
-  private void setupUI() {
-    genderComboBox.getItems().addAll(
-        Gender.FEMALE,
-        Gender.MALE
+  private void setupUI() { }
+
+  private void setupComponents() {
+    genderComboBox.setItems(
+        FXCollections.observableArrayList(Gender.values())
     );
   }
 

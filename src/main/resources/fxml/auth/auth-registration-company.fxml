@@ -37,7 +37,7 @@
                   <Label text="Business Email:" />
                   <TextField prefHeight="34.0" prefWidth="353.0" />
                   <Label text="Country:" />
-                  <TextField prefHeight="34.0" prefWidth="353.0" />
+                  <ComboBox fx:id="countryComboBox" prefWidth="150.0" />
                   <Label text="Team:" />
                   <TextField prefHeight="34.0" prefWidth="353.0" />
                   <Label text="Password:" />
