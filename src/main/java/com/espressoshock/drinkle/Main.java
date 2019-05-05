@@ -25,8 +25,8 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/app/beverage-builder.fxml"));
         //WINDOW  //***********
         Scene mainScene = new Scene(root, windowWidth, windowHeight);
-        //mainScene.setFill(Color.TRANSPARENT);
-        //primaryStage.initStyle(StageStyle.TRANSPARENT);
+        mainScene.setFill(Color.TRANSPARENT);
+        primaryStage.initStyle(StageStyle.TRANSPARENT);
 
 
         primaryStage.setTitle("Drinkle");
