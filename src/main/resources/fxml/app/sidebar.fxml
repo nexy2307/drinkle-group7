@@ -33,10 +33,10 @@
                   <ToggleGroup fx:id="sidebarMenu" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" prefHeight="40.0" prefWidth="68.0" selected="true" styleClass="ingredient-list" toggleGroup="$sidebarMenu" userData="APP_INGREDIENT_LIST" />
-            <RadioButton mnemonicParsing="false" prefHeight="40.0" prefWidth="68.0" styleClass="beverage-list" toggleGroup="$sidebarMenu" userData="APP_BEVERAGE_LIST"/>
-            <RadioButton mnemonicParsing="false" prefHeight="40.0" prefWidth="68.0" styleClass="menu-list" toggleGroup="$sidebarMenu" userData="APP_MENU_LIST"/>
-            <RadioButton mnemonicParsing="false" prefHeight="40.0" prefWidth="68.0" styleClass="team-list" toggleGroup="$sidebarMenu" userData="APP_TEAM_LIST"/>
+            <RadioButton mnemonicParsing="false" prefHeight="40.0" prefWidth="68.0" styleClass="ingredient-list" toggleGroup="$sidebarMenu" userData="APP_INGREDIENT_LIST" />
+            <RadioButton mnemonicParsing="false" prefHeight="40.0" prefWidth="68.0" styleClass="beverage-list" toggleGroup="$sidebarMenu" userData="APP_BEVERAGE_LIST" />
+            <RadioButton mnemonicParsing="false" prefHeight="40.0" prefWidth="68.0" styleClass="menu-list" toggleGroup="$sidebarMenu" userData="APP_MENU_LIST" />
+            <RadioButton mnemonicParsing="false" prefHeight="40.0" prefWidth="68.0" styleClass="team-list" toggleGroup="$sidebarMenu" userData="APP_TEAM_LIST" />
          </children>
       </VBox>
       <HBox alignment="CENTER" layoutY="640.0" prefHeight="40.0" prefWidth="65.0" styleClass="bottom-bar">
