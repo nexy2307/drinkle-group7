@@ -7,6 +7,14 @@
     -fx-border-radius: 100;
     -fx-fit-to-width: 20;
 }
+.radio-button .radio {
+    -fx-border-width: 1px;
+    -fx-border-color: #000;
+    -fx-background-color: white;
+    -fx-background-image: null;
+    -fx-border-radius: 25px;
+    -fx-padding: 4px;
+}
 /*---------------Right side css---------------------*/
 #alcoholPercentCircle, #pourCostCircle{
     -fx-background-color: transparent;
@@ -70,7 +78,54 @@
     -fx-background-color: #ef6b02;
     -fx-background-radius: 5;
 }
-/*--------------End of right side----------------------*/
+/*----------------End of right side--------------------*/
+/*--------------------Center css-----------------------*/
+#lblVolume{
+    -fx-font-size: 22;
+-fx-text-fill: #d18d44;
+}
+#lblVolumeUnit, #lblCostValuta, #lblPercentRPercent {
+    -fx-font-size: 20;
+    -fx-text-fill: #e1e4f1;
+}
+#lblVolName, #lblCostName, #lblPercentRName{
+    -fx-text-fill: #e1e4f1;
+}
+#lblPercentR{
+-fx-font-size: 22;
+    -fx-text-fill: #7a9df4;
+}
+
+#lblCost{
+-fx-font-size: 22;
+    -fx-text-fill: #fd6592;
+}
+.radio-button .radio {
+    -fx-border-width: 1px;
+    -fx-border-color: #3f4fa5;
+    -fx-background-color: white;
+    -fx-background-image: null;
+    -fx-border-radius: 20px;
+    -fx-padding: 6 6 6 6;
+}
+
+.radio-button .radio:selected {
+    -fx-background-color: black;
+}
+.radio-button .radio:armed {
+    -fx-fill: yellow;
+    -fx-background-color: yellow;
+
+}
+
+.radio-button .dot {
+    -fx-color: yellow;
+    -fx-background-radius: 20px;
+    -fx-padding: 3px;
+}
+
+
+/*----------------End of center css--------------------*/
 
 /*------------------Left side css----------------------*/
 #vBoxListOfIngredients{

@@ -9,6 +9,7 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Slider?>
@@ -17,6 +18,8 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.SVGPath?>
@@ -47,18 +50,7 @@
             </ImageView>
             <Group id="slider&amp;volume&amp;..." layoutX="293.0" layoutY="116.0">
                <children>
-                  <Group id="Volume (center)" layoutX="11.0" layoutY="-10.0">
-                     <children>
-                        <Label text="Volume" />
-                        <Label fx:id="lblVol" layoutX="8.0" layoutY="18.0" text="0ml" />
-                     </children>
-                  </Group>
-                  <Group id="Cost (center)" layoutX="15.0" layoutY="33.0">
-                     <children>
-                        <Label layoutX="2.0" text="Cost" />
-                        <Label fx:id="lblCost" layoutX="5.0" layoutY="18.0" text="0.0$" />
-                     </children>
-                  </Group>
+                  <Group id="Volume (center)" layoutX="11.0" layoutY="-10.0" />
                   <Slider fx:id="slider" blockIncrement="0.01" layoutX="-13.0" layoutY="-47.0" max="1.0" orientation="VERTICAL">
                      <tooltip>
                         <Tooltip text="Slide to adjust the volume of the ingredient." />
@@ -67,13 +59,43 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Slider>
-                  <Group id="\%/R" layoutX="66.0" layoutY="-10.0">
-                     <children>
-                        <Label layoutX="2.0" text="\%/R" />
-                        <Label fx:id="lblCost1" layoutX="4.0" layoutY="18.0" text="0%" />
-                     </children>
-                  </Group>
                   <ProgressBar fx:id="progressGlass" layoutX="-193.0" layoutY="-85.0" prefHeight="18.0" prefWidth="163.0" progress="0.0" />
+                  <VBox alignment="TOP_CENTER" layoutY="-20.0">
+                     <children>
+                        <Label fx:id="lblVolName" text="Volume" />
+                        <HBox alignment="BOTTOM_RIGHT" prefHeight="26.0" prefWidth="69.0">
+                           <children>
+                              <Label fx:id="lblVolume" text="25" />
+                              <Label fx:id="lblVolumeUnit" text="ml" />
+                              <Pane prefHeight="27.0" prefWidth="12.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" layoutX="52.0" layoutY="-20.0" prefHeight="44.0" prefWidth="69.0">
+                     <children>
+                        <Label fx:id="lblPercentRName" text="\%/R" />
+                        <HBox alignment="BOTTOM_RIGHT" prefHeight="26.0" prefWidth="69.0">
+                           <children>
+                              <Label fx:id="lblPercentR" text="60" />
+                              <Label fx:id="lblPercentRPercent" text="\%" />
+                              <Pane prefHeight="27.0" prefWidth="12.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" layoutY="24.0" prefHeight="44.0" prefWidth="69.0">
+                     <children>
+                        <Label fx:id="lblCostName" text="Cost" />
+                        <HBox alignment="BOTTOM_RIGHT" prefHeight="26.0" prefWidth="69.0">
+                           <children>
+                              <Label fx:id="lblCost" text="3.54" />
+                              <Label fx:id="lblCostValuta" text="€" />
+                              <Pane prefHeight="27.0" prefWidth="12.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
                </children>
             </Group>
          </children>
@@ -718,5 +740,10 @@
             <Label layoutY="15.0" text="0ml" />
          </children>
       </Group>
+      <RadioButton layoutX="359.0" layoutY="591.0" mnemonicParsing="false" />
+      <RadioButton layoutX="418.0" layoutY="591.0" mnemonicParsing="false" />
+      <RadioButton layoutX="478.0" layoutY="591.0" mnemonicParsing="false" />
+      <RadioButton layoutX="538.0" layoutY="591.0" mnemonicParsing="false" />
+      <RadioButton layoutX="598.0" layoutY="591.0" mnemonicParsing="false" />
    </children>
 </AnchorPane>
