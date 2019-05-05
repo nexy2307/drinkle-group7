@@ -37,7 +37,7 @@
                   <Label text="Date of Birth:" />
                   <TextField prefHeight="34.0" prefWidth="353.0" />
                   <Label text="Gender:" />
-                  <TextField prefHeight="34.0" prefWidth="353.0" />
+                  <ComboBox fx:id="genderComboBox" prefHeight="30.0" prefWidth="160.0" />
                   <Label text="Password:" />
                   <TextField prefHeight="34.0" prefWidth="353.0" />
                   <HBox alignment="CENTER_LEFT" prefHeight="27.0" prefWidth="349.0" spacing="120.0">
