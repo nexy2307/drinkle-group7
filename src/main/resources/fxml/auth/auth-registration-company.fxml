@@ -9,7 +9,7 @@
 <?import java.net.URL?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="694.0" maxWidth="1000.0" minHeight="694.0" minWidth="1000.0" prefHeight="694.0" prefWidth="1000.0" styleClass="view, view-white-bg, left-border-radius" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espressoshock.drinkle.controllers.auth.AuthRegistration">
+<AnchorPane maxHeight="694.0" maxWidth="1000.0" minHeight="694.0" minWidth="1000.0" prefHeight="694.0" prefWidth="1000.0" styleClass="view, view-white-bg, left-border-radius" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espressoshock.drinkle.controllers.auth.AuthRegistrationCompany">
 
     <stylesheets>
         <URL value="@../../css/auth/auth-registration.css" />
@@ -20,23 +20,25 @@
          <children>
             <HBox layoutX="45.0" layoutY="222.0" prefHeight="34.0" prefWidth="349.0" styleClass="login-type-toggle">
                <children>
-                  <RadioButton mnemonicParsing="false" prefHeight="34.0" prefWidth="192.0" selected="true" styleClass="right" text="Individual" textAlignment="CENTER">
+                  <RadioButton mnemonicParsing="false" onMousePressed="#onSwitchAccountRegistrationTap" prefHeight="34.0" prefWidth="192.0" selected="true" styleClass="right" text="Individual" textAlignment="CENTER">
                      <toggleGroup>
                         <ToggleGroup fx:id="loginType" />
                      </toggleGroup>
                   </RadioButton>
-                  <RadioButton mnemonicParsing="false" onMousePressed="#onSwitchAccountRegistrationTap" prefHeight="34.0" prefWidth="160.0" styleClass="left" text="Company" toggleGroup="$loginType" />
+                  <RadioButton mnemonicParsing="false" prefHeight="34.0" prefWidth="160.0" selected="true" styleClass="left" text="Company" toggleGroup="$loginType" />
                </children>
             </HBox>
             <VBox layoutX="46.0" layoutY="260.0" prefHeight="270.0" prefWidth="349.0" styleClass="login-form">
                <children>
-                  <Label text="Full Name:" />
+                  <Label text="VAT:" />
                   <TextField prefHeight="34.0" prefWidth="353.0" />
-                  <Label text="Email:" />
+                  <Label text="Business Name:" />
                   <TextField prefHeight="34.0" prefWidth="353.0" />
-                  <Label text="Date of Birth:" />
+                  <Label text="Business Email:" />
                   <TextField prefHeight="34.0" prefWidth="353.0" />
-                  <Label text="Gender:" />
+                  <Label text="Country:" />
+                  <TextField prefHeight="34.0" prefWidth="353.0" />
+                  <Label text="Team:" />
                   <TextField prefHeight="34.0" prefWidth="353.0" />
                   <Label text="Password:" />
                   <TextField prefHeight="34.0" prefWidth="353.0" />

@@ -6,11 +6,11 @@ import com.espressoshock.drinkle.viewLoader.ViewMetadata;
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
 
-public class AuthRegistration extends EventDispatcherAdapter {
+public class AuthRegistrationCompany extends EventDispatcherAdapter {
 
   @FXML
   public void onSwitchAccountRegistrationTap(MouseEvent event) {
-    super.dispatchViewChangeRequest(ViewMetadata.AUTH_REGISTRATION_COMPANY);
+    super.dispatchViewChangeRequest(ViewMetadata.AUTH_REGISTRATION);
   }
 
   @FXML
@@ -22,5 +22,4 @@ public class AuthRegistration extends EventDispatcherAdapter {
     //some serious business logic
     super.dispatchViewChangeRequest(ViewLoader.default_view);
   }
-
 }

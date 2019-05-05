@@ -115,7 +115,8 @@ public class MainViewWrapper extends EventObserverAdapter implements IEventObser
 
 /********* =LAYOUT UTILITY - TEMPORARY */
  public void loadLayoutUtility(ViewMetadata view) throws IOException{
-     if(view != ViewMetadata.APP_SIDEBAR && view != ViewMetadata.AUTH_LOGIN && view != ViewMetadata.AUTH_REGISTRATION) {
+     if(view != ViewMetadata.APP_SIDEBAR && view != ViewMetadata.AUTH_LOGIN && view != ViewMetadata.AUTH_REGISTRATION
+     && view != ViewMetadata.AUTH_REGISTRATION_COMPANY) {
          if(ViewLoader.getRenderedViewsSize()>1)
              super.setEventDispatcher(ViewLoader.add(view, 65d, 0d));
          else{
