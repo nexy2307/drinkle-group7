@@ -33,6 +33,11 @@ public class Main extends Application {
         primaryStage.setResizable(false);
         primaryStage.setScene(mainScene);
         primaryStage.show();
+
+        /*
+        shows current jdk used by the app itself.
+        System.out.println(System.getProperties());
+        */
     }
 
 

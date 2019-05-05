@@ -80,9 +80,9 @@ public class MainViewWrapper extends EventObserverAdapter implements IEventObser
         //fields loaded here -> check if logged/remembered is checked etc...
         if (Current.environment.userStatus.equals(loggedIn)) {
             //logged show main ui
+            super.setEventDispatcher(ViewLoader.load(ViewLoader.default_view));
         } else if (Current.environment.userStatus.equals(loggedOut)) {
             //NOT_LOGGED -> LOAD auth-login
-
             /********* =VIEW-LOADER: AUTH_LOGIN         */
             super.setEventDispatcher(ViewLoader.load(ViewMetadata.AUTH_LOGIN));
             /********* END =VIEW-LOADER: AUTH_LOGIN           */

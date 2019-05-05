@@ -1,12 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 <?import java.net.URL?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="694.0" maxWidth="1000.0" minHeight="694.0" minWidth="1000.0" prefHeight="694.0" prefWidth="1000.0" styleClass="view, view-white-bg, left-border-radius" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espressoshock.drinkle.controllers.auth.AuthRegistration">
+<AnchorPane maxHeight="694.0" maxWidth="1000.0" minHeight="694.0" minWidth="1000.0" prefHeight="694.0" prefWidth="1000.0" styleClass="view, view-white-bg, left-border-radius" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espressoshock.drinkle.controllers.auth.AuthRegistration">
 
     <stylesheets>
         <URL value="@../../css/auth/auth-registration.css" />
         <URL value="@../../css/common.css" />
     </stylesheets>
+   <children>
+      <Pane layoutY="22.0" prefHeight="634.0" prefWidth="529.0">
+         <children>
+            <HBox layoutX="45.0" layoutY="222.0" prefHeight="34.0" prefWidth="349.0" styleClass="login-type-toggle">
+               <children>
+                  <RadioButton mnemonicParsing="false" prefHeight="34.0" prefWidth="192.0" selected="true" styleClass="right" text="Individual" textAlignment="CENTER">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="loginType" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" prefHeight="34.0" prefWidth="160.0" styleClass="left" text="Company" toggleGroup="$loginType" />
+               </children>
+            </HBox>
+            <VBox layoutX="46.0" layoutY="260.0" prefHeight="270.0" prefWidth="349.0" styleClass="login-form">
+               <children>
+                  <Label text="Full Name" />
+                  <TextField prefHeight="34.0" prefWidth="353.0" />
+                  <Label text="Email" />
+                  <TextField prefHeight="34.0" prefWidth="353.0" />
+                  <Label text="Date of Birth" />
+                  <TextField prefHeight="34.0" prefWidth="353.0" />
+                  <Label text="Gender" />
+                  <TextField prefHeight="34.0" prefWidth="353.0" />
+                  <Label text="Password" />
+                  <TextField prefHeight="34.0" prefWidth="353.0" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="27.0" prefWidth="349.0" spacing="120.0">
+                     <VBox.margin>
+                        <Insets bottom="45.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Button mnemonicParsing="false" onMousePressed="#register" prefHeight="47.0" prefWidth="190.0" styleClass="login-btn" text="Register">
+                     <VBox.margin>
+                        <Insets left="-8.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <Button layoutX="749.0" layoutY="617.0" mnemonicParsing="false" onMousePressed="#openLoginView" prefHeight="54.0" prefWidth="251.0" text="I already have an account" />
+         </children>
+      </Pane>
+   </children>
 </AnchorPane>
