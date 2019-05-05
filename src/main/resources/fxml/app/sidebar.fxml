@@ -28,7 +28,7 @@
       </HBox>
       <VBox layoutY="119.0" opacity="0.89" prefHeight="300.0" prefWidth="65.0" spacing="30.0" styleClass="ordered-menu">
          <children>
-            <RadioButton mnemonicParsing="false" prefHeight="40.0" prefWidth="68.0" styleClass="dashboard" userData="APP_DASHBOARD">
+            <RadioButton mnemonicParsing="false" prefHeight="40.0" prefWidth="68.0" styleClass="dashboard" toggleGroup="$sidebarMenu" userData="APP_DASHBOARD">
                <toggleGroup>
                   <ToggleGroup fx:id="sidebarMenu" />
                </toggleGroup>
