@@ -1,6 +1,6 @@
 package com.espressoshock.drinkle.controllers.app;
 
-import com.espressoshock.drinkle.viewLoader.EventObserverAdapter;
+import com.espressoshock.drinkle.viewLoader.EventDispatcherAdapter;
 
-public class BeverageList extends EventObserverAdapter {
+public class BeverageList extends EventDispatcherAdapter {
 }
