@@ -22,44 +22,44 @@
 <?import javafx.scene.shape.SVGPath?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="729.0" prefWidth="1000.0" styleClass="view-white-bg, view-page" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espressoshock.drinkle.controllers.app.BeverageBuilder">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="935.0" styleClass="view-white-bg, view-page" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espressoshock.drinkle.controllers.app.BeverageBuilder">
 
     <stylesheets>
         <URL value="@../../css/app/beverage-builder.css" />
         <URL value="@../../css/common.css" />
     </stylesheets>
    <children>
-      <SVGPath fx:id="highlight" content="M36.7,719.7c-23.3-106-36.6-245-36.6-382.2c0-112.8,12.5-223.3,38.2-337.4c39.8,0,69.6,0.1,98.4,0.1c28.6,0,58.1,0.1,97.4,0.1v719c-39.3,0-69.2,0.1-98.2,0.2C106.7,719.6,76.5,719.7,36.7,719.7z" layoutX="761.0" layoutY="2.0" scaleX="1.05" scaleY="1.03" />
+      <SVGPath fx:id="highlight" content="M36.7,719.7c-23.3-106-36.6-245-36.6-382.2c0-112.8,12.5-223.3,38.2-337.4c39.8,0,69.6,0.1,98.4,0.1c28.6,0,58.1,0.1,97.4,0.1v719c-39.3,0-69.2,0.1-98.2,0.2C106.7,719.6,76.5,719.7,36.7,719.7z" layoutX="696.0" layoutY="-12.0" scaleX="1.05" scaleY="0.97" />
       <Group id="Cetner graphics/data" layoutX="288.0" layoutY="89.0">
          <children>
-            <Group id="Chosen Ingredient" layoutX="126.0">
+            <Group id="Chosen Ingredient" layoutX="102.0" layoutY="-46.0">
                <children>
                   <Label layoutY="1.0" text="Move the slider to adjust the volume" />
                </children>
             </Group>
-            <ImageView fitHeight="505.0" fitWidth="452.0" layoutX="-11.0" layoutY="3.0">
+            <ImageView fitHeight="468.0" fitWidth="421.0" layoutX="-27.0" layoutY="-33.0">
                <cursor>
-                  <Cursor fx:constant="NONE" />
+                  <Cursor fx:constant="DEFAULT" />
                </cursor>
                <image>
                   <Image url="@../../images/app/beverage-builder/martini.png" />
                </image>
             </ImageView>
-            <Group id="slider&amp;volume&amp;..." layoutX="324.0" layoutY="96.0">
+            <Group id="slider&amp;volume&amp;..." layoutX="293.0" layoutY="116.0">
                <children>
-                  <Group id="Volume (center)" layoutX="25.0" layoutY="54.0">
+                  <Group id="Volume (center)" layoutX="11.0" layoutY="-10.0">
                      <children>
                         <Label text="Volume" />
                         <Label fx:id="lblVol" layoutX="8.0" layoutY="18.0" text="0ml" />
                      </children>
                   </Group>
-                  <Group id="Cost (center)" layoutX="32.0" layoutY="98.0">
+                  <Group id="Cost (center)" layoutX="15.0" layoutY="33.0">
                      <children>
                         <Label layoutX="2.0" text="Cost" />
-                        <Label fx:id="lblCost" layoutX="4.0" layoutY="18.0" text="0.0$" />
+                        <Label fx:id="lblCost" layoutX="5.0" layoutY="18.0" text="0.0$" />
                      </children>
                   </Group>
-                  <Slider fx:id="slider" blockIncrement="0.01" layoutX="3.0" max="1.0" orientation="VERTICAL">
+                  <Slider fx:id="slider" blockIncrement="0.01" layoutX="-13.0" layoutY="-47.0" max="1.0" orientation="VERTICAL">
                      <tooltip>
                         <Tooltip text="Slide to adjust the volume of the ingredient." />
                      </tooltip>
@@ -67,27 +67,27 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Slider>
-                  <Group id="\%/R" layoutX="80.0" layoutY="53.0">
+                  <Group id="\%/R" layoutX="66.0" layoutY="-10.0">
                      <children>
                         <Label layoutX="2.0" text="\%/R" />
                         <Label fx:id="lblCost1" layoutX="4.0" layoutY="18.0" text="0%" />
                      </children>
                   </Group>
-                  <ProgressBar fx:id="progressGlass" layoutX="-191.0" prefHeight="18.0" prefWidth="163.0" progress="0.0" />
+                  <ProgressBar fx:id="progressGlass" layoutX="-193.0" layoutY="-85.0" prefHeight="18.0" prefWidth="163.0" progress="0.0" />
                </children>
             </Group>
          </children>
       </Group>
-      <AnchorPane fx:id="ingredintListAnchorPane" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="729.0" prefWidth="285.0">
+      <AnchorPane fx:id="ingredintListAnchorPane" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="268.0">
          <children>
-            <ScrollPane id="list of the ingredients" fx:id="listOfIngredientsScrollPane" layoutY="60.0" prefHeight="669.0" prefWidth="282.0">
+            <ScrollPane id="list of the ingredients" fx:id="listOfIngredientsScrollPane" layoutX="4.0" layoutY="60.0" prefHeight="633.0" prefWidth="260.0">
                <content>
-                  <VBox fx:id="vBoxListOfIngredients">
+                  <VBox fx:id="vBoxListOfIngredients" prefHeight="625.0" prefWidth="242.0">
                      <children>
                         <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice">
                            <children>
                               <Label onMouseClicked="#choseIngredient" text="Name 1" />
-                              <Label layoutX="230.0" text="0.0€/l" />
+                              <Label layoutX="214.0" text="0.0€/l" />
                            </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -95,17 +95,8 @@
                         </Group>
                         <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice1" layoutX="10.0" layoutY="10.0">
                            <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 2" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice2" layoutX="10.0" layoutY="10.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 3" />
-                              <Label layoutX="230.0" text="0.0€/l" />
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
                            </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -113,422 +104,404 @@
                         </Group>
                         <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice11" layoutX="10.0" layoutY="25.0">
                            <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 4" />
-                              <Label layoutX="230.0" text="0.0€/l" />
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
                            </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice21" layoutX="10.0" layoutY="40.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 5" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice3" layoutX="10.0" layoutY="10.0">
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice111" layoutX="10.0" layoutY="40.0">
                            <children>
                               <Label onMouseClicked="#choseIngredient" text="Name 1" />
-                              <Label layoutX="230.0" text="0.0€/l" />
+                              <Label layoutX="214.0" text="0.0€/l" />
                            </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice12" layoutX="10.0" layoutY="25.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 2" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice22" layoutX="10.0" layoutY="40.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 3" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice111" layoutX="10.0" layoutY="55.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 4" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice211" layoutX="10.0" layoutY="70.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 5" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice31" layoutX="10.0" layoutY="85.0">
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice1111" layoutX="10.0" layoutY="55.0">
                            <children>
                               <Label onMouseClicked="#choseIngredient" text="Name 1" />
-                              <Label layoutX="230.0" text="0.0€/l" />
+                              <Label layoutX="214.0" text="0.0€/l" />
                            </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice121" layoutX="10.0" layoutY="100.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 2" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice221" layoutX="10.0" layoutY="115.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 3" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice1111" layoutX="10.0" layoutY="130.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 4" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice2111" layoutX="10.0" layoutY="145.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 5" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice311" layoutX="10.0" layoutY="160.0">
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice11111" layoutX="10.0" layoutY="70.0">
                            <children>
                               <Label onMouseClicked="#choseIngredient" text="Name 1" />
-                              <Label layoutX="230.0" text="0.0€/l" />
+                              <Label layoutX="214.0" text="0.0€/l" />
                            </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice1211" layoutX="10.0" layoutY="175.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 2" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice2211" layoutX="10.0" layoutY="190.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 3" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice11111" layoutX="10.0" layoutY="205.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 4" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice21111" layoutX="10.0" layoutY="220.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 5" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice3111" layoutX="10.0" layoutY="235.0">
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice111111" layoutX="10.0" layoutY="85.0">
                            <children>
                               <Label onMouseClicked="#choseIngredient" text="Name 1" />
-                              <Label layoutX="230.0" text="0.0€/l" />
+                              <Label layoutX="214.0" text="0.0€/l" />
                            </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice12111" layoutX="10.0" layoutY="250.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 2" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice22111" layoutX="10.0" layoutY="265.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 3" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice111111" layoutX="10.0" layoutY="280.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 4" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice211111" layoutX="10.0" layoutY="295.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 5" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice31111" layoutX="10.0" layoutY="310.0">
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice1111111" layoutX="10.0" layoutY="100.0">
                            <children>
                               <Label onMouseClicked="#choseIngredient" text="Name 1" />
-                              <Label layoutX="230.0" text="0.0€/l" />
+                              <Label layoutX="214.0" text="0.0€/l" />
                            </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice121111" layoutX="10.0" layoutY="325.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 2" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice221111" layoutX="10.0" layoutY="340.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 3" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice1111111" layoutX="10.0" layoutY="355.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 4" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice2111111" layoutX="10.0" layoutY="370.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 5" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice311111" layoutX="10.0" layoutY="385.0">
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice11111111" layoutX="10.0" layoutY="115.0">
                            <children>
                               <Label onMouseClicked="#choseIngredient" text="Name 1" />
-                              <Label layoutX="230.0" text="0.0€/l" />
+                              <Label layoutX="214.0" text="0.0€/l" />
                            </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice1211111" layoutX="10.0" layoutY="400.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 2" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice2211111" layoutX="10.0" layoutY="415.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 3" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice11111111" layoutX="10.0" layoutY="430.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 4" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice21111111" layoutX="10.0" layoutY="445.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 5" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice3111111" layoutX="10.0" layoutY="460.0">
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice111111111" layoutX="10.0" layoutY="130.0">
                            <children>
                               <Label onMouseClicked="#choseIngredient" text="Name 1" />
-                              <Label layoutX="230.0" text="0.0€/l" />
+                              <Label layoutX="214.0" text="0.0€/l" />
                            </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice12111111" layoutX="10.0" layoutY="475.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 2" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice22111111" layoutX="10.0" layoutY="490.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 3" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice111111111" layoutX="10.0" layoutY="505.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 4" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice211111111" layoutX="10.0" layoutY="520.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 5" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice31111111" layoutX="10.0" layoutY="535.0">
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice1111111111" layoutX="10.0" layoutY="145.0">
                            <children>
                               <Label onMouseClicked="#choseIngredient" text="Name 1" />
-                              <Label layoutX="230.0" text="0.0€/l" />
+                              <Label layoutX="214.0" text="0.0€/l" />
                            </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice121111111" layoutX="10.0" layoutY="550.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 2" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice221111111" layoutX="10.0" layoutY="565.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 3" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice1111111111" layoutX="10.0" layoutY="580.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 4" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice2111111111" layoutX="10.0" layoutY="595.0">
-                           <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 5" />
-                              <Label layoutX="230.0" text="0.0€/l" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice311111111" layoutX="10.0" layoutY="610.0">
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice11111111111" layoutX="10.0" layoutY="160.0">
                            <children>
                               <Label onMouseClicked="#choseIngredient" text="Name 1" />
-                              <Label layoutX="230.0" text="0.0€/l" />
+                              <Label layoutX="214.0" text="0.0€/l" />
                            </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice1211111111" layoutX="10.0" layoutY="625.0">
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice111111111111" layoutX="10.0" layoutY="175.0">
                            <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 2" />
-                              <Label layoutX="230.0" text="0.0€/l" />
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
                            </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice2211111111" layoutX="10.0" layoutY="640.0">
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice1111111111111" layoutX="10.0" layoutY="190.0">
                            <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 3" />
-                              <Label layoutX="230.0" text="0.0€/l" />
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
                            </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice11111111111" layoutX="10.0" layoutY="655.0">
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice11111111111111" layoutX="10.0" layoutY="205.0">
                            <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 4" />
-                              <Label layoutX="230.0" text="0.0€/l" />
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
                            </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Group>
-                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice21111111111" layoutX="10.0" layoutY="670.0">
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice111111111111111" layoutX="10.0" layoutY="220.0">
                            <children>
-                              <Label onMouseClicked="#choseIngredient" text="Name 5" />
-                              <Label layoutX="230.0" text="0.0€/l" />
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice1111111111111111" layoutX="10.0" layoutY="235.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice11111111111111111" layoutX="10.0" layoutY="250.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice111111111111111111" layoutX="10.0" layoutY="265.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice1111111111111111111" layoutX="10.0" layoutY="280.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice11111111111111111111" layoutX="10.0" layoutY="295.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice111111111111111111111" layoutX="10.0" layoutY="310.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice1111111111111111111111" layoutX="10.0" layoutY="325.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice11111111111111111111111" layoutX="10.0" layoutY="340.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice111111111111111111111111" layoutX="10.0" layoutY="355.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice1111111111111111111111111" layoutX="10.0" layoutY="370.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice11111111111111111111111111" layoutX="10.0" layoutY="385.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice111111111111111111111111111" layoutX="10.0" layoutY="400.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice1111111111111111111111111111" layoutX="10.0" layoutY="415.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice11111111111111111111111111111" layoutX="10.0" layoutY="430.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice111111111111111111111111111111" layoutX="10.0" layoutY="445.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice1111111111111111111111111111111" layoutX="10.0" layoutY="460.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice11111111111111111111111111111111" layoutX="10.0" layoutY="475.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice111111111111111111111111111111111" layoutX="10.0" layoutY="490.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice1111111111111111111111111111111111" layoutX="10.0" layoutY="505.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice11111111111111111111111111111111111" layoutX="10.0" layoutY="520.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice111111111111111111111111111111111111" layoutX="10.0" layoutY="535.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice1111111111111111111111111111111111111" layoutX="10.0" layoutY="550.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice11111111111111111111111111111111111111" layoutX="10.0" layoutY="565.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice111111111111111111111111111111111111111" layoutX="10.0" layoutY="580.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice1111111111111111111111111111111111111111" layoutX="10.0" layoutY="595.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice11111111111111111111111111111111111111111" layoutX="10.0" layoutY="610.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice111111111111111111111111111111111111111111" layoutX="10.0" layoutY="625.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice1111111111111111111111111111111111111111111" layoutX="10.0" layoutY="640.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice11111111111111111111111111111111111111111111" layoutX="10.0" layoutY="655.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice111111111111111111111111111111111111111111111" layoutX="10.0" layoutY="670.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Group>
+                        <Group id="Chose Ingredient" fx:id="choseIngredientNamePrice1111111111111111111111111111111111111111111111" layoutX="10.0" layoutY="685.0">
+                           <children>
+                              <Label onMouseClicked="#choseIngredient" text="Name 1" />
+                              <Label layoutX="214.0" text="0.0€/l" />
                            </children>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -538,27 +511,25 @@
                   </VBox>
                </content>
             </ScrollPane>
-            <Separator layoutY="52.0" prefHeight="4.0" prefWidth="255.0" />
+            <Separator layoutY="52.0" prefHeight="1.0" prefWidth="232.0" />
             <Group id="search" layoutX="22.0" layoutY="22.0">
                <children>
-                  <ImageView fitHeight="150.0" fitWidth="20.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="150.0" fitWidth="20.0" layoutX="-6.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../images/app/beverage-builder/search.png" />
                      </image>
                   </ImageView>
-                  <ChoiceBox layoutX="20.0" prefHeight="23.0" prefWidth="92.0">
+                  <ChoiceBox layoutX="14.0" prefHeight="23.0" prefWidth="92.0">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </ChoiceBox>
-                  <TextField layoutX="117.0" prefHeight="23.0" prefWidth="115.0" />
+                  <TextField layoutX="111.0" prefHeight="23.0" prefWidth="103.0" />
                </children>
             </Group>
          </children>
       </AnchorPane>
-      <Button layoutX="813.0" layoutY="580.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" text="Export" />
-      <Button layoutX="813.0" layoutY="624.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" text="Generate" />
-      <ImageView fitHeight="150.0" fitWidth="20.0" layoutX="968.0" layoutY="698.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="15.0" layoutX="911.0" layoutY="671.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/app/beverage-builder/settings.png" />
          </image>
@@ -566,25 +537,25 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <Group id="Alc%" layoutX="803.0" layoutY="191.0">
+      <Group id="Alc%" layoutX="734.0" layoutY="150.0">
          <children>
             <Label layoutX="-1.0" text="Alcohol%" />
             <AnchorPane fx:id="alcoholPercentCircle" layoutX="-30.0" layoutY="14.0" prefHeight="112.0" prefWidth="114.0" />
          </children>
       </Group>
-      <Group id="Pour Cost" layoutX="918.0" layoutY="191.0">
+      <Group id="Pour Cost" layoutX="849.0" layoutY="150.0">
          <children>
             <Label layoutX="-3.0" layoutY="1.0" text="Pour Cost" />
             <AnchorPane fx:id="pourCostCircle" layoutX="-30.0" layoutY="14.0" prefHeight="112.0" prefWidth="114.0" />
          </children>
       </Group>
-      <Group id="Number of ingredients" layoutX="950.0" layoutY="106.0">
+      <Group id="Number of ingredients" layoutX="869.0" layoutY="85.0">
          <children>
             <Label text="N.I." />
             <Label layoutX="2.0" layoutY="15.0" text="0" />
          </children>
       </Group>
-      <Group id="Notes" layoutX="806.0" layoutY="99.0">
+      <Group id="Notes" layoutX="736.0" layoutY="83.0">
          <children>
             <TextField fx:id="txtFieldNotes" layoutY="7.0" prefHeight="37.0" prefWidth="114.0" text="Served cold">
                <tooltip>
@@ -594,7 +565,7 @@
             <Label layoutX="8.0" text="Notes" />
          </children>
       </Group>
-      <Group id="Cocktail name" layoutX="806.0" layoutY="40.0">
+      <Group id="Cocktail name" layoutX="735.0" layoutY="33.0">
          <children>
             <TextField fx:id="txtFieldCocktailName" layoutY="6.0" prefHeight="37.0" prefWidth="135.0" text="Cocktail Name">
                <tooltip>
@@ -604,7 +575,7 @@
             <Label layoutX="9.0" layoutY="-3.0" text="Name" />
          </children>
       </Group>
-      <ImageView fitHeight="150.0" fitWidth="40.0" layoutX="951.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="30.0" layoutX="877.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/app/beverage-builder/folder.png" />
          </image>
@@ -612,7 +583,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <Group id="radio buttons" layoutX="364.0" layoutY="633.0">
+      <Group id="radio buttons" layoutX="338.0" layoutY="630.0">
          <children>
             <Group id="radio button">
                <children>
@@ -650,8 +621,7 @@
             </Group>
          </children>
       </Group>
-      <Line endX="100.0" startX="-100.0" />
-      <ScrollPane fx:id="addedIngredients" hbarPolicy="NEVER" layoutX="772.0" layoutY="337.0" prefHeight="228.0" prefWidth="224.0">
+      <ScrollPane fx:id="addedIngredients" hbarPolicy="NEVER" layoutX="710.0" layoutY="344.0" prefHeight="163.0" prefWidth="224.0">
          <content>
             <VBox fx:id="vBoxChosenIngredients" prefHeight="200.0" prefWidth="164.0" spacing="10.0">
                <children>
@@ -739,5 +709,14 @@
             </VBox>
          </content>
       </ScrollPane>
+      <Button layoutX="747.0" layoutY="547.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" text="Export" />
+      <Button layoutX="747.0" layoutY="591.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" text="Generate" />
+      <Button layoutX="814.0" layoutY="298.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="103.0" text="Manage" />
+      <Group layoutX="713.0" layoutY="298.0">
+         <children>
+            <Label text="Total volume" />
+            <Label layoutY="15.0" text="0ml" />
+         </children>
+      </Group>
    </children>
 </AnchorPane>

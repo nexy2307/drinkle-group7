@@ -1,3 +1,7 @@
+.root{
+    -fx-border-radius: 30 0 0 0;
+    -fx-background-radius: 30 0 0 0;
+}
 .check-box .box{
     -fx-background-radius: 100;
     -fx-border-radius: 100;
@@ -73,12 +77,11 @@
     -fx-background-color: transparent;
     -fx-fill: transparent;
 }
-#listOfIngredientsScrollPane{
-    -fx-background-color: red;
-    -fx-fill: red;
-}
+
 #ingredintListAnchorPane, #ingredintListAnchorPane .scroll-pane, #ingredintListAnchorPane .viewport {
     -fx-background-color: #f8f9fd;
+    -fx-background-radius: 30 0 0 0;
+    -fx-border-radius: 30 0 0 0;
 }
 
 #ingredintListAnchorPane .scroll-pane :vertical {

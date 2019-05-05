@@ -6,7 +6,8 @@ import com.espressoshock.drinkle.controllers.auth.*;
 public enum ViewMetadata {
     AUTH_LOGIN(AuthLogin.class, "/fxml/auth/auth-login.fxml"),
     AUTH_REGISTRATION(AuthRegistration.class, "/fxml/auth/auth-registration.fxml"),
-    APP_INGREDIENT_LIST(IngredientList.class, "/fxml/app/ingredient-list.fxml"),
+    //APP_INGREDIENT_LIST(IngredientList.class, "/fxml/app/ingredient-list.fxml"),
+    APP_INGREDIENT_LIST(IngredientList.class, "/fxml/app/beverage-builder.fxml"),//<---- For test purpose only
     APP_BEVERAGE_LIST(BeverageList.class, "/fxml/app/beverage-list.fxml"),
     APP_MENU_LIST(MenuList.class, "/fxml/app/menu-list.fxml"),
     APP_BEVERAGE_BUILDER(BeverageBuilder.class, "/fxml/app/beverage-builder.fxml"),
