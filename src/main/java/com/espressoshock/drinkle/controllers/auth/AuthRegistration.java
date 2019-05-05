@@ -12,15 +12,12 @@ public class AuthRegistration extends EventDispatcherAdapter {
   public void onSwitchAccountRegistrationTap(MouseEvent event) {
     super.dispatchViewChangeRequest(ViewMetadata.AUTH_REGISTRATION_COMPANY);
   }
-
   @FXML
   public void openLoginView(MouseEvent event) {
     super.dispatchViewChangeRequest(ViewMetadata.AUTH_LOGIN);
   }
   @FXML
   public void register(MouseEvent event){
-    //some serious business logic
     super.dispatchViewChangeRequest(ViewLoader.default_view);
   }
-
 }
