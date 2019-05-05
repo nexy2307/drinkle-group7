@@ -4,6 +4,11 @@
     -fx-fit-to-width: 20;
 }
 /*---------------Right side css---------------------*/
+#alcoholPercentCircle, #pourCostCircle{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-fill: transparent;
+}
 #txtFieldCocktailName, #txtFieldNotes{
     -fx-background-color: transparent;
     -fx-text-fill: white;
@@ -62,3 +67,48 @@
     -fx-background-radius: 5;
 }
 /*--------------End of right side----------------------*/
+
+/*------------------Left side css----------------------*/
+#vBoxListOfIngredients{
+    -fx-background-color: transparent;
+    -fx-fill: transparent;
+}
+#listOfIngredientsScrollPane{
+    -fx-background-color: red;
+    -fx-fill: red;
+}
+#ingredintListAnchorPane, #ingredintListAnchorPane .scroll-pane, #ingredintListAnchorPane .viewport {
+    -fx-background-color: #f8f9fd;
+}
+
+#ingredintListAnchorPane .scroll-pane :vertical {
+    -fx-pref-width: 8;
+    -fx-background-color: transparent;
+}
+#ingredintListAnchorPane.track{
+
+    -fx-background-color: transparent;
+    -fx-fill: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+#ingredintListAnchorPane .thumb {
+    -fx-pref-width: 5;
+    -fx-background-color: #9ba4d1;
+    -fx-background-radius: 5em;
+}
+#ingredintListAnchorPane .separator .line{
+    -fx-pref-height: 2;
+    -fx-background-color: #3f4fa5;
+}
+#ingredintListAnchorPane .decrement-arrow, .increment-arrow{
+    -fx-background-color: transparent;
+}
+#ingredintListAnchorPane .decrement-arrow:hover, .increment-arrow:hover{
+    -fx-background-color: transparent;
+}
+#ingredintListAnchorPane .decrement-button:hover, .increment-button:hover{
+    -fx-background-color: transparent;
+}
+
+/*------------End of left side css---------------------*/

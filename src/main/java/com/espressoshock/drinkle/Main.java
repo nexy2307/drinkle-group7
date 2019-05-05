@@ -22,11 +22,11 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         //RESOURCE LOADING //***********
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/wrappers/main-v-wrapper.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/app/beverage-builder.fxml"));
         //WINDOW  //***********
         Scene mainScene = new Scene(root, windowWidth, windowHeight);
-        mainScene.setFill(Color.TRANSPARENT);
-        primaryStage.initStyle(StageStyle.TRANSPARENT);
+        //mainScene.setFill(Color.TRANSPARENT);
+        //primaryStage.initStyle(StageStyle.TRANSPARENT);
 
 
         primaryStage.setTitle("Drinkle");
