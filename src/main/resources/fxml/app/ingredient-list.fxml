@@ -74,12 +74,12 @@
       </Label>
       <Label layoutX="635.0" layoutY="278.0" stylesheets="@../../css/app/ingredient-list.css" text="\%" />
       <Label layoutX="635.0" layoutY="324.0" stylesheets="@../../css/app/ingredient-list.css" text="\$" />
-      <Label layoutX="664.0" layoutY="85.0" stylesheets="@../../css/app/ingredient-list.css" text="Visualizations">
+      <Label layoutX="665.0" layoutY="34.0" stylesheets="@../../css/app/ingredient-list.css" text="Visualizations">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="664.0" layoutY="124.0" stylesheets="@../../css/app/ingredient-list.css" text="Likes">
+      <Label layoutX="665.0" layoutY="73.0" stylesheets="@../../css/app/ingredient-list.css" text="Likes">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -125,18 +125,6 @@
             <Reflection fraction="0.42" topOpacity="0.32" />
          </effect>
       </MenuButton>
-      <MenuButton fx:id="menuBtnGoTo" layoutX="842.0" layoutY="30.0" mnemonicParsing="false" stylesheets="@../../css/app/ingredient-list.css" text="Go To">
-        <items>
-          <MenuItem mnemonicParsing="false" text="Action 1" />
-          <MenuItem mnemonicParsing="false" text="Action 2" />
-        </items>
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-         <effect>
-            <Reflection fraction="0.42" topOpacity="0.32" />
-         </effect>
-      </MenuButton>
       <ProgressBar fx:id="progressBarAlcohol" layoutX="382.0" layoutY="282.0" prefHeight="10.0" prefWidth="200.0" stylesheets="@../../css/app/ingredient-list.css" />
       <ProgressBar fx:id="progressBarPrice" layoutX="382.0" layoutY="333.0" prefHeight="10.0" prefWidth="200.0" stylesheets="@../../css/app/ingredient-list.css" />
       <TextArea fx:id="txtAreaDescription" editable="false" layoutX="338.0" layoutY="62.0" prefHeight="200.0" prefWidth="299.0" promptText="Product Description" stylesheets="@../../css/app/ingredient-list.css">
@@ -147,9 +135,9 @@
       <TextField fx:id="txtFieldAlcohol" alignment="TOP_RIGHT" editable="false" layoutX="581.0" layoutY="274.0" prefHeight="25.0" prefWidth="52.0" promptText="Alcoh" stylesheets="@../../css/app/ingredient-list.css" />
       <TextField fx:id="txtFieldPrice" alignment="TOP_RIGHT" editable="false" layoutX="581.0" layoutY="320.0" prefHeight="25.0" prefWidth="52.0" promptText="Price" stylesheets="@../../css/app/ingredient-list.css" />
       <TextField fx:id="txtFieldSearchOption" layoutX="264.0" layoutY="27.0" prefHeight="32.0" prefWidth="151.0" promptText="Search Options" stylesheets="@../../css/app/ingredient-list.css" AnchorPane.leftAnchor="266.0" AnchorPane.rightAnchor="516.0" />
-      <TextField fx:id="txtFieldVisualisations" editable="false" layoutX="815.0" layoutY="81.0" prefHeight="25.0" prefWidth="91.0" promptText="Visualisations" stylesheets="@../../css/app/ingredient-list.css" />
-      <TextField fx:id="txtFieldLikes" editable="false" layoutX="815.0" layoutY="120.0" prefHeight="25.0" prefWidth="91.0" promptText="Likes" stylesheets="@../../css/app/ingredient-list.css" />
-      <TextField fx:id="txtFieldProductName" alignment="CENTER" editable="false" layoutX="649.0" layoutY="150.0" prefHeight="51.0" prefWidth="274.0" promptText="Product Name" stylesheets="@../../css/app/ingredient-list.css">
+      <TextField fx:id="txtFieldVisualisations" editable="false" layoutX="816.0" layoutY="30.0" prefHeight="25.0" prefWidth="91.0" promptText="Visualisations" stylesheets="@../../css/app/ingredient-list.css" />
+      <TextField fx:id="txtFieldLikes" editable="false" layoutX="816.0" layoutY="69.0" prefHeight="25.0" prefWidth="91.0" promptText="Likes" stylesheets="@../../css/app/ingredient-list.css" />
+      <TextField fx:id="txtFieldProductName" alignment="CENTER" editable="false" layoutX="645.0" layoutY="111.0" prefHeight="51.0" prefWidth="274.0" promptText="Product Name" stylesheets="@../../css/app/ingredient-list.css">
          <font>
             <Font name="System Bold Italic" size="24.0" />
          </font>
@@ -160,7 +148,7 @@
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Label>
-      <ImageView fx:id="imgViewProduct" fitHeight="380.0" fitWidth="275.0" layoutX="650.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgViewProduct" fitHeight="410.0" fitWidth="275.0" layoutX="650.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="imgViewSimilarProduct1" fitHeight="215.0" fitWidth="149.0" layoutX="338.0" layoutY="444.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="338.0" />
       <ImageView fx:id="imgViewSimilarProduct2" fitHeight="215.0" fitWidth="149.0" layoutX="496.0" layoutY="444.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="35.0" />
       <TextField fx:id="txtFieldProductOneName" alignment="CENTER" layoutX="339.0" layoutY="412.0" promptText="Product Name" stylesheets="@../../css/app/ingredient-list.css" />

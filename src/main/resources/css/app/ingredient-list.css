@@ -35,10 +35,6 @@
     -fx-border-radius: 10;
     -fx-background-radius: 10;
 }
-#menuBtnGoTo{
-    -fx-border-radius: 20;
-    -fx-background-radius: 20;
-}
 #progressBarAlcohol{
     -fx-progress-color: red;
 }
