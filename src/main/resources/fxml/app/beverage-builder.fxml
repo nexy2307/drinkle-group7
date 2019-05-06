@@ -9,7 +9,6 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
-<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Slider?>
@@ -25,14 +24,14 @@
 <?import javafx.scene.shape.SVGPath?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="935.0" styleClass="view-white-bg, view-page" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espressoshock.drinkle.controllers.app.BeverageBuilder">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="935.0" styleClass="view-white-bg, view-page" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espressoshock.drinkle.controllers.app.BeverageBuilder">
 
     <stylesheets>
         <URL value="@../../css/app/beverage-builder.css" />
         <URL value="@../../css/common.css" />
     </stylesheets>
    <children>
-      <SVGPath fx:id="highlight" blendMode="DARKEN" content="M49.64,694c-17-76.52-26.28-144.55-31.47-200.58c-3.45-37.26-6.84-95.66-6.74-167.47c0.07-51.5,3.06-109.65,11.26-172.96C29.95,96.78,40.13,45.67,51.37,0.29c69.56,0.06,139.12,0.13,208.69,0.19c0.31,80.13,2.46,654.87-0.11,674.24c-1.29,9.74-6.43,14.02-6.43,14.02c-4.04,3.36-10.57,5.01-15.11,5.26c-1.63,0.09-4.97,0.11-5.48,0.11c-3.3,0.02-6-0.05-7.82-0.11c0,0,0,0-7.59,0c-9.28,0-18.57,0-27.85,0c-14.22,0-28.44,0-42.67,0c-5.28,0-10.57,0-15.85,0c-6.07,0-12.15,0-18.22,0c-4.37,0-8.74,0-13.11,0c-2.44,0-4.89,0-7.33,0c-3.14,0-6.27,0-9.41,0c-6.37,0-12.74,0-19.11,0c-1.49,0-2.99,0-4.48,0c-1.7,0-3.41,0-5.11,0C52.79,694,51.22,694,49.64,694z" layoutX="675.0" strokeLineCap="BUTT" />
+      <SVGPath fx:id="highlight" blendMode="DARKEN" content="M36.425,0.000 C106.950,0.000 177.475,0.000 248.000,0.000 C248.000,225.667 248.000,451.333 248.000,677.000 C248.000,686.389 240.680,694.000 231.651,694.000 C166.576,694.000 101.500,694.000 36.425,694.000 C-11.661,461.000 -12.622,232.000 36.425,0.000 Z" layoutX="687.0" strokeLineCap="BUTT" />
       <Group id="Cetner graphics/data" layoutX="288.0" layoutY="89.0">
          <children>
             <Group id="Chosen Ingredient" layoutX="102.0" layoutY="-46.0">
@@ -740,10 +739,5 @@
             <Label layoutY="15.0" text="0ml" />
          </children>
       </Group>
-      <RadioButton layoutX="359.0" layoutY="591.0" mnemonicParsing="false" />
-      <RadioButton layoutX="418.0" layoutY="591.0" mnemonicParsing="false" />
-      <RadioButton layoutX="478.0" layoutY="591.0" mnemonicParsing="false" />
-      <RadioButton layoutX="538.0" layoutY="591.0" mnemonicParsing="false" />
-      <RadioButton layoutX="598.0" layoutY="591.0" mnemonicParsing="false" />
    </children>
 </AnchorPane>
