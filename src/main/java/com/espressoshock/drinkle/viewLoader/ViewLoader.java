@@ -69,4 +69,8 @@ public class ViewLoader {
     public static void setLoadingWrapperNode(Node loadingWrapperNode) {
         ViewLoader.loadingWrapperNode = loadingWrapperNode;
     }
+
+    public static int getRenderedViewsSize(){
+        return ((Pane) loadingWrapperNode).getChildren().size();
+    }
 }
