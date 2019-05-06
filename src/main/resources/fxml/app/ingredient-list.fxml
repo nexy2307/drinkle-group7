@@ -1,21 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<?import java.net.URL?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.espressoshock.drinkle.controllers.app.IngredientList"
-            styleClass="view-white-bg, view-page"
-            maxHeight="694.0" maxWidth="935.0" minHeight="694.0" minWidth="935.0" prefHeight="694.0" prefWidth="935.0">
-
-
-    <stylesheets>
-        <URL value="@../../css/app/ingredient-list.css" />
-        <URL value="@../../css/common.css" />
-    </stylesheets>
+<AnchorPane maxHeight="694.0" maxWidth="935.0" minHeight="694.0" minWidth="935.0" prefHeight="694.0" prefWidth="935.0" styleClass="view-white-bg, view-page" stylesheets="@../../css/app/ingredient-list.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espressoshock.drinkle.controllers.app.IngredientList">
+   <children>
+      <ScrollPane layoutX="21.0" layoutY="62.0" prefHeight="535.0" prefWidth="299.0" stylesheets="@../../css/app/ingredient-list.css">
+         <content>
+            <VBox fx:id="vBoxIngredients" prefHeight="803.0" prefWidth="284.0" stylesheets="@../../css/app/ingredient-list.css" />
+         </content>
+      </ScrollPane>
+      <Button fx:id="btnCreate" layoutX="45.0" layoutY="615.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="250.0" stylesheets="@../../css/app/ingredient-list.css" text="Create">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+         <effect>
+            <Reflection fraction="0.42" topOpacity="0.32" />
+         </effect>
+      </Button>
+      <Button fx:id="btnAddToInventory" layoutX="649.0" layoutY="615.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="250.0" stylesheets="@../../css/app/ingredient-list.css" text="Add to my Inventory ">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+         <effect>
+            <Reflection fraction="0.42" topOpacity="0.32" />
+         </effect>
+      </Button>
+      <Button fx:id="btnSearch" layoutX="421.0" layoutY="27.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="54.0" stylesheets="@../../css/app/ingredient-list.css" text="Search">
+         <effect>
+            <Reflection fraction="0.42" topOpacity="0.32" />
+         </effect>
+      </Button>
+      <CheckBox fx:id="checkBoxAddToList" layoutX="818.0" layoutY="584.0" mnemonicParsing="false" snapToPixel="false" stylesheets="@../../css/app/ingredient-list.css" text="Add to my list">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <Lighting bumpInput="$null" diffuseConstant="1.6" specularConstant="0.74" specularExponent="4.19" surfaceScale="1.85">
+            </Lighting>
+         </effect>
+      </CheckBox>
+      <CheckBox fx:id="checkBoxLike" layoutX="682.0" layoutY="584.0" mnemonicParsing="false" snapToPixel="false" stylesheets="@../../css/app/ingredient-list.css" text="Like it!">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <Lighting bumpInput="$null" diffuseConstant="1.6" specularConstant="0.74" specularExponent="4.19" surfaceScale="1.85">
+            </Lighting>
+         </effect>
+      </CheckBox>
+      <Label layoutX="326.0" layoutY="278.0" stylesheets="@../../css/app/ingredient-list.css" text="Alcohol">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="326.0" layoutY="325.0" stylesheets="@../../css/app/ingredient-list.css" text="Price">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="635.0" layoutY="278.0" stylesheets="@../../css/app/ingredient-list.css" text="\%" />
+      <Label layoutX="635.0" layoutY="324.0" stylesheets="@../../css/app/ingredient-list.css" text="\$" />
+      <Label layoutX="664.0" layoutY="85.0" stylesheets="@../../css/app/ingredient-list.css" text="Visualizations">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="664.0" layoutY="124.0" stylesheets="@../../css/app/ingredient-list.css" text="Likes">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <MenuButton fx:id="menuButtonBrands" layoutX="21.0" layoutY="27.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="125.0" stylesheets="@../../css/app/ingredient-list.css" text="Brands">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <Reflection fraction="0.42" topOpacity="0.32" />
+         </effect>
+      </MenuButton>
+      <MenuButton fx:id="menuButtonProducts" layoutX="145.0" layoutY="27.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="119.0" stylesheets="@../../css/app/ingredient-list.css" text="Products">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <Reflection fraction="0.42" topOpacity="0.32" />
+         </effect>
+      </MenuButton>
+      <MenuButton fx:id="menuBtnGoTo" layoutX="842.0" layoutY="30.0" mnemonicParsing="false" stylesheets="@../../css/app/ingredient-list.css" text="Go To">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <Reflection fraction="0.42" topOpacity="0.32" />
+         </effect>
+      </MenuButton>
+      <ProgressBar fx:id="progressBarAlcohol" layoutX="382.0" layoutY="282.0" prefHeight="10.0" prefWidth="200.0" stylesheets="@../../css/app/ingredient-list.css" />
+      <ProgressBar fx:id="progressBarPrice" layoutX="382.0" layoutY="333.0" prefHeight="10.0" prefWidth="200.0" stylesheets="@../../css/app/ingredient-list.css" />
+      <TextArea fx:id="txtAreaDescription" editable="false" layoutX="338.0" layoutY="62.0" prefHeight="200.0" prefWidth="299.0" promptText="Product Description" stylesheets="@../../css/app/ingredient-list.css">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </TextArea>
+      <TextField fx:id="txtFieldAlcohol" alignment="TOP_RIGHT" editable="false" layoutX="581.0" layoutY="274.0" prefHeight="25.0" prefWidth="52.0" promptText="Alcoh" stylesheets="@../../css/app/ingredient-list.css" />
+      <TextField fx:id="txtFieldPrice" alignment="TOP_RIGHT" editable="false" layoutX="581.0" layoutY="320.0" prefHeight="25.0" prefWidth="52.0" promptText="Price" stylesheets="@../../css/app/ingredient-list.css" />
+      <TextField fx:id="txtFieldSearchOption" layoutX="264.0" layoutY="27.0" prefHeight="32.0" prefWidth="151.0" promptText="Search Options" stylesheets="@../../css/app/ingredient-list.css" AnchorPane.leftAnchor="266.0" AnchorPane.rightAnchor="516.0" />
+      <TextField fx:id="txtFieldVisualisations" editable="false" layoutX="815.0" layoutY="81.0" prefHeight="25.0" prefWidth="91.0" promptText="Visualisations" stylesheets="@../../css/app/ingredient-list.css" />
+      <TextField fx:id="txtFieldLikes" editable="false" layoutX="815.0" layoutY="120.0" prefHeight="25.0" prefWidth="91.0" promptText="Likes" stylesheets="@../../css/app/ingredient-list.css" />
+      <TextField fx:id="txtFieldProductName" alignment="CENTER" editable="false" layoutX="649.0" layoutY="150.0" prefHeight="51.0" prefWidth="274.0" promptText="Product Name" stylesheets="@../../css/app/ingredient-list.css">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtFieldSimilarWithProduct" editable="false" layoutX="421.0" layoutY="378.0" promptText="Product Name" stylesheets="@../../css/app/ingredient-list.css" />
+      <Label layoutX="355.0" layoutY="382.0" stylesheets="@../../css/app/ingredient-list.css" text="Similar with">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgViewProduct" fitHeight="380.0" fitWidth="275.0" layoutX="650.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgViewSimilarProduct1" fitHeight="215.0" fitWidth="149.0" layoutX="338.0" layoutY="444.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="338.0" />
+      <ImageView fx:id="imgViewSimilarProduct2" fitHeight="215.0" fitWidth="149.0" layoutX="496.0" layoutY="444.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="35.0" />
+      <TextField fx:id="txtFieldProductOneName" alignment="CENTER" layoutX="339.0" layoutY="412.0" promptText="Product Name" stylesheets="@../../css/app/ingredient-list.css" />
+      <TextField fx:id="txtFieldProductTwoName" alignment="CENTER" layoutX="496.0" layoutY="412.0" promptText="Product Name" stylesheets="@../../css/app/ingredient-list.css" />
+      <Button fx:id="btnChoose1" alignment="BOTTOM_CENTER" layoutX="357.0" layoutY="473.0" mnemonicParsing="false" opacity="0.29" prefHeight="171.0" prefWidth="112.0" stylesheets="@../../css/app/ingredient-list.css" text="Choose">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnChoose2" alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" layoutX="514.0" layoutY="473.0" mnemonicParsing="false" opacity="0.29" prefHeight="171.0" prefWidth="112.0" stylesheets="@../../css/app/ingredient-list.css" text="Choose">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+   </children>
 </AnchorPane>
