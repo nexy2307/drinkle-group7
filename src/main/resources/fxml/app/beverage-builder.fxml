@@ -32,7 +32,7 @@
         <URL value="@../../css/common.css" />
     </stylesheets>
    <children>
-      <SVGPath fx:id="highlight" content="M36.7,719.7c-23.3-106-36.6-245-36.6-382.2c0-112.8,12.5-223.3,38.2-337.4c39.8,0,69.6,0.1,98.4,0.1c28.6,0,58.1,0.1,97.4,0.1v719c-39.3,0-69.2,0.1-98.2,0.2C106.7,719.6,76.5,719.7,36.7,719.7z" layoutX="696.0" layoutY="-12.0" scaleX="1.05" scaleY="0.97" />
+      <SVGPath fx:id="highlight" blendMode="DARKEN" content="M49.64,694c-17-76.52-26.28-144.55-31.47-200.58c-3.45-37.26-6.84-95.66-6.74-167.47c0.07-51.5,3.06-109.65,11.26-172.96C29.95,96.78,40.13,45.67,51.37,0.29c69.56,0.06,139.12,0.13,208.69,0.19c0.31,80.13,2.46,654.87-0.11,674.24c-1.29,9.74-6.43,14.02-6.43,14.02c-4.04,3.36-10.57,5.01-15.11,5.26c-1.63,0.09-4.97,0.11-5.48,0.11c-3.3,0.02-6-0.05-7.82-0.11c0,0,0,0-7.59,0c-9.28,0-18.57,0-27.85,0c-14.22,0-28.44,0-42.67,0c-5.28,0-10.57,0-15.85,0c-6.07,0-12.15,0-18.22,0c-4.37,0-8.74,0-13.11,0c-2.44,0-4.89,0-7.33,0c-3.14,0-6.27,0-9.41,0c-6.37,0-12.74,0-19.11,0c-1.49,0-2.99,0-4.48,0c-1.7,0-3.41,0-5.11,0C52.79,694,51.22,694,49.64,694z" layoutX="675.0" strokeLineCap="BUTT" />
       <Group id="Cetner graphics/data" layoutX="288.0" layoutY="89.0">
          <children>
             <Group id="Chosen Ingredient" layoutX="102.0" layoutY="-46.0">
@@ -551,7 +551,7 @@
             </Group>
          </children>
       </AnchorPane>
-      <ImageView fitHeight="150.0" fitWidth="15.0" layoutX="911.0" layoutY="671.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="15.0" layoutX="893.0" layoutY="655.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/app/beverage-builder/settings.png" />
          </image>
