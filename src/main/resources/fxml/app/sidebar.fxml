@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="694.0" maxWidth="65.0" minHeight="694.0" minWidth="65.0" prefHeight="65.0" prefWidth="65.0" styleClass="root" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espressoshock.drinkle.controllers.app.Sidebar">
+
+    <stylesheets>
+        <URL value="@../../css/app/sidebar.css" />
+        <URL value="@../../css/common.css" />
+    </stylesheets>
+   <children>
+      <HBox alignment="TOP_CENTER" prefHeight="39.0" prefWidth="65.0">
+         <children>
+            <ImageView fitHeight="59.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/app/sidebar/profile-thumb@2x.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <VBox layoutY="119.0" opacity="0.89" prefHeight="300.0" prefWidth="65.0" spacing="30.0" styleClass="ordered-menu">
+         <children>
+            <RadioButton mnemonicParsing="false" prefHeight="40.0" prefWidth="68.0" styleClass="dashboard" toggleGroup="$sidebarMenu" userData="APP_DASHBOARD">
+               <toggleGroup>
+                  <ToggleGroup fx:id="sidebarMenu" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" prefHeight="40.0" prefWidth="68.0" styleClass="ingredient-list" toggleGroup="$sidebarMenu" userData="APP_INGREDIENT_LIST" />
+            <RadioButton mnemonicParsing="false" prefHeight="40.0" prefWidth="68.0" styleClass="beverage-list" toggleGroup="$sidebarMenu" userData="APP_BEVERAGE_LIST" />
+            <RadioButton mnemonicParsing="false" prefHeight="40.0" prefWidth="68.0" styleClass="menu-list" toggleGroup="$sidebarMenu" userData="APP_MENU_LIST" />
+            <RadioButton mnemonicParsing="false" prefHeight="40.0" prefWidth="68.0" styleClass="team-list" toggleGroup="$sidebarMenu" userData="APP_TEAM_LIST" />
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutY="640.0" prefHeight="40.0" prefWidth="65.0" styleClass="bottom-bar">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="65.0" styleClass="log-out" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

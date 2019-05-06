@@ -29,3 +29,23 @@
 /********* END =FONTS */
 
 
+/********* =VIEWS DEFAULTS BG */
+.view{
+    -fx-background-radius: 0 0 20 20;
+}
+.view-white-bg{
+    -fx-background-color: #fff;
+}
+.no-border-radius{
+    -fx-background-radius: 0;
+}
+.left-border-radius{
+    -fx-background-radius: 20 0 20 20;
+}
+.view-page{
+    -fx-background-radius: 20 0 20 0;
+}
+
+/********* END =VIEWS DEFAULTS BG */
+
+

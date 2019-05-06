@@ -1,5 +1,6 @@
 package com.espressoshock.drinkle.appState;
 
+import com.espressoshock.drinkle.models.Account;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -8,8 +9,16 @@ import java.util.Date;
 //NOTE: Will contain the user.
 public class Environment {
 
-  //TODO: Check for data on disk, query db for existing user.
-  public UserState userStatus = UserState.loggedIn;
+  public UserState userStatus() {
+    if (currentUser == null) {
+      System.out.println("No user saved, show login");
+      return UserState.loggedOut;
+    }
+    System.out.println("User available, show default");
+    return UserState.loggedIn;
+  }
+  public Account currentUser = (Account) AppStatePersistence.retrieveObject(AppStatePersistence.userFilename);
+
 
 
   private DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm");

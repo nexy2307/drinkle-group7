@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="694.0" maxWidth="935.0" minHeight="694.0" minWidth="935.0" prefHeight="694.0" prefWidth="935.0" styleClass="view-white-bg, view-page" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espressoshock.drinkle.controllers.app.IngredientList">
+
+
+    <stylesheets>
+        <URL value="@../../css/app/ingredient-list.css" />
+        <URL value="@../../css/common.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="409.0" layoutY="319.0" text="ingredient-list" textFill="#aeaeae">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
