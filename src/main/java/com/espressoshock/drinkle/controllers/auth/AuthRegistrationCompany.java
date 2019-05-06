@@ -1,20 +1,18 @@
 package com.espressoshock.drinkle.controllers.auth;
 
-import com.espressoshock.drinkle.models.Gender;
+import com.espressoshock.drinkle.models.Country;
 import com.espressoshock.drinkle.viewLoader.EventDispatcherAdapter;
 import com.espressoshock.drinkle.viewLoader.ViewLoader;
 import com.espressoshock.drinkle.viewLoader.ViewMetadata;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.input.MouseEvent;
 
-public class AuthRegistration extends EventDispatcherAdapter {
-
+public class AuthRegistrationCompany extends EventDispatcherAdapter {
 
   @FXML
-  ComboBox genderComboBox;
+  ComboBox countryComboBox;
 
   @FXML
   public void initialize() {
@@ -25,14 +23,15 @@ public class AuthRegistration extends EventDispatcherAdapter {
   private void setupUI() { }
 
   private void setupComponents() {
-    genderComboBox.setItems(
-        FXCollections.observableArrayList(Gender.values())
+    countryComboBox.setItems(
+        FXCollections.observableArrayList(Country.values())
     );
   }
 
+
   @FXML
   public void onSwitchAccountRegistrationTap(MouseEvent event) {
-    super.dispatchViewChangeRequest(ViewMetadata.AUTH_REGISTRATION_COMPANY);
+    super.dispatchViewChangeRequest(ViewMetadata.AUTH_REGISTRATION);
   }
   @FXML
   public void openLoginView(MouseEvent event) {
@@ -42,5 +41,4 @@ public class AuthRegistration extends EventDispatcherAdapter {
   public void register(MouseEvent event){
     super.dispatchViewChangeRequest(ViewLoader.default_view);
   }
-
 }

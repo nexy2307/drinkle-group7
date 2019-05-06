@@ -78,11 +78,11 @@ public class MainViewWrapper extends EventObserverAdapter implements IEventObser
 
 
         //fields loaded here -> check if logged/remembered is checked etc...
-        if (Current.environment.userStatus.equals(loggedIn)) {
+        if (Current.environment.userStatus().equals(loggedIn)) {
             //logged show main ui
-        } else if (Current.environment.userStatus.equals(loggedOut)) {
+            super.setEventDispatcher(ViewLoader.load(ViewLoader.default_view));
+        } else if (Current.environment.userStatus().equals(loggedOut)) {
             //NOT_LOGGED -> LOAD auth-login
-
             /********* =VIEW-LOADER: AUTH_LOGIN         */
             super.setEventDispatcher(ViewLoader.load(ViewMetadata.AUTH_LOGIN));
             /********* END =VIEW-LOADER: AUTH_LOGIN           */
@@ -115,7 +115,8 @@ public class MainViewWrapper extends EventObserverAdapter implements IEventObser
 
 /********* =LAYOUT UTILITY - TEMPORARY */
  public void loadLayoutUtility(ViewMetadata view) throws IOException{
-     if(view != ViewMetadata.APP_SIDEBAR && view != ViewMetadata.AUTH_LOGIN && view != ViewMetadata.AUTH_REGISTRATION) {
+     if(view != ViewMetadata.APP_SIDEBAR && view != ViewMetadata.AUTH_LOGIN && view != ViewMetadata.AUTH_REGISTRATION
+     && view != ViewMetadata.AUTH_REGISTRATION_COMPANY) {
          if(ViewLoader.getRenderedViewsSize()>1)
              super.setEventDispatcher(ViewLoader.add(view, 65d, 0d));
          else{
