@@ -16,5 +16,4 @@ public class AuthLogin extends EventDispatcherAdapter {
         //some serious business logic
         super.dispatchViewChangeRequest(ViewLoader.default_view);
     }
-
 }
