@@ -2,12 +2,12 @@ package com.espressoshock.drinkle.models;
 
 
 public enum IngredientCategory implements ICategory {
-    GLASSWARE("Glassware"), GARNISH("Garnish"), ICE_TYPE("Ice Type"), VODKA("Vodka"),
+    GLASSWARE("Glassware"), GARNISH("Garnish"), ICE_TYPE("Ice Type"),
+    WATER("Water"), DAIRY_PRODUCT("Dairy Product"),VODKA("Vodka"),
     WHISKEY("Whiskey"), VERMOUTH("Vermouth"),BITTER("Bitter"),GIN("Gin"),
     TEQUILA("Tequila"), RUM("Rum"), LIQUEUR("Liqueur"), BRANDY("Brandy"),
     CIDER("Cider"), WINE("Wine"), BEER("Beer"), JUICE("Juice"),
-    SYRUP("Syrup"), FRUIT("Fruit"),WARM_DRINK("Warm Drink"), POWDER("Powder"),
-    WATER("Water"), DAIRY_PRODUCT("Dairy Product");
+    SYRUP("Syrup"), FRUIT("Fruit"),WARM_DRINK("Warm Drink"), POWDER("Powder");
 
     private final String displayName;
 
