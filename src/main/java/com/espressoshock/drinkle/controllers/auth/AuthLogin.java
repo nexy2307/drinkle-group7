@@ -1,24 +1,21 @@
 package com.espressoshock.drinkle.controllers.auth;
 
 import com.espressoshock.drinkle.daoLayer.JPADaoManager;
-import com.espressoshock.drinkle.models.Account;
 import com.espressoshock.drinkle.models.PrivateAccount;
 import com.espressoshock.drinkle.viewLoader.EventDispatcherAdapter;
 import com.espressoshock.drinkle.viewLoader.ViewLoader;
 import com.espressoshock.drinkle.viewLoader.ViewMetadata;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
-import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
+import java.util.concurrent.*;
 
 public class AuthLogin extends EventDispatcherAdapter {
-    private class AsyncCallable implements Callable<Boolean>{
+    private static class AsyncCallable implements Callable<Boolean>{
+        public static Boolean digestresult;
         private final String email;
         private final String password;
 
@@ -55,6 +52,7 @@ public class AuthLogin extends EventDispatcherAdapter {
     @FXML
     private Label errorLbl;
 
+
     /********* TODO: IMPLEMENT APPSTATE CON. */
     private Boolean digestResult;
     /********* END TODO: IMPLEMENT APPSTATE CON. */
@@ -66,29 +64,40 @@ public class AuthLogin extends EventDispatcherAdapter {
 
     @FXML
     public void login(MouseEvent event)throws Exception {
-
-        showDialog();
+        /********* SHOW LOGIN MODAL DIALOG  */
+        this.showDialog();
 
         /********* =NON-BLOCK ASYNC REQUEST  */
-        new Thread(() -> {
+       CompletableFuture.supplyAsync( () -> {
             JPADaoManager jpaDaoManager = new JPADaoManager();
             if (jpaDaoManager.login(new PrivateAccount(emailTf.getText(), passwordTf.getText(), null, null, null)) != null) {
                 //logged
                 this.hideDialog();
                 errorLbl.setVisible(false);
-                digestResult = true;
+                return true;
             } else {
                 //incorrect username/password
                 this.hideDialog();
                 errorLbl.setVisible(true);
-                digestResult = false;
-
+                return false;
             }
-        }).start();
+        }).thenAccept( (status) ->{
+            /********* EVENT DISPATCHER -> WITHIN SAME THREAD  */
+           Platform.runLater(new Runnable(){
+               @Override public void run() {
+                   System.out.println(status);
+                   if(status) AuthLogin:SynchContinueApp();
+               }
+           });
+            System.out.println(status);
+        });
 
-        /********* EVENT DISPATCHER -> WITHIN SAME THREAD  */
-        //if(task.get())
-            super.dispatchViewChangeRequest(ViewLoader.default_view);
+
+
+
+
+
+
 
     }
 
@@ -102,8 +111,8 @@ public class AuthLogin extends EventDispatcherAdapter {
     }
     /********* END =DIALOGS  */
 
-    public void continueApp(){
-
+    public void SynchContinueApp(){
+        super.dispatchViewChangeRequest(ViewLoader.default_view);
     }
 
 }
