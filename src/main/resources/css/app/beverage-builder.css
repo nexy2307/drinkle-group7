@@ -1,0 +1,151 @@
+.root{
+    -fx-border-radius: 30 0 0 0;
+    -fx-background-radius: 30 0 0 0;
+}
+.check-box .box{
+    -fx-background-radius: 100;
+    -fx-border-radius: 100;
+    -fx-fit-to-width: 20;
+}
+.radio-button .radio {
+    -fx-border-width: 1px;
+    -fx-border-color: #000;
+    -fx-background-color: white;
+    -fx-background-image: null;
+    -fx-border-radius: 25px;
+    -fx-padding: 4px;
+}
+/*---------------Right side css---------------------*/
+#alcoholPercentCircle, #pourCostCircle{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-fill: transparent;
+}
+#txtFieldCocktailName, #txtFieldNotes{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+.progress-indicator .percentage {
+    -fx-fill:null;
+}
+#highlight{
+    -fx-fill: #ef4a00;
+}
+
+#addedIngredients{
+    scrollbar-arrow-color: black;
+    -fx-background-color: transparent;
+    -fx-fill: transparent;
+}
+#vBoxChosenIngredients{
+    -fx-background-color: transparent;
+    -fx-fill: transparent;
+}
+#addedIngredients .viewport, #addedIngredients :vertical {
+    -fx-pref-width: 8;
+    -fx-background-color: transparent;
+}
+#addedIngredients .track{
+
+    -fx-background-color: transparent;
+    -fx-fill: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+#addedIngredients .thumb {
+    -fx-pref-width: 5;
+    -fx-background-color: orange;
+    -fx-background-radius: 5em;
+}
+#addedIngredients .decrement-arrow, .increment-arrow, .decrement-button:hover, .increment-button:hover, .decrement-arrow:hover, .increment-arrow:hover{
+    -fx-background-color: transparent;
+}
+#addedIngredients .progress-bar{
+    -fx-pref-height: 5;
+    -fx-background-color: #b53904;
+    -fx-background-radius: 5;
+
+}
+#addedIngredients .progress-bar .bar {
+    -fx-padding: 1px;
+    -fx-background-insets: 0;
+    -fx-background-color: #ef6b02;
+    -fx-background-radius: 5;
+}
+/*----------------End of right side--------------------*/
+/*--------------------Center css-----------------------*/
+#lblVolume{
+    -fx-font-size: 22;
+-fx-text-fill: #d18d44;
+}
+#lblVolumeUnit, #lblCostValuta, #lblPercentRPercent {
+    -fx-font-size: 20;
+    -fx-text-fill: #e1e4f1;
+}
+#lblVolName, #lblCostName, #lblPercentRName{
+    -fx-text-fill: #e1e4f1;
+}
+#lblPercentR{
+-fx-font-size: 22;
+    -fx-text-fill: #7a9df4;
+}
+
+#lblCost{
+-fx-font-size: 22;
+    -fx-text-fill: #fd6592;
+}
+.radio-button .radio{
+    -fx-fill: white;
+-fx-padding: 8;
+}
+.radio-button .dot{
+    -fx-border-width: 3;
+    -fx-padding: 2;
+}
+
+
+/*----------------End of center css--------------------*/
+
+/*------------------Left side css----------------------*/
+#vBoxListOfIngredients{
+    -fx-background-color: transparent;
+    -fx-fill: transparent;
+}
+
+#ingredintListAnchorPane, #ingredintListAnchorPane .scroll-pane, #ingredintListAnchorPane .viewport {
+    -fx-background-color: #f8f9fd;
+    -fx-background-radius: 30 0 0 0;
+    -fx-border-radius: 30 0 0 0;
+}
+
+#ingredintListAnchorPane .scroll-pane :vertical {
+    -fx-pref-width: 8;
+    -fx-background-color: transparent;
+}
+#ingredintListAnchorPane.track{
+
+    -fx-background-color: transparent;
+    -fx-fill: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+#ingredintListAnchorPane .thumb {
+    -fx-pref-width: 5;
+    -fx-background-color: #9ba4d1;
+    -fx-background-radius: 5em;
+}
+#ingredintListAnchorPane .separator .line{
+    -fx-pref-height: 2;
+    -fx-background-color: #3f4fa5;
+}
+#ingredintListAnchorPane .decrement-arrow, .increment-arrow{
+    -fx-background-color: transparent;
+}
+#ingredintListAnchorPane .decrement-arrow:hover, .increment-arrow:hover{
+    -fx-background-color: transparent;
+}
+#ingredintListAnchorPane .decrement-button:hover, .increment-button:hover{
+    -fx-background-color: transparent;
+}
+
+/*------------End of left side css---------------------*/
