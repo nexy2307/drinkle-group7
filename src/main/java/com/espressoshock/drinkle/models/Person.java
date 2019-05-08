@@ -7,7 +7,7 @@ import javax.persistence.Table;
 
 //JPA DB ANNOTATIONS //***********
 @Entity
-@Table(name = "account")
+@Table(name = "person")
 //JPA DB ANNOTATIONS //***********
 public class Person {
 
