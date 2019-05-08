@@ -1,5 +1,6 @@
 /* 
  * Copyright (c) 2014, Andrea Vacondio
+ *Modified 2019 by Nemanja Negovanovic
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
