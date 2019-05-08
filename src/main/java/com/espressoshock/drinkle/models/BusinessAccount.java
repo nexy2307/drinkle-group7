@@ -40,6 +40,10 @@ public class BusinessAccount extends Account implements IBusinessAccountAction {
         this.team = team;
     }
 
+    public BusinessAccount(String email, String password, String pictureURL, Person registered, List<Blueprint> blueprints) {
+        super(email, password, pictureURL, registered, blueprints);
+    }
+
     public String getVatID() {
         return vatID;
     }

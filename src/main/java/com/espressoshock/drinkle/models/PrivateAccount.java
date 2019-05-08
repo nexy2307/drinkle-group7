@@ -17,9 +17,6 @@ public class PrivateAccount extends Account{
     @Column(name="dob")
     private Date dob;
 
-    @Id
-    @Column(name="email")
-    private String email;
 
     @Column(name="username")
     private String username;
@@ -28,21 +25,18 @@ public class PrivateAccount extends Account{
     private String gender;
 
 
-    public PrivateAccount(String email, String password, String pictureURL, Person registered, List<Blueprint> blueprints, Date dob, String email1, String username, String gender) {
+    public PrivateAccount(String email, String password, String pictureURL, Person registered, List<Blueprint> blueprints, Date dob, String username, String gender) {
         super(email, password, pictureURL, registered, blueprints);
         this.dob = dob;
-        this.email = email1;
         this.username = username;
         this.gender = gender;
     }
 
-    public String getEmail() {
-        return email;
+    public PrivateAccount(String email, String password, String pictureURL, Person registered, List<Blueprint> blueprints) {
+        super(email, password, pictureURL, registered, blueprints);
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+
 
     public String getUsername() {
         return username;
@@ -52,11 +46,5 @@ public class PrivateAccount extends Account{
         this.username = username;
     }
 
-    @Override
-    public String toString() {
-        return "PrivateAccount{" +
-                "email='" + email + '\'' +
-                ", username='" + username + '\'' +
-                '}';
-    }
+
 }

@@ -4,7 +4,9 @@ import com.espressoshock.drinkle.daoLayer.entities.AccountDAL;
 import com.espressoshock.drinkle.daoLayer.entities.JPAAAccountDal;
 import com.espressoshock.drinkle.daoLayer.entities.JPAAccountDao;
 import com.espressoshock.drinkle.models.Account;
+import com.espressoshock.drinkle.models.BusinessAccount;
 import com.espressoshock.drinkle.models.Person;
+import com.espressoshock.drinkle.models.PrivateAccount;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -18,15 +20,17 @@ public class JPADaoManager {
     }
 
     public Account login(Account account){
+        System.out.println(account.getEmail()+","+ account.getPassword());
         this.accountDao = new JPAAAccountDal(this.EMF.createEntityManager());
-        if(true){
-            AccountDAL result = this.accountDao.getByKey(account.getEmail());
-            /********* ACCOUNT MATCH  */
-            if(result != null && compareMD5(account.getPassword(), result.getPassword()))
-                System.out.println("logged: "+result.getPassword());
-            else
-                System.out.println("error");
-        }
+        AccountDAL result = this.accountDao.getByKey(account.getEmail());
+        /********* ACCOUNT MATCH  */
+        if(result != null && compareMD5(account.getPassword(), result.getPassword()))
+            if(account instanceof BusinessAccount)
+                return new BusinessAccount(result.getEmail(), result.getPassword(), result.getPictureURL(), null, null); //->add decorators
+            else if(account instanceof PrivateAccount) //more accounts?
+                return new PrivateAccount(result.getEmail(), result.getPassword(), result.getPictureURL(), null, null); //->add decorators
+
+
         return null;
     }
 
