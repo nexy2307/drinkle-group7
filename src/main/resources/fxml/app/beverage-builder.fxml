@@ -87,7 +87,7 @@
                         <Label fx:id="lblCostName" text="Cost" />
                         <HBox alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity">
                            <children>
-                              <Label fx:id="lblCost" text="3.54" textAlignment="CENTER">
+                              <Label fx:id="lblCost" text="3.15" textAlignment="CENTER">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin></Label>
@@ -109,7 +109,7 @@
                </content>
             </ScrollPane>
             <Separator layoutY="52.0" prefHeight="1.0" prefWidth="232.0" />
-            <Group id="search" layoutX="22.0" layoutY="22.0">
+            <Group id="search" disable="true" layoutX="22.0" layoutY="22.0">
                <children>
                   <ImageView fitHeight="150.0" fitWidth="20.0" layoutX="-6.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -154,7 +154,7 @@
       </Group>
       <Group id="Notes" layoutX="736.0" layoutY="83.0">
          <children>
-            <TextField fx:id="txtFieldNotes" layoutY="7.0" prefHeight="37.0" prefWidth="114.0" text="Served cold">
+            <TextField fx:id="txtFieldNotes" disable="true" layoutY="7.0" prefHeight="37.0" prefWidth="114.0" text="Served cold">
                <tooltip>
                   <Tooltip text="Add your notes here." />
                </tooltip>
@@ -164,7 +164,7 @@
       </Group>
       <Group id="Cocktail name" layoutX="735.0" layoutY="33.0">
          <children>
-            <TextField fx:id="txtFieldCocktailName" layoutY="6.0" prefHeight="37.0" prefWidth="135.0" text="Cocktail Name">
+            <TextField fx:id="txtFieldCocktailName" disable="true" layoutY="6.0" prefHeight="37.0" prefWidth="135.0" text="Cocktail Name">
                <tooltip>
                   <Tooltip text="Write a name for your cocktail." />
                </tooltip>
@@ -172,7 +172,7 @@
             <Label layoutX="9.0" layoutY="-3.0" text="Name" />
          </children>
       </Group>
-      <ImageView fitHeight="150.0" fitWidth="30.0" layoutX="877.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView disable="true" fitHeight="150.0" fitWidth="30.0" layoutX="877.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/app/beverage-builder/folder.png" />
          </image>
@@ -182,35 +182,35 @@
       </ImageView>
       <Group id="radio buttons" layoutX="325.0" layoutY="630.0">
          <children>
-            <Group id="radio button">
+            <Group id="radio button" disable="true">
                <children>
                   <RadioButton fx:id="btnGlassware" layoutX="15.0" layoutY="-3.0" mnemonicParsing="false" />
-                  <Line fx:id="lineGlassware" accessibleRoleDescription="line" endX="50.0" layoutX="37.0" layoutY="8.0" />
+                  <Line fx:id="lineGlassware" accessibleRoleDescription="line" endX="38.0" layoutX="37.0" layoutY="8.0" />
                   <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="23.0" text="Glassware" textAlignment="CENTER" />
                </children>
             </Group>
             <Group id="radio button" layoutX="60.0">
                <children>
-                  <RadioButton fx:id="btnIngredients" layoutX="15.0" layoutY="-3.0" mnemonicParsing="false" />
-                  <Line fx:id="lineIngredients" accessibleRoleDescription="line" endX="50.0" layoutX="37.0" layoutY="8.0" />
+                  <RadioButton fx:id="btnIngredients" layoutX="15.0" layoutY="-3.0" mnemonicParsing="false" selected="true" />
+                  <Line fx:id="lineIngredients" accessibleRoleDescription="line" endX="38.0" layoutX="37.0" layoutY="8.0" />
                   <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="23.0" text="Ingredients" textAlignment="CENTER" />
                </children>
             </Group>
-            <Group id="radio button" layoutX="120.0">
+            <Group id="radio button" disable="true" layoutX="120.0">
                <children>
                   <RadioButton fx:id="btnGarnishes" layoutX="15.0" layoutY="-3.0" mnemonicParsing="false" />
-                  <Line fx:id="lineGarnishes" accessibleRoleDescription="line" endX="50.0" layoutX="37.0" layoutY="8.0" />
+                  <Line fx:id="lineGarnishes" accessibleRoleDescription="line" endX="38.0" layoutX="37.0" layoutY="8.0" />
                   <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="23.0" text="Garnishes" textAlignment="CENTER" />
                </children>
             </Group>
-            <Group id="radio button" layoutX="180.0">
+            <Group id="radio button" disable="true" layoutX="180.0">
                <children>
                   <RadioButton fx:id="btnIceStyle" layoutX="15.0" layoutY="-3.0" mnemonicParsing="false" />
-                  <Line fx:id="lineIceStyle" accessibleRoleDescription="line" endX="50.0" layoutX="37.0" layoutY="8.0" />
+                  <Line fx:id="lineIceStyle" accessibleRoleDescription="line" endX="37.0" layoutX="37.0" layoutY="8.0" />
                   <Label alignment="CENTER" contentDisplay="CENTER" layoutX="6.0" layoutY="23.0" text="Ice-style" textAlignment="CENTER" />
                </children>
             </Group>
-            <Group id="radio button" layoutX="240.0">
+            <Group id="radio button" disable="true" layoutX="240.0">
                <children>
                   <Label alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="23.0" text="Done" textAlignment="CENTER" />
                   <RadioButton fx:id="btnDone" layoutX="14.0" layoutY="-3.0" mnemonicParsing="false" />
@@ -223,9 +223,9 @@
             <VBox fx:id="vBoxChosenIngredients" prefHeight="12.0" prefWidth="222.0" spacing="10.0" />
          </content>
       </ScrollPane>
-      <Button fx:id="btnExport" layoutX="750.0" layoutY="540.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" text="Export" />
+      <Button fx:id="btnExport" disable="true" layoutX="750.0" layoutY="540.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" text="Export" />
       <Button fx:id="btnGenerate" layoutX="750.0" layoutY="588.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" text="Generate" />
-      <Button fx:id="btnManage" layoutX="814.0" layoutY="298.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="103.0" text="Manage" />
+      <Button fx:id="btnManage" disable="true" layoutX="814.0" layoutY="298.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="103.0" text="Manage" />
       <Group layoutX="713.0" layoutY="298.0">
          <children>
             <Label text="Total volume" />
@@ -234,11 +234,11 @@
       </Group>
       <Group layoutX="343.0" layoutY="545.0">
          <children>
-            <Button fx:id="btnGoToPrevious" mnemonicParsing="false" prefHeight="36.0" prefWidth="110.0" text="Go to previous" />
+            <Button fx:id="btnGoToPrevious" disable="true" mnemonicParsing="false" prefHeight="36.0" prefWidth="110.0" text="Go to previous" />
             <Button fx:id="btnAddIngredient" layoutX="146.0" mnemonicParsing="false" onAction="#addIngredientWidget" prefHeight="36.0" prefWidth="110.0" text="Add ingredient" />
          </children>
       </Group>
       <Label layoutX="360.0" layoutY="22.0" text="Chosen ingredient: " />
-      <Label fx:id="lblChosenName" layoutX="456.0" layoutY="22.0" text="asdasdasdasdasdasd" />
+      <Label fx:id="lblChosenName" layoutX="456.0" layoutY="22.0" text="none" />
    </children>
 </AnchorPane>
