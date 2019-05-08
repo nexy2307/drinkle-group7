@@ -1,9 +1,28 @@
 package com.espressoshock.drinkle.models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+//JPA DB ANNOTATIONS //***********
+@Entity
+@Table(name = "account")
+//JPA DB ANNOTATIONS //***********
 public class Person {
+
+    @Column(name="first_name")
     private String firstName;
+
+    @Column(name="last_name")
     private String lastName;
+
+    @Id
+    @Column(name="ssn")
     private String SSN;
+
+    public Person() {
+    }
 
     public Person(String firstName, String lastName, String SSN) {
         this.firstName = firstName;
