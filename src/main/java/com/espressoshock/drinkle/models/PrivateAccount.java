@@ -1,29 +1,39 @@
 package com.espressoshock.drinkle.models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.util.Date;
 import java.util.List;
 
+//JPA DB ANNOTATIONS //***********
+@Entity
+@Table(name = "private_account")
+//JPA DB ANNOTATIONS //***********
 public class PrivateAccount extends Account{
 
+
+    @Column(name="dob")
+    private Date dob;
+
+    @Id
+    @Column(name="email")
     private String email;
+
+    @Column(name="username")
     private String username;
 
+    @Column(name="gender")
+    private String gender;
 
-    public PrivateAccount(String accountID, String accountName, String accountPassword, Person registered, String email, String username) {
-        super(accountID, accountName, accountPassword, registered);
-        this.email = email;
-        this.username = username;
-    }
 
-    public PrivateAccount(String accountID, String accountName, String accountPassword, Person registered, List<Blueprint> blueprints, String email, String username) {
-        super(accountID, accountName, accountPassword, registered, blueprints);
-        this.email = email;
+    public PrivateAccount(String email, String password, String pictureURL, Person registered, List<Blueprint> blueprints, Date dob, String email1, String username, String gender) {
+        super(email, password, pictureURL, registered, blueprints);
+        this.dob = dob;
+        this.email = email1;
         this.username = username;
-    }
-
-    public PrivateAccount(List<Blueprint> blueprints, String email, String username) {
-        super(blueprints);
-        this.email = email;
-        this.username = username;
+        this.gender = gender;
     }
 
     public String getEmail() {
