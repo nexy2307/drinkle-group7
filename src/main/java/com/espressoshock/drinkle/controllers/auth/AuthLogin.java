@@ -53,10 +53,6 @@ public class AuthLogin extends EventDispatcherAdapter {
     private Label errorLbl;
 
 
-    /********* TODO: IMPLEMENT APPSTATE CON. */
-    private Boolean digestResult;
-    /********* END TODO: IMPLEMENT APPSTATE CON. */
-
     @FXML
     public void openRegistrationView(MouseEvent event) {
         super.dispatchViewChangeRequest(ViewMetadata.AUTH_REGISTRATION);
