@@ -1,13 +1,27 @@
 package com.espressoshock.drinkle.models;
 
+import java.util.List;
+
 public class PrivateAccount extends Account{
 
     private String email;
     private String username;
 
-    public PrivateAccount(String accountID, String accountName, String accountPassword, Person registered, Blueprint blueprint,
-                          String email, String username) {
-        super(accountID, accountName, accountPassword, registered, blueprint);
+
+    public PrivateAccount(String accountID, String accountName, String accountPassword, Person registered, String email, String username) {
+        super(accountID, accountName, accountPassword, registered);
+        this.email = email;
+        this.username = username;
+    }
+
+    public PrivateAccount(String accountID, String accountName, String accountPassword, Person registered, List<Blueprint> blueprints, String email, String username) {
+        super(accountID, accountName, accountPassword, registered, blueprints);
+        this.email = email;
+        this.username = username;
+    }
+
+    public PrivateAccount(List<Blueprint> blueprints, String email, String username) {
+        super(blueprints);
         this.email = email;
         this.username = username;
     }

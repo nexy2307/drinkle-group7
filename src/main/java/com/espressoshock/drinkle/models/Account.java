@@ -64,7 +64,7 @@ public class Account implements IActionAccount{
 
     @Override
     public boolean addBlueprint(Blueprint blueprint) {
-        return this.blueprints.add(blueprint)
+        return this.blueprints.add(blueprint);
     }
 
     @Override

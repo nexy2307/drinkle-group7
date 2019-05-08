@@ -1,5 +1,7 @@
 package com.espressoshock.drinkle.models;
 
+import java.util.List;
+
 public class BusinessAccount extends Account implements IBusinessAccountAction {
 
     private String vatID;
@@ -7,10 +9,24 @@ public class BusinessAccount extends Account implements IBusinessAccountAction {
     private Country registrationCountry;
     private Team team;
 
-    public BusinessAccount(String accountID, String accountName, String accountPassword,
-                           Person registered, Blueprint blueprint, String vatID,
-                           String businessName, Country registrationCountry, Team team) {
-        super(accountID, accountName, accountPassword, registered, blueprint);
+    public BusinessAccount(String accountID, String accountName, String accountPassword, Person registered, String vatID, String businessName, Country registrationCountry, Team team) {
+        super(accountID, accountName, accountPassword, registered);
+        this.vatID = vatID;
+        this.businessName = businessName;
+        this.registrationCountry = registrationCountry;
+        this.team = team;
+    }
+
+    public BusinessAccount(String accountID, String accountName, String accountPassword, Person registered, List<Blueprint> blueprints, String vatID, String businessName, Country registrationCountry, Team team) {
+        super(accountID, accountName, accountPassword, registered, blueprints);
+        this.vatID = vatID;
+        this.businessName = businessName;
+        this.registrationCountry = registrationCountry;
+        this.team = team;
+    }
+
+    public BusinessAccount(List<Blueprint> blueprints, String vatID, String businessName, Country registrationCountry, Team team) {
+        super(blueprints);
         this.vatID = vatID;
         this.businessName = businessName;
         this.registrationCountry = registrationCountry;
