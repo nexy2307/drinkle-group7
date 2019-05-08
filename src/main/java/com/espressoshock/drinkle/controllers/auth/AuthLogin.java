@@ -70,10 +70,21 @@ public class AuthLogin extends EventDispatcherAdapter {
         showDialog();
 
         /********* =NON-BLOCK ASYNC REQUEST  */
-        ExecutorService es = Executors.newSingleThreadExecutor();
-        Future<Boolean> task = es.submit(new AsyncCallable(emailTf.getText(), passwordTf.getText()));
+        new Thread(() -> {
+            JPADaoManager jpaDaoManager = new JPADaoManager();
+            if (jpaDaoManager.login(new PrivateAccount(emailTf.getText(), passwordTf.getText(), null, null, null)) != null) {
+                //logged
+                this.hideDialog();
+                errorLbl.setVisible(false);
+                digestResult = true;
+            } else {
+                //incorrect username/password
+                this.hideDialog();
+                errorLbl.setVisible(true);
+                digestResult = false;
 
-        /********* END =NON-BLOCK ASYNC REQUEST  */
+            }
+        }).start();
 
         /********* EVENT DISPATCHER -> WITHIN SAME THREAD  */
         //if(task.get())
