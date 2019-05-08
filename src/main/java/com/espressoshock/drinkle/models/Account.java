@@ -1,19 +1,30 @@
 package com.espressoshock.drinkle.models;
 
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Account implements IActionAccount{
     private String accountID;
     private String accountName;
     private String accountPassword;
     private Person registered;
-    private Blueprint blueprint;
+    private List<Blueprint> blueprints;
 
-    public Account(String accountID, String accountName,String accountPassword,Person registered,
-    Blueprint blueprint){
-    this.accountID = accountID;
-    this.accountName = accountName;
-    this.accountPassword = accountPassword;
-    this.registered = registered;
-    this.blueprint = blueprint;
+    public Account(String accountID, String accountName,String accountPassword,Person registered){
+        this.accountID = accountID;
+        this.accountName = accountName;
+        this.accountPassword = accountPassword;
+        this.registered = registered;
+        this.blueprints = new ArrayList<>();
+    }
+
+    public Account(String accountID, String accountName, String accountPassword, Person registered, List<Blueprint> blueprints) {
+        this.accountID = accountID;
+        this.accountName = accountName;
+        this.accountPassword = accountPassword;
+        this.registered = registered;
+        this.blueprints = blueprints;
     }
 
     public String getAccountID(){return accountID;}
@@ -24,7 +35,9 @@ public class Account implements IActionAccount{
 
     public Person getRegistered(){return registered;}
 
-    public Blueprint getBlueprint(){return blueprint;}
+    public Account(List<Blueprint> blueprints) {
+        this.blueprints = blueprints;
+    }
 
     public void setAccountID(String accountID){this.accountID = accountID;}
 
@@ -34,7 +47,9 @@ public class Account implements IActionAccount{
 
     public void setRegistered(Person registered){this.registered = registered;}
 
-    public void setBlueprint(Blueprint blueprint){this.blueprint = blueprint;}
+    public void setBlueprints(List<Blueprint> blueprints) {
+        this.blueprints = blueprints;
+    }
 
     @Override
     public String toString() {
@@ -43,28 +58,42 @@ public class Account implements IActionAccount{
                 ", accountName='" + accountName + '\'' +
                 ", accountPassword='" + accountPassword + '\'' +
                 ", registered=" + registered +
-                ", blueprint=" + blueprint +
+                ", blueprints=" + blueprints +
                 '}';
     }
 
     @Override
     public boolean addBlueprint(Blueprint blueprint) {
-        return false;
+        return this.blueprints.add(blueprint)
     }
 
     @Override
     public boolean deleteBlueprint(Blueprint blueprint) {
-        return false;
+        return this.blueprints.remove(blueprint);
     }
 
     @Override
     public boolean deleteBlueprintUsingIndex(int pos) {
-        return false;
+        try{
+            this.blueprints.remove(pos);
+        } catch(IndexOutOfBoundsException|UnsupportedOperationException e){
+            e.printStackTrace();
+            return false;
+        }
+
+        return true;
     }
 
     @Override
     public boolean editBlueprint(Blueprint source, Blueprint destination) {
-        return false;
+        try{
+            this.blueprints.set(this.blueprints.indexOf(source), destination);
+        } catch(IndexOutOfBoundsException|UnsupportedOperationException|ClassCastException|NullPointerException|IllegalArgumentException e){
+            e.printStackTrace();
+            return false;
+        }
+
+        return true;
     }
 
     @Override
