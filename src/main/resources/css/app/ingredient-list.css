@@ -1,0 +1,44 @@
+.button{
+    -fx-background-color: #4475ff;
+
+}
+#btnSearch{
+    -fx-background-color: invisible;
+    -fx-border-color: #4475ff;
+    -fx-border-radius: 0 20 20 0;
+}
+.menu-button{
+    -fx-border-color: #4475ff;
+    -fx-background-color: #ff6d33;
+}
+#txtFieldSearchOption{
+    -fx-border-color: #4475ff;
+}
+#btnChoose1, #btnChoose2{
+    -fx-background-color: invisible;
+    -fx-border-color: invisible;
+}
+#menuButtonBrands{
+    -fx-background-radius: 20 0 0 20;
+    -fx-border-radius: 20 0 0 20;
+}
+#txtAreaDescription{
+    -fx-background-color: invisible;
+    -fx-border-color: invisible;
+    -fx-text-fill: #581616;
+}
+.text-field{
+    -fx-background-color: invisible;
+    -fx-border-color: invisible;
+ }
+#btnCreate,#btnAddToInventory{
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+#progressBarAlcohol{
+    -fx-progress-color: red;
+}
+#imgViewProduct,#imgViewSimilarProduct1,#imgViewSimilarProduct2{
+    -fx-border-color: #8c8c8c;
+    -fx-border-radius: 10 0 0 0 ;
+}

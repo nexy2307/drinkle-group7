@@ -3,6 +3,8 @@ package com.espressoshock.drinkle.controllers.app;
 import com.espressoshock.drinkle.viewLoader.EventDispatcherAdapter;
 import com.espressoshock.drinkle.viewLoader.ViewLoader;
 import com.espressoshock.drinkle.viewLoader.ViewMetadata;
+import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleButton;
@@ -45,5 +47,13 @@ public class Sidebar extends EventDispatcherAdapter {
             if(toggle.getUserData().toString().equals(userData))
                 toggle.setSelected(true);
             //careful here-userData must be valid
+    }
+
+    @FXML
+    void logOut(Event event) {
+        //insert appState modifier here
+
+        /********* AFTER LOGOUT */
+        super.dispatchViewChangeRequest(ViewMetadata.AUTH_LOGIN);
     }
 }
