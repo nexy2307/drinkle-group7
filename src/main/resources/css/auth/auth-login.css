@@ -98,6 +98,7 @@
 
 .login-error {
     -fx-text-fill: #fe2558;
+
 }
 
 /********* =LOADING DIALOG */
@@ -114,6 +115,17 @@
 }
 
 /********* END =LOADING DIALOG */
+
+/********* =TOOLTIPS */
+.tooltip{
+    -fx-background-color: #fff;
+    -fx-text-fill: #bfc2c8;
+    -fx-font-size: 12;
+    -fx-padding: 5 10;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.2) , 20, 0.0 , 0 , 3 );
+}
+
+/********* END =TOOLTIPS */
 
 
 /********* END =LOGIN-FORM   */
