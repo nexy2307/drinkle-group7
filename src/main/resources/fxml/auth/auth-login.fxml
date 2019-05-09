@@ -53,12 +53,18 @@
                      <VBox.margin>
                         <Insets bottom="21.0" />
                      </VBox.margin>
+                     <tooltip>
+                        <Tooltip text="Please type your email" />
+                     </tooltip>
                   </TextField>
                   <Label text="Password" />
                   <PasswordField fx:id="passwordTf" prefHeight="34.0" prefWidth="353.0">
                      <VBox.margin>
                         <Insets bottom="21.0" />
                      </VBox.margin>
+                     <tooltip>
+                        <Tooltip text="Please type your password" />
+                     </tooltip>
                   </PasswordField>
                   <HBox alignment="CENTER_LEFT" prefHeight="27.0" prefWidth="349.0" spacing="120.0">
                      <children>
